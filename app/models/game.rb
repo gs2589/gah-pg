@@ -1,7 +1,7 @@
 class Game < ActiveRecord::Base
-
   has_many :players, through: :player_games
   has_one :prompt
+
   has_one :winner, class_name: "Player" # as a winner, how do we record this?
 
   @prompt_mode=false
@@ -32,4 +32,5 @@ class Game < ActiveRecord::Base
       self.save
     end
   end
+
 end

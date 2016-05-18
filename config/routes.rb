@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  root to: 'home#index'
 
-  resources :games
-  resources :gifs
-  resources :players
+  resources :games, only: [:new, :create, :show, :destroy]
+  resources :gifs, only: [:new, :create]
+  resources :players, except: [:index]
   resources :player_games
-  resources :prompts
+  resources :prompts, only: [:new, :create]
 end
