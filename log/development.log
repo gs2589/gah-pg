@@ -439,3 +439,4 @@ Started GET "/" for ::1 at 2016-05-18 12:39:23 -0400
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/erin/.rvm/gems/ruby-2.2.1/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
 Completed 200 OK in 21ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
