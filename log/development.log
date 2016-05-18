@@ -878,3 +878,1117 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+  [1m[36m (94.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGifs (20160518191536)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "gifs" ("id" serial primary key, "url" character varying, "player_id" integer) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160518191536"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePlayers (20160518191612)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "players" ("id" serial primary key, "username" character varying, "score" integer) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160518191612"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateGames (20160518191632)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "prompt_id" integer, "player_id" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160518191632"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePrompts (20160518191656)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.7ms)[0m  [1mCREATE TABLE "prompts" ("id" serial primary key, "phrase" character varying) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160518191656"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePlayerGames (20160518191716)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "player_games" ("id" serial primary key, "player_id" integer, "game_id" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160518191716"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Migrating to AddPickToPrompts (20160518192646)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "prompts" ADD "pick" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160518192646"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (6.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'games'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'gifs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'player_games'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'players'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'prompts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "Why can't I sleep at night?"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "I got 99 problems but _ ain't one."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "What's a girl's best friend?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What's that smell?"]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "This is the way the world ends / This is the way the world ends / Not with a bang but with _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What is Batman's guilty pleasure?"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "TSA guidelines now prohibit _ on airplanes."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What ended my last relationship?"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "MTV's new reality show features eight washed-up celebrities living with _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "I drink to forget _."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "I'm sorry, Professor, but I couldn't complete my homework because of _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "Alternative medicine is now embracing the curative powers of _."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "What's that sound?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What's the next Happy Meal&reg; toy?"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "It's a pity that kids these days are all getting involved with _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "In the new Disney Channel Original Movie, Hannah Montana struggles with _ for the first time."]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "_. That's how I want to die."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What does Dick Cheney prefer?"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "What's the most emo?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "Instead of coal, Santa now gives the bad children _."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "Next from J.K. Rowling: Harry Potter and the Chamber of _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "A romantic, candlelit dinner would be incomplete without _."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "White people like _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "_. Betcha can't have just one!"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "War!<br><br>What is it good for?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "BILLY MAYS HERE FOR _."]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "_. High five, bro."]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "During sex, I like to think about _."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "What did I bring back from Mexico?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What are my parents hiding from me?"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "What will always get you laid?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What would grandma find disturbing, yet oddly charming?"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "What did the U.S. airdrop to the children of Afghanistan?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What helps Obama unwind?"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "What's there a ton of in heaven?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "Major League Baseball has banned _ for giving players an unfair advantage."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "When I am a billionaire, I shall erect a 50-foot statue to commemorate _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What's the new fad diet?"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "When I am the President of the United States, I will create the Department of _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "_. It's a trap!"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "How am I maintaining my relationship status?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What will I bring back in time to convince people that I am a powerful wizard?"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "While the United States raced the Soviet Union to the moon, the Mexican government funneled millions of pesos into research on _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "Coming to Broadway this season, _: The Musical."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "What's my secret power?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What gives me uncontrollable gas?"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "But before I kill you, Mr. Bond, I must show you _."]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What never fails to liven up the party?"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "What am I giving up for Lent?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What do old people smell like? "]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "The class field trip was completely ruined by _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "When Pharaoh remained unmoved, Moses called down a plague of _."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "I do not know with which weapons World War III will be fought, but World War IV will be fought with _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What's Teach for America using to inspire inner city students to succeed?"]]
+  [1m[36m (5.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "In Michael Jackson's final moments, he thought about _."]]
+  [1m[35m (3.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "Why do I hurt all over?"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "Studies show that lab rats navigate mazes 50% faster after being exposed to _."]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "Why am I sticky?"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "What's my anti-drug?"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "And the Academy Award for _ goes to _."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "For my next trick, I will pull _ out of _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "_: Good to the last drop."]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "What did Vin Diesel eat for dinner?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "_: kid-tested, mother-approved."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "What gets better with age?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "I never truly understood _ until I encountered _."]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "Rumor has it that Vladimir Putin's favorite delicacy is _ stuffed with _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "Lifetime&reg; presents _, the story of _."]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "Make a haiku."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "In M. Night Shyamalan's new movie, Bruce Willis discovers that _ had really been _ all along."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "_ is a slippery slope that leads to _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "In a world ravaged by _, our only solace is _."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "That's right, I killed _. How, you ask? _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "When I was tripping on acid, _ turned into _."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "_ + _ = _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What's the next superhero/sidekick duo?"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "Dear Abby,<br><br>I'm having some trouble with _ and would like your advice."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "After the earthquake, Sean Penn brought _ to the people of Haiti."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "In L.A. County Jail, word is you can trade 200 cigarettes for _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "Maybe she's born with it. Maybe it's _."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "Life for American Indians was forever changed when the White Man introduced them to _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "Next on ESPN2, the World Series of _."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "Step 1: _. Step 2: _. Step 3: Profit."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "Here is the church<br>Here is the steeple<br>Open the doors<br>And there is _."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "How did I lose my virginity?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "During his childhood, Salvador Dal&iacute; produced hundreds of paintings of _."]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "In 1,000 years, when paper money is a distant memory, how will we pay for goods and services?"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "What don't you want to find in your Kung Pao chicken?"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"[0m  [["phrase", "The Smithsonian Museum of Natural History has just opened an exhibit on _."]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase") VALUES ($1) RETURNING "id"  [["phrase", "Daddy, why is Mommy crying?"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[36mPrompt Load (0.6ms)[0m  [1mSELECT "prompts".* FROM "prompts"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Why can't I sleep at night?"], ["pick", 1]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "I got 99 problems but _ ain't one."], ["pick", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What's a girl's best friend?"], ["pick", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What's that smell?"], ["pick", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "This is the way the world ends / This is the way the world ends / Not with a bang but with _."], ["pick", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What is Batman's guilty pleasure?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "TSA guidelines now prohibit _ on airplanes."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What ended my last relationship?"], ["pick", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "MTV's new reality show features eight washed-up celebrities living with _."], ["pick", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "I drink to forget _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "I'm sorry, Professor, but I couldn't complete my homework because of _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Alternative medicine is now embracing the curative powers of _."], ["pick", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What's that sound?"], ["pick", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What's the next Happy Meal&reg; toy?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "It's a pity that kids these days are all getting involved with _."], ["pick", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "In the new Disney Channel Original Movie, Hannah Montana struggles with _ for the first time."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "_. That's how I want to die."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What does Dick Cheney prefer?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What's the most emo?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Instead of coal, Santa now gives the bad children _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Next from J.K. Rowling: Harry Potter and the Chamber of _."], ["pick", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "A romantic, candlelit dinner would be incomplete without _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "White people like _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "_. Betcha can't have just one!"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "War!<br><br>What is it good for?"], ["pick", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "BILLY MAYS HERE FOR _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "_. High five, bro."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "During sex, I like to think about _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What did I bring back from Mexico?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What are my parents hiding from me?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What will always get you laid?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What would grandma find disturbing, yet oddly charming?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What did the U.S. airdrop to the children of Afghanistan?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What helps Obama unwind?"], ["pick", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What's there a ton of in heaven?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Major League Baseball has banned _ for giving players an unfair advantage."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "When I am a billionaire, I shall erect a 50-foot statue to commemorate _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What's the new fad diet?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "When I am the President of the United States, I will create the Department of _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "_. It's a trap!"], ["pick", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "How am I maintaining my relationship status?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What will I bring back in time to convince people that I am a powerful wizard?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "While the United States raced the Soviet Union to the moon, the Mexican government funneled millions of pesos into research on _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Coming to Broadway this season, _: The Musical."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What's my secret power?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What gives me uncontrollable gas?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "But before I kill you, Mr. Bond, I must show you _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What never fails to liven up the party?"], ["pick", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What am I giving up for Lent?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What do old people smell like? "], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "The class field trip was completely ruined by _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "When Pharaoh remained unmoved, Moses called down a plague of _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "I do not know with which weapons World War III will be fought, but World War IV will be fought with _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What's Teach for America using to inspire inner city students to succeed?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "In Michael Jackson's final moments, he thought about _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Why do I hurt all over?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Studies show that lab rats navigate mazes 50% faster after being exposed to _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Why am I sticky?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What's my anti-drug?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "And the Academy Award for _ goes to _."], ["pick", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "For my next trick, I will pull _ out of _."], ["pick", 2]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "_: Good to the last drop."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What did Vin Diesel eat for dinner?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "_: kid-tested, mother-approved."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What gets better with age?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "I never truly understood _ until I encountered _."], ["pick", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Rumor has it that Vladimir Putin's favorite delicacy is _ stuffed with _."], ["pick", 2]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Lifetime&reg; presents _, the story of _."], ["pick", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Make a haiku."], ["pick", 3]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "In M. Night Shyamalan's new movie, Bruce Willis discovers that _ had really been _ all along."], ["pick", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "_ is a slippery slope that leads to _."], ["pick", 2]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "In a world ravaged by _, our only solace is _."], ["pick", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "That's right, I killed _. How, you ask? _."], ["pick", 2]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "When I was tripping on acid, _ turned into _."], ["pick", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "_ + _ = _."], ["pick", 3]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What's the next superhero/sidekick duo?"], ["pick", 2]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Dear Abby,<br><br>I'm having some trouble with _ and would like your advice."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "After the earthquake, Sean Penn brought _ to the people of Haiti."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "In L.A. County Jail, word is you can trade 200 cigarettes for _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Maybe she's born with it. Maybe it's _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Life for American Indians was forever changed when the White Man introduced them to _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Next on ESPN2, the World Series of _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Step 1: _. Step 2: _. Step 3: Profit."], ["pick", 2]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Here is the church<br>Here is the steeple<br>Open the doors<br>And there is _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "How did I lose my virginity?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "During his childhood, Salvador Dal&iacute; produced hundreds of paintings of _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "In 1,000 years, when paper money is a distant memory, how will we pay for goods and services?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What don't you want to find in your Kung Pao chicken?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "The Smithsonian Museum of Natural History has just opened an exhibit on _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Daddy, why is Mommy crying?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[36mPrompt Load (0.7ms)[0m  [1mSELECT "prompts".* FROM "prompts"[0m
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGifs (20160518191536)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.7ms)[0m  [1mCREATE TABLE "gifs" ("id" serial primary key, "url" character varying, "player_id" integer) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160518191536"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePlayers (20160518191612)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "players" ("id" serial primary key, "username" character varying, "score" integer) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160518191612"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateGames (20160518191632)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "prompt_id" integer, "player_id" integer) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160518191632"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePrompts (20160518191656)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "prompts" ("id" serial primary key, "phrase" character varying) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160518191656"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePlayerGames (20160518191716)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "player_games" ("id" serial primary key, "player_id" integer, "game_id" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160518191716"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddPickToPrompts (20160518192646)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "prompts" ADD "pick" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160518192646"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'games'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.2ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'gifs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'player_games'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'players'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'prompts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Why can't I sleep at night?"], ["pick", 1]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "I got 99 problems but _ ain't one."], ["pick", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What's a girl's best friend?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What's that smell?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "This is the way the world ends / This is the way the world ends / Not with a bang but with _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What is Batman's guilty pleasure?"], ["pick", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "TSA guidelines now prohibit _ on airplanes."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What ended my last relationship?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "MTV's new reality show features eight washed-up celebrities living with _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "I drink to forget _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "I'm sorry, Professor, but I couldn't complete my homework because of _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Alternative medicine is now embracing the curative powers of _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What's that sound?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What's the next Happy Meal&reg; toy?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "It's a pity that kids these days are all getting involved with _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "In the new Disney Channel Original Movie, Hannah Montana struggles with _ for the first time."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "_. That's how I want to die."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What does Dick Cheney prefer?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What's the most emo?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Instead of coal, Santa now gives the bad children _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Next from J.K. Rowling: Harry Potter and the Chamber of _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "A romantic, candlelit dinner would be incomplete without _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "White people like _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "_. Betcha can't have just one!"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "War!<br><br>What is it good for?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "BILLY MAYS HERE FOR _."], ["pick", 1]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "_. High five, bro."], ["pick", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "During sex, I like to think about _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What did I bring back from Mexico?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What are my parents hiding from me?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What will always get you laid?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What would grandma find disturbing, yet oddly charming?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What did the U.S. airdrop to the children of Afghanistan?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What helps Obama unwind?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What's there a ton of in heaven?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Major League Baseball has banned _ for giving players an unfair advantage."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "When I am a billionaire, I shall erect a 50-foot statue to commemorate _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What's the new fad diet?"], ["pick", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "When I am the President of the United States, I will create the Department of _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "_. It's a trap!"], ["pick", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "How am I maintaining my relationship status?"], ["pick", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What will I bring back in time to convince people that I am a powerful wizard?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "While the United States raced the Soviet Union to the moon, the Mexican government funneled millions of pesos into research on _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Coming to Broadway this season, _: The Musical."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What's my secret power?"], ["pick", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What gives me uncontrollable gas?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "But before I kill you, Mr. Bond, I must show you _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What never fails to liven up the party?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What am I giving up for Lent?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What do old people smell like? "], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "The class field trip was completely ruined by _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "When Pharaoh remained unmoved, Moses called down a plague of _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "I do not know with which weapons World War III will be fought, but World War IV will be fought with _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What's Teach for America using to inspire inner city students to succeed?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "In Michael Jackson's final moments, he thought about _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Why do I hurt all over?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Studies show that lab rats navigate mazes 50% faster after being exposed to _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Why am I sticky?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What's my anti-drug?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "And the Academy Award for _ goes to _."], ["pick", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "For my next trick, I will pull _ out of _."], ["pick", 2]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "_: Good to the last drop."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What did Vin Diesel eat for dinner?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "_: kid-tested, mother-approved."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "What gets better with age?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "I never truly understood _ until I encountered _."], ["pick", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Rumor has it that Vladimir Putin's favorite delicacy is _ stuffed with _."], ["pick", 2]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Lifetime&reg; presents _, the story of _."], ["pick", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Make a haiku."], ["pick", 3]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "In M. Night Shyamalan's new movie, Bruce Willis discovers that _ had really been _ all along."], ["pick", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "_ is a slippery slope that leads to _."], ["pick", 2]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "In a world ravaged by _, our only solace is _."], ["pick", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "That's right, I killed _. How, you ask? _."], ["pick", 2]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "When I was tripping on acid, _ turned into _."], ["pick", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "_ + _ = _."], ["pick", 3]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What's the next superhero/sidekick duo?"], ["pick", 2]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Dear Abby,<br><br>I'm having some trouble with _ and would like your advice."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "After the earthquake, Sean Penn brought _ to the people of Haiti."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "In L.A. County Jail, word is you can trade 200 cigarettes for _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Maybe she's born with it. Maybe it's _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Life for American Indians was forever changed when the White Man introduced them to _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Next on ESPN2, the World Series of _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "Step 1: _. Step 2: _. Step 3: Profit."], ["pick", 2]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Here is the church<br>Here is the steeple<br>Open the doors<br>And there is _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "How did I lose my virginity?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "During his childhood, Salvador Dal&iacute; produced hundreds of paintings of _."], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "In 1,000 years, when paper money is a distant memory, how will we pay for goods and services?"], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "What don't you want to find in your Kung Pao chicken?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"[0m  [["phrase", "The Smithsonian Museum of Natural History has just opened an exhibit on _."], ["pick", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "prompts" ("phrase", "pick") VALUES ($1, $2) RETURNING "id"  [["phrase", "Daddy, why is Mommy crying?"], ["pick", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[36mPrompt Load (0.5ms)[0m  [1mSELECT "prompts".* FROM "prompts"[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "games" DEFAULT VALUES RETURNING "id"
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", nil]]
+  [1m[35mGame Load (0.4ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.4ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "prompts"
+  [1m[36mPrompt Load (0.5ms)[0m  [1mSELECT  "prompts".* FROM "prompts"  ORDER BY "prompts"."id" ASC LIMIT 1 OFFSET 9[0m
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "prompts"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35mPrompt Load (0.7ms)[0m  SELECT  "prompts".* FROM "prompts"  ORDER BY "prompts"."id" ASC LIMIT 1 OFFSET 37
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "prompts"
+  [1m[36mPrompt Load (0.6ms)[0m  [1mSELECT  "prompts".* FROM "prompts"  ORDER BY "prompts"."id" ASC LIMIT 1 OFFSET 32[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemovePromptIdFromGames (20160518204602)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mALTER TABLE "games" DROP "prompt_id"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "games" DROP "player_id"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160518204602"]]
+  [1m[35m (44.5ms)[0m  COMMIT
+Migrating to AddGameIdToPrompts (20160518204645)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "prompts" ADD "game_id" integer
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160518204645"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+Migrating to AddWinnerIdToGames (20160518205001)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "games" ADD "winner_id" integer
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160518205001"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'games'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'gifs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'player_games'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'players'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'prompts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mGame Load (0.6ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "prompts"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35mPrompt Load (0.6ms)[0m  SELECT  "prompts".* FROM "prompts"  ORDER BY "prompts"."id" ASC LIMIT 1 OFFSET 41
+  [1m[36mPrompt Load (0.2ms)[0m  [1mSELECT  "prompts".* FROM "prompts" WHERE "prompts"."game_id" = $1 LIMIT 1[0m  [["game_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "prompts" SET "game_id" = $1 WHERE "prompts"."id" = $2[0m  [["game_id", 1], ["id", 42]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
