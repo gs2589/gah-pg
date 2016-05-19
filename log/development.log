@@ -22656,3 +22656,30 @@ Processing by GamesController#show as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT "prompts".* FROM "prompts"
   Rendered games/show.html.erb within layouts/application (680.6ms)
 Completed 200 OK in 724ms (Views: 685.3ms | ActiveRecord: 37.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-19 18:08:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 3456ms (Views: 3431.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d41205779dd419a7fe871061d4788715f316a154e7180e68fe13fde0d895fce6.css?body=1" for ::1 at 2016-05-19 18:08:22 -0400
+
+
+Started GET "/assets/game.self-52b436c985b4b317dda6d29678df3226b5ff8c68cb176469ab7d5f7d1420d9ca.js?body=1" for ::1 at 2016-05-19 18:08:22 -0400
+
+
+Started GET "/assets/home.self-0c9d7bde0a06718651e3496a7a32fa1929bc730891f6264972ffe4f69f4cd642.js?body=1" for ::1 at 2016-05-19 18:08:22 -0400
+
+
+Started POST "/sessions" for ::1 at 2016-05-19 18:08:30 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"geRj8HUihcJHGlm1thDDPjv9PG5BclSmz1A8FnzQei6o7Up+ouYVJaB4u6GYmEyH3Ovb2AIKC2HTcf2OsKXtRg==", "username"=>"bob3", "existing_game_number"=>"1", "commit"=>"Play"}
+  [1m[35mPlayer Load (1.0ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT 1  [["username", "bob3"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "players" ("username") VALUES ($1) RETURNING "id"  [["username", "bob3"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mGame Load (0.9ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/games/1
