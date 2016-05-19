@@ -1,11 +1,7 @@
 $(document).ready(function(){
-  $('#gif_generator').click(function(e){
-      e.preventDefault()
-      $("ul").append('<img src= <%= Gif.randomgif  %>   >');
-    
 
-  })
- 
+  <% 20.times do %>
+  $("ul").append('<img src= <%= Gif.randomgif %> >');
+  <% end %>
   
-
 })
