@@ -2,7 +2,7 @@ class Gif < ActiveRecord::Base
   belongs_to :player
 
   require 'json'
-  attr_reader :url
+  # attr_reader :url
 
   def self.random
    newgif = Gif.new

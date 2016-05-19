@@ -1,2 +1,47 @@
-<h1>Games#show</h1>
-<p>Find me in app/views/games/show.html.erb</p>
+<!-- remove this from view once we have data from controller -->
+<% @player = Player.new %>
+<% @player.save %>
+
+
+<% @player.starting_hand %>
+<% @gifs = @player.gifs %>
+
+
+<!-- TOP ROW -->
+<div class="row img-row">
+  <% @gifs[0..3].each do |gif| %>
+    <div class="col-md-3 center-block">
+      <%= image_tag(gif.url) %>
+    </div>
+  <% end %>
+</div><!-- /top row -->
+
+<!-- MIDDLE ROW -->
+<div class="row img-row">
+  <div class="col-md-3 center-block">
+    <%= image_tag(@gifs[4].url) %>
+  </div>
+
+  <div class="col-md-6">
+    <div class="col-md-8">
+      <h3>HERE'S THE PROMPT. PICK A GIF GIF GIF GIF GIF!.</h3>
+    </div>
+    <div class="col-md-4">
+      GAME INFO
+    </div>
+  </div>
+
+  <div class="col-md-3 center-block">
+    <%= image_tag(@gifs[5].url) %>
+  </div>
+</div><!-- /middle row -->
+
+
+<!-- BOTTOM ROW -->
+<div class="row img-row">
+  <% @gifs[6..9].each do |gif| %>
+    <div class="col-md-3 center-block">
+      <%= image_tag(gif.url) %>
+    </div>
+  <% end %>
+</div><!-- /bottom row -->

@@ -1,0 +1,16 @@
+.img-row {
+  height:33%;
+
+  .img-col {
+    text-align:center;
+  }
+}
+
+.img-row img {
+  max-height:250px;
+  max-width:275px;
+  padding:10px;
+  margin:10px;
+  border: 1px solid black;
+  border-radius:5px;
+}
