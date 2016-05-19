@@ -13,6 +13,8 @@ log/*.log
 *.log
 tmp/**/*
 tmp/*
+/log/development.log
+
 
 ## Specific to RubyMotion:
 .dat*
