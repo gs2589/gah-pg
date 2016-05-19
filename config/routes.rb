@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :players, except: [:index]
   resources :player_games
   resources :prompts, only: [:new, :create]
+  resources :sessions, only: [:create]
 end

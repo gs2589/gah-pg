@@ -1,5 +1,14 @@
-<h1>Home Gif World</h1>
+<h1>Gifs Against Humanity: Watch yo'self!</h1>
 <p>Wait for Awesomeness</p>
 <ul>
   
 </ul>
+
+
+<%= form_tag sessions_path do %>
+<%=label_tag :username, "Hi there! Who are you? Enter you username" %>
+<%= text_field_tag :username %><br>
+<%=label_tag :username, "Select Existing Game" %><br>
+<%= text_field_tag :existing_game_number%>
+<%= submit_tag "Play" %>
+<% end%>

@@ -21103,3 +21103,1046 @@ ORDER BY c.conname
 >>>>>>> f9b8d53c955b43449943199de41d122e31173195
 =======
 >>>>>>> firstview
+
+
+Started GET "/" for ::1 at 2016-05-19 16:11:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/Gabriel/Development/day8onwards/GAH/GAH/app/views/home/index.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/Gabriel/Development/day8onwards/GAH/GAH/app/views/home/index.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/home/index.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/home/index.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.5ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (51.5ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (111.4ms)
+
+
+Started GET "/" for ::1 at 2016-05-19 16:12:12 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `sessions_path' for #<#<Class:0x007fce93628478>:0x007fce932c1320>):
+     5: </ul>
+     6: 
+     7: 
+     8: <%= form_tag sessions_path do %>
+     9: <%=label_tag :username, "Hi there! Who are you? Enter you username" %>
+    10: <%= text_field_tag :username %>
+    11: <%= submit_tag "Play" %>
+  app/views/home/index.html.erb:8:in `_app_views_home_index_html_erb___637647793897994159_70262604536040'
+
+
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.2ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.9ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.2ms)
+
+
+Started GET "/" for ::1 at 2016-05-19 16:13:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4838ms (Views: 4830.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6b5ab25d61aa790d7b047ae6800ce2c8144d01180397a50fbb734f14a6466a5e.css?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/game.self-ee0500cb80905de7cf55b6624204ddbf654a2f59dc25b7ad74a0d99411f8897f.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/home.self-4ad660b95f80d3a135e0bd8f652bbd740d92269487801f4874a23daf9129d2a0.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/gifs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/players.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/assets/prompts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:13:26 -0400
+
+
+Started GET "/" for ::1 at 2016-05-19 16:16:36 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 219ms (Views: 218.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6b5ab25d61aa790d7b047ae6800ce2c8144d01180397a50fbb734f14a6466a5e.css?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/home.self-0167c1730feb48b0e86efce771182c44da17ebdf931356c6ef922d9f7c7272e6.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/game.self-ee0500cb80905de7cf55b6624204ddbf654a2f59dc25b7ad74a0d99411f8897f.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/gifs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/players.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/prompts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-19 16:16:37 -0400
+
+
+Started GET "/" for ::1 at 2016-05-19 16:17:16 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6b5ab25d61aa790d7b047ae6800ce2c8144d01180397a50fbb734f14a6466a5e.css?body=1" for ::1 at 2016-05-19 16:17:16 -0400
+
+
+Started GET "/assets/game.self-ee0500cb80905de7cf55b6624204ddbf654a2f59dc25b7ad74a0d99411f8897f.js?body=1" for ::1 at 2016-05-19 16:17:16 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-19 16:17:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-19 16:17:16 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-19 16:17:16 -0400
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:17:16 -0400
+
+
+Started GET "/assets/gifs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:17:16 -0400
+
+
+Started GET "/assets/home.self-0167c1730feb48b0e86efce771182c44da17ebdf931356c6ef922d9f7c7272e6.js?body=1" for ::1 at 2016-05-19 16:17:16 -0400
+
+
+Started GET "/assets/players.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/prompts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-19 16:17:17 -0400
+
+
+Started POST "/sessions" for ::1 at 2016-05-19 16:17:32 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"irYXu8mn7cDTnr3JTOWja9UzbOGonxXNVGj6WmKJSdxDH0U/gf5eKlyGN11CTPPUYRhF+ZH88ZA9zyZMB+wzog==", "username"=>"gabriel", "commit"=>"Play"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:3:in `create'
+
+
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.0ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.0ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-19 16:18:36 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"irYXu8mn7cDTnr3JTOWja9UzbOGonxXNVGj6WmKJSdxDH0U/gf5eKlyGN11CTPPUYRhF+ZH88ZA9zyZMB+wzog==", "username"=>"gabriel", "commit"=>"Play"}
+Completed 500 Internal Server Error in 363992ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:4:in `create'
+
+
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.1ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.4ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.9ms)
+
+
+Started GET "/" for ::1 at 2016-05-19 16:24:40 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6b5ab25d61aa790d7b047ae6800ce2c8144d01180397a50fbb734f14a6466a5e.css?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/game.self-ee0500cb80905de7cf55b6624204ddbf654a2f59dc25b7ad74a0d99411f8897f.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/gifs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/home.self-0167c1730feb48b0e86efce771182c44da17ebdf931356c6ef922d9f7c7272e6.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/players.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/prompts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-19 16:24:40 -0400
+
+
+Started GET "/" for ::1 at 2016-05-19 16:25:53 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 58ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6b5ab25d61aa790d7b047ae6800ce2c8144d01180397a50fbb734f14a6466a5e.css?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/game.self-ee0500cb80905de7cf55b6624204ddbf654a2f59dc25b7ad74a0d99411f8897f.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/gifs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/home.self-0167c1730feb48b0e86efce771182c44da17ebdf931356c6ef922d9f7c7272e6.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/players.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/prompts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-19 16:25:54 -0400
+
+
+Started GET "/" for ::1 at 2016-05-19 16:26:46 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6b5ab25d61aa790d7b047ae6800ce2c8144d01180397a50fbb734f14a6466a5e.css?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/game.self-ee0500cb80905de7cf55b6624204ddbf654a2f59dc25b7ad74a0d99411f8897f.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/gifs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/home.self-0167c1730feb48b0e86efce771182c44da17ebdf931356c6ef922d9f7c7272e6.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/players.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/prompts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-19 16:26:47 -0400
+
+
+Started POST "/sessions" for ::1 at 2016-05-19 16:26:58 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HzHVkeOurcySphBfMH11FpzAXrJgUSuMJV7quAwFconWmIcVq/ceJh2+mss+1CWpKOt3qlkyz9FM+TauaWAI9w==", "username"=>"gabriel", "existing_game_number"=>"1", "commit"=>"Play"}
+Completed 500 Internal Server Error in 477810ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:5:in `create'
+
+
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.2ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.1ms)
+
+
+Started GET "/" for ::1 at 2016-05-19 16:35:05 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-19 16:35:49 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SZVmrAdlw6+5NGGksq+2265eLL1PvW4kymuBtK1qL9mAPDQoTzxwRTYs6zC8BuZkGnUFpXbeinmjzF2iyA9Vpw==", "username"=>"gabriel", "existing_game_number"=>"1", "commit"=>"Play"}
+  [1m[35mPlayer Load (0.9ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT 1  [["username", "gabriel"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "players" ("username") VALUES ($1) RETURNING "id"  [["username", "gabriel"]]
+  [1m[36m (59.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mGame Load (0.5ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 71.2ms)
+
+ActiveRecord::HasManyThroughNestedAssociationsAreReadonly (Cannot modify association 'Game#players' because it goes through more than one other association.):
+  app/controllers/sessions_controller.rb:8:in `create'
+
+
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.6ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.9ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Gabriel/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.7ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-19 16:36:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SZVmrAdlw6+5NGGksq+2265eLL1PvW4kymuBtK1qL9mAPDQoTzxwRTYs6zC8BuZkGnUFpXbeinmjzF2iyA9Vpw==", "username"=>"gabriel", "existing_game_number"=>"1", "commit"=>"Play"}
+  [1m[35mPlayer Load (0.4ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT 1  [["username", "gabriel"]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/games/1
+  [1m[35mPlayer Load (1.6ms)[0m  SELECT "players".* FROM "players" INNER JOIN "player_round_gifs" ON "players"."id" = "player_round_gifs"."player_id" INNER JOIN "rounds" ON "player_round_gifs"."round_id" = "rounds"."id" WHERE "rounds"."game_id" = $1  [["game_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 302 Found in 165224ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/games/1" for ::1 at 2016-05-19 16:39:20 -0400
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" DEFAULT VALUES RETURNING "id"
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "gifs" SET "player_id" = NULL WHERE "gifs"."player_id" = $1  [["player_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/kGJW1lHbePSkE/giphy.gif"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 2], ["id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media2.giphy.com/media/4MeUvwKEB8kh2/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 2], ["id", 2]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/10NlKV9xWFVqhO/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 2], ["id", 3]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media2.giphy.com/media/2iFzh3DTEaW2c/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 2], ["id", 4]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/l2JdStUNFe3Mc66zu/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 2], ["id", 5]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/YukCiyS8OPAuA/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 2], ["id", 6]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/7sgwG8MhaBtG8/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 2], ["id", 7]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media0.giphy.com/media/nJrfVKoGxI6Pu/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 2], ["id", 8]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/nOzJ7Fw3jSIE/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 2], ["id", 9]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media2.giphy.com/media/xT5LMvmOApGsQDXGdq/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 2], ["id", 10]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35mPrompt Load (0.3ms)[0m  SELECT "prompts".* FROM "prompts"
+  Rendered games/show.html.erb within layouts/application (1139.6ms)
+Completed 200 OK in 1552ms (Views: 1505.6ms | ActiveRecord: 45.5ms)
+
+
+Started GET "/" for ::1 at 2016-05-19 16:40:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 326ms (Views: 316.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-19 16:41:07 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEmTq2IyOs0dgKP22gqQit+aSV3LNgejVEWcCOh3RCJd4MEvKmuJJ5KYKWLUo8A1a7FgRfJV4/494kAejRI+XA==", "username"=>"erin", "existing_game_number"=>"1", "commit"=>"Play"}
+  [1m[35mPlayer Load (0.4ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT 1  [["username", "erin"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" ("username") VALUES ($1) RETURNING "id"  [["username", "erin"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/games/1
+  [1m[36mPlayer Load (0.7ms)[0m  [1mSELECT "players".* FROM "players" INNER JOIN "player_round_gifs" ON "players"."id" = "player_round_gifs"."player_id" INNER JOIN "rounds" ON "player_round_gifs"."round_id" = "rounds"."id" WHERE "rounds"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mPlayer Load (0.4ms)[0m  SELECT "players".* FROM "players"
+Completed 302 Found in 306618ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/games/1" for ::1 at 2016-05-19 16:46:13 -0400
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" DEFAULT VALUES RETURNING "id"
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "gifs" SET "player_id" = NULL WHERE "gifs"."player_id" = $1  [["player_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/mHidnb5ev0y2c/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 4], ["id", 11]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/O8lz11yZmR5sc/giphy.gif"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 4], ["id", 12]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/wUSaoEgZg3ytG/giphy.gif"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 4], ["id", 13]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/S2eFVLgvV6384/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 4], ["id", 14]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media2.giphy.com/media/ButyivKFJSbsc/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 4], ["id", 15]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/SWsHWnS8iD1te/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 4], ["id", 16]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media0.giphy.com/media/gGUsRSqyIOnde/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 4], ["id", 17]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/mEcQckOlScBmU/giphy.gif"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 4], ["id", 18]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/10iNMVJ7D95JDi/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 4], ["id", 19]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/43wjtiLaqHVq8/giphy.gif"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 4], ["id", 20]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35mPrompt Load (0.4ms)[0m  SELECT "prompts".* FROM "prompts"
+  Rendered games/show.html.erb within layouts/application (1102.3ms)
+Completed 200 OK in 1154ms (Views: 1113.0ms | ActiveRecord: 40.5ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-19 16:46:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEmTq2IyOs0dgKP22gqQit+aSV3LNgejVEWcCOh3RCJd4MEvKmuJJ5KYKWLUo8A1a7FgRfJV4/494kAejRI+XA==", "username"=>"mayank", "existing_game_number"=>"1", "commit"=>"Play"}
+  [1m[35mPlayer Load (0.4ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT 1  [["username", "mayank"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" ("username") VALUES ($1) RETURNING "id"  [["username", "mayank"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mGame Load (0.4ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/games/1
+Completed 302 Found in 48ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/games/1" for ::1 at 2016-05-19 16:46:30 -0400
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "players" DEFAULT VALUES RETURNING "id"
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "gifs" SET "player_id" = NULL WHERE "gifs"."player_id" = $1  [["player_id", 6]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/12h9ewRtIP3ohG/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 6], ["id", 21]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media0.giphy.com/media/10UydIOWRasZe8/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 6], ["id", 22]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/g0Ee06hGvaEw0/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 6], ["id", 23]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/rczY5u5jPdita/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 6], ["id", 24]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/1hrxh0uZODzzO/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 6], ["id", 25]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/pCpmOBdRzQLn2/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 6], ["id", 26]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "https://media4.giphy.com/media/Pet1xIWpLNJv2/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 6], ["id", 27]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media2.giphy.com/media/xTiTnDxKQsVPwyGiaY/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 6], ["id", 28]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/bU9amh9Y8cqSA/giphy.gif"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 6], ["id", 29]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "https://media4.giphy.com/media/jQuRVPtyYVqO4/giphy.gif"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 6], ["id", 30]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35mPrompt Load (0.3ms)[0m  SELECT "prompts".* FROM "prompts"
+  Rendered games/show.html.erb within layouts/application (696.6ms)
+Completed 200 OK in 968ms (Views: 929.7ms | ActiveRecord: 37.1ms)
+
+
+Started GET "/games/1" for ::1 at 2016-05-19 16:47:28 -0400
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "players" DEFAULT VALUES RETURNING "id"
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "gifs" SET "player_id" = NULL WHERE "gifs"."player_id" = $1  [["player_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/14uFmEeEUzQVLG/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 7], ["id", 31]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media2.giphy.com/media/HBEoTYdZAWzL2/giphy.gif"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 7], ["id", 32]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/DL8jyWeEInQYw/giphy.gif"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 7], ["id", 33]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/12MWE83YGPOlQQ/giphy.gif"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 7], ["id", 34]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/R99ebd1uZ7YD6/giphy.gif"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 7], ["id", 35]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/JEuqn3ft25C3m/giphy.gif"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 7], ["id", 36]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/nyTGzGMVnI4kE/giphy.gif"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 7], ["id", 37]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/E6XjfvFGRN56M/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 7], ["id", 38]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/sCmFQ0gStfjl6/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 7], ["id", 39]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media2.giphy.com/media/JWLKOqnomHDDG/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 7], ["id", 40]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35mPrompt Load (0.2ms)[0m  SELECT "prompts".* FROM "prompts"
+  Rendered games/show.html.erb within layouts/application (706.0ms)
+Completed 200 OK in 773ms (Views: 739.0ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/assets/application.self-6b5ab25d61aa790d7b047ae6800ce2c8144d01180397a50fbb734f14a6466a5e.css?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/game.self-ee0500cb80905de7cf55b6624204ddbf654a2f59dc25b7ad74a0d99411f8897f.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/gifs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/home.self-0167c1730feb48b0e86efce771182c44da17ebdf931356c6ef922d9f7c7272e6.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/players.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/prompts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
