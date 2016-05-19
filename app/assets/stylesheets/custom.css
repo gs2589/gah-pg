@@ -1,9 +1,10 @@
-.img-row {
-  height:33%;
+/* GAMES */
 
-  .img-col {
-    text-align:center;
-  }
+body {
+  background: #222222;
+}
+
+.img-row {
 }
 
 .img-row img {
@@ -13,4 +14,14 @@
   margin:10px;
   border: 1px solid black;
   border-radius:5px;
+  background-color: #444444;
+}
+
+.prompt-box {
+  background-color:white;
+  text-align:left;
+  padding:30px;
+  border-radius: 5px;
+  height:150px;
+  margin:25px;
 }
