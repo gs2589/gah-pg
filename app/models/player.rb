@@ -9,11 +9,8 @@ class Player < ActiveRecord::Base
 
   def starting_hand
     self.gifs.delete_all
-    8.times do
+    10.times do
      self.gifs << Gif.random
-   end 
+   end
  end
-
- 
 end
-

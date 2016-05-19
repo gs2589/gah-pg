@@ -1,2 +1,46 @@
-<h1>Games#show</h1>
-<p>Find me in app/views/games/show.html.erb</p>
+
+<!-- remove this from view once we have data from controller -->
+<% @player = Player.new %>
+<% @player.save %>
+
+<% @player.starting_hand %>
+<% @gifs = @player.gifs %>
+
+<% @prompt = Prompt.working_random_prompt.phrase %>
+
+
+<!-- TOP ROW -->
+<div class="row img-row">
+  <% @gifs[0..3].each do |gif| %>
+    <div class="col-md-3 center-block gif-img">
+      <%= link_to image_tag(gif.url), root_path %>
+    </div>
+  <% end %>
+</div><!-- /top row -->
+
+<!-- MIDDLE ROW -->
+<div class="row img-row">
+  <div class="col-md-3 center-block gif-img">
+    <%= link_to image_tag(@gifs[4].url), root_path %>
+  </div>
+
+  <div class="col-md-6">
+    <div class="col-md-12 prompt-box">
+      <h3><%= @prompt %></h3>
+    </div>
+  </div>
+
+  <div class="col-md-3 center-block gif-img">
+    <%= link_to image_tag(@gifs[5].url), root_path %>
+  </div>
+</div><!-- /middle row -->
+
+
+<!-- BOTTOM ROW -->
+<div class="row img-row">
+  <% @gifs[6..9].each do |gif| %>
+    <div class="col-md-3 center-block gif-img">
+      <%= link_to image_tag(gif.url), root_path %>
+    </div>
+  <% end %>
+</div><!-- /bottom row -->
