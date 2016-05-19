@@ -4,9 +4,6 @@ body {
   background: #222222;
 }
 
-.img-row {
-}
-
 .img-row img {
   max-height:275px;
   max-width:275px;
@@ -17,6 +14,12 @@ body {
   background-color: #444444;
 }
 
+.img-row img:hover {
+  -ms-transform: rotate(3deg); /* IE 9 */
+  -webkit-transform: rotate(3deg); /* Chrome, Safari, Opera */
+  transform: rotate(3deg);
+}
+
 .prompt-box {
   background-color:white;
   text-align:left;
@@ -24,4 +27,10 @@ body {
   border-radius: 10px;
   height:150px;
   margin:25px;
+}
+
+.prompt-box:hover {
+  -ms-transform: rotate(358deg); /* IE 9 */
+  -webkit-transform: rotate(358deg); /* Chrome, Safari, Opera */
+  transform: rotate(358deg);
 }
