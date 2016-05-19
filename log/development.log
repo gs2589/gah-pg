@@ -2666,3 +2666,10 @@ Started GET "/assets/prompts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-19 11:11:19 -0400
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/xT5LMu7WXiIYSSjScU/giphy.gif"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mGif Load (0.8ms)[0m  SELECT "gifs".* FROM "gifs"
+  [1m[36mGif Load (2.2ms)[0m  [1mSELECT  "gifs".* FROM "gifs"  ORDER BY "gifs"."id" ASC LIMIT 1[0m
+  [1m[35mGif Load (0.9ms)[0m  SELECT  "gifs".* FROM "gifs"  ORDER BY "gifs"."id" ASC LIMIT 1
+  [1m[36mGame Load (0.8ms)[0m  [1mSELECT "games".* FROM "games"[0m
