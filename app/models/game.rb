@@ -1,8 +1,7 @@
 class Game < ActiveRecord::Base
-  has_many :players, through: :player_games
-  has_one :prompt
-
-  has_one :winner, class_name: "Player" # as a winner, how do we record this?
+  has_many :rounds
+  has_many :players, through: :rounds
+  has_one  :champion, class_name: "Player"
 
   @prompt_mode=false
 
