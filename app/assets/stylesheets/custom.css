@@ -16,6 +16,7 @@ body {
 }
 
 
+
 .gif-button:hover input {
   -ms-transform: rotate(358deg); /* IE 9 */
   -webkit-transform: rotate(358deg); /* Chrome, Safari, Opera */
