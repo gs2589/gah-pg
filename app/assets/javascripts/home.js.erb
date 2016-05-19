@@ -1,0 +1,11 @@
+$(document).ready(function(){
+  $('#gif_generator').click(function(e){
+      e.preventDefault()
+      $("ul").append('<img src= <%= Gif.randomgif  %>   >');
+    
+
+  })
+ 
+  
+
+})
