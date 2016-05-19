@@ -4,14 +4,12 @@ body {
   background: #222222;
 }
 
-.img-row {
-}
 
-.img-row img {
-  max-height:275px;
-  max-width:275px;
-  padding:10px;
-  margin:10px;
+.gif-button input {
+  max-height: 275px;
+  max-width: 275px;
+  padding:20px;
+  margin: 10px;
   border: 1px solid black;
   border-radius:15px;
   background-color: #444444;
@@ -19,8 +17,12 @@ body {
 
 
 
-img:hover{
-background: purple; /* make this whatever you want */
+
+.gif-button:hover input {
+  -ms-transform: rotate(358deg); /* IE 9 */
+  -webkit-transform: rotate(358deg); /* Chrome, Safari, Opera */
+  transform: rotate(358deg);
+background: purple;
 }
 
 
@@ -32,3 +34,11 @@ background: purple; /* make this whatever you want */
   height:150px;
   margin:25px;
 }
+
+.prompt-box:hover {
+
+   -ms-transform: rotate(358deg); /* IE 9 */
+   -webkit-transform: rotate(358deg); /* Chrome, Safari, Opera */
+   transform: rotate(358deg);
+ }
+

@@ -22146,3 +22146,513 @@ Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb
 
 
 Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-19 16:47:29 -0400
+
+
+Started GET "/games/1" for ::1 at 2016-05-19 16:50:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "players" DEFAULT VALUES RETURNING "id"[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "gifs" SET "player_id" = NULL WHERE "gifs"."player_id" = $1[0m  [["player_id", 8]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "http://media3.giphy.com/media/C4POYOxiTCfmM/giphy.gif"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2  [["player_id", 8], ["id", 41]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "https://media2.giphy.com/media/mx68czGrQiYQE/giphy.gif"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2  [["player_id", 8], ["id", 42]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "http://media3.giphy.com/media/WDgb70xjya7hm/giphy.gif"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2  [["player_id", 8], ["id", 43]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "http://media4.giphy.com/media/3orif40Eo3AOd3EDvi/giphy.gif"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2  [["player_id", 8], ["id", 44]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "http://media0.giphy.com/media/GfQucPYWgYKg8/giphy.gif"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2  [["player_id", 8], ["id", 45]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "http://media4.giphy.com/media/HH2gZXMG4dsXK/giphy.gif"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2  [["player_id", 8], ["id", 46]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "http://media0.giphy.com/media/L6ph7lcUZtRMA/giphy.gif"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2  [["player_id", 8], ["id", 47]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "http://media0.giphy.com/media/uOh4GskvP44Mw/giphy.gif"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2  [["player_id", 8], ["id", 48]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "http://media0.giphy.com/media/I3kZocRxuxwY/giphy.gif"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2  [["player_id", 8], ["id", 49]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "http://media0.giphy.com/media/q2ClS77UVsWty/giphy.gif"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2  [["player_id", 8], ["id", 50]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "prompts"
+  [1m[36mPrompt Load (0.3ms)[0m  [1mSELECT "prompts".* FROM "prompts"[0m
+  Rendered games/show.html.erb within layouts/application (875.9ms)
+Completed 200 OK in 1218ms (Views: 1167.7ms | ActiveRecord: 41.9ms)
+
+
+Started GET "/assets/application.self-6b5ab25d61aa790d7b047ae6800ce2c8144d01180397a50fbb734f14a6466a5e.css?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/game.self-ee0500cb80905de7cf55b6624204ddbf654a2f59dc25b7ad74a0d99411f8897f.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/gifs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/home.self-0167c1730feb48b0e86efce771182c44da17ebdf931356c6ef922d9f7c7272e6.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/players.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/prompts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-19 16:50:55 -0400
+
+
+Started GET "/" for ::1 at 2016-05-19 16:51:13 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-19 16:52:10 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GOh286x6O28t1Q9YGJ9NdqqtOHHngWy4a8eSoZEWcRTRQSR35COIhaLNhcwWNh3JHoYRad7iiOUCYE639HMLag==", "username"=>"steven", "existing_game_number"=>"1", "commit"=>"Play"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT 1  [["username", "steven"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "players" ("username") VALUES ($1) RETURNING "id"  [["username", "steven"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mGame Load (0.4ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/games/1
+  [1m[36mPlayer Load (0.9ms)[0m  [1mSELECT "players".* FROM "players" INNER JOIN "player_round_gifs" ON "players"."id" = "player_round_gifs"."player_id" INNER JOIN "rounds" ON "player_round_gifs"."round_id" = "rounds"."id" WHERE "rounds"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 302 Found in 847858ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/" for ::1 at 2016-05-19 17:06:18 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6b5ab25d61aa790d7b047ae6800ce2c8144d01180397a50fbb734f14a6466a5e.css?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/game.self-ee0500cb80905de7cf55b6624204ddbf654a2f59dc25b7ad74a0d99411f8897f.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/gifs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/home.self-0167c1730feb48b0e86efce771182c44da17ebdf931356c6ef922d9f7c7272e6.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/players.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/prompts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-19 17:06:18 -0400
+
+
+Started POST "/sessions" for ::1 at 2016-05-19 17:06:34 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o6EyyWifgtVd2LBqLxFKJZ1OVxODLHfmdRd/TorLeHFqCGBNIMYxP9LAOv4huBqaKWV+C7pPk7scsKNY764CDw==", "username"=>"robin", "existing_game_number"=>"1", "commit"=>"Play"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT 1  [["username", "robin"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "players" ("username") VALUES ($1) RETURNING "id"  [["username", "robin"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/games/1
+Completed 302 Found in 7207ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/games/1" for ::1 at 2016-05-19 17:06:41 -0400
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" DEFAULT VALUES RETURNING "id"
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "gifs" SET "player_id" = NULL WHERE "gifs"."player_id" = $1  [["player_id", 11]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/T0Az6rBOUUlTq/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 11], ["id", 51]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media0.giphy.com/media/1s7BJJe0aKuys/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 11], ["id", 52]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/Yox9N0xqcZdJe/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 11], ["id", 53]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/2MY1PElDDkh6o/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 11], ["id", 54]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/x8fieftq7Zzqw/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 11], ["id", 55]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media0.giphy.com/media/ayayXpz37AI4E/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 11], ["id", 56]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/qLiEEC5tffWkE/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 11], ["id", 57]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/3oEduWIEO6pxYmjovm/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 11], ["id", 58]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/4sPlXaoywKRfW/giphy.gif"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 11], ["id", 59]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media0.giphy.com/media/xT5LMXIOw0PEv46s3C/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 11], ["id", 60]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35mPrompt Load (0.3ms)[0m  SELECT "prompts".* FROM "prompts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "prompts".* FROM "prompts"
+  Rendered games/show.html.erb within layouts/application (1111.2ms)
+Completed 200 OK in 1157ms (Views: 1120.6ms | ActiveRecord: 36.1ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-19 17:06:54 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o6EyyWifgtVd2LBqLxFKJZ1OVxODLHfmdRd/TorLeHFqCGBNIMYxP9LAOv4huBqaKWV+C7pPk7scsKNY764CDw==", "username"=>"robin", "existing_game_number"=>"1", "commit"=>"Play"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT 1[0m  [["username", "robin"]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/games/1
+Completed 302 Found in 800405ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/games/1" for ::1 at 2016-05-19 17:20:14 -0400
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "players" DEFAULT VALUES RETURNING "id"
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "gifs" SET "player_id" = NULL WHERE "gifs"."player_id" = $1  [["player_id", 12]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/s7YHoFlmNCbsI/giphy.gif"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 12], ["id", 61]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/9b8kMjgcDpo88/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 12], ["id", 62]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media0.giphy.com/media/fXMUrIdKU2tzy/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 12], ["id", 63]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media0.giphy.com/media/5LCWfFXbECruw/giphy.gif"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 12], ["id", 64]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/9JxSSe30IxyBa/giphy.gif"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 12], ["id", 65]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/3o6Mb82ocNth7kauju/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 12], ["id", 66]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/WLPz2bzTXEQP6/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 12], ["id", 67]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media0.giphy.com/media/HWam7kMsD04x2/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 12], ["id", 68]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/owPKAbBPZdC6I/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 12], ["id", 69]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/4ecYrsXd2abss/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 12], ["id", 70]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35mPrompt Load (0.3ms)[0m  SELECT "prompts".* FROM "prompts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "prompts".* FROM "prompts"
+  Rendered games/show.html.erb within layouts/application (1122.9ms)
+Completed 200 OK in 1173ms (Views: 1133.1ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/" for ::1 at 2016-05-19 17:20:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 343ms (Views: 333.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-19 17:20:47 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GEvVw2jqdslC251Q59ben+ol98303XxvIFCmAiiFfc/R4odHILPFI83DF8Tpf44gXg7e1c2+mDJJ93oUTeAHsQ==", "username"=>"sophie", "existing_game_number"=>"1", "commit"=>"Play"}
+  [1m[35mPlayer Load (0.4ms)[0m  SELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT 1  [["username", "sophie"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" ("username") VALUES ($1) RETURNING "id"  [["username", "sophie"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/games/1
+Completed 302 Found in 27489ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/games/1" for ::1 at 2016-05-19 17:21:15 -0400
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" DEFAULT VALUES RETURNING "id"
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "gifs" SET "player_id" = NULL WHERE "gifs"."player_id" = $1  [["player_id", 14]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/zydqDrat050Ag/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 14], ["id", 71]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media4.giphy.com/media/LOCx5fTs31MXe/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 14], ["id", 72]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media2.giphy.com/media/nPMrIudNcUdUs/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 14], ["id", 73]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media0.giphy.com/media/xT5LMX2RurIz3hh1xm/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 14], ["id", 74]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/gW9CnjXumu9os/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 14], ["id", 75]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media2.giphy.com/media/VmiPJZAEN98U8/giphy.gif"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 14], ["id", 76]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/tiDqqTvKgfScU/giphy.gif"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 14], ["id", 77]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media0.giphy.com/media/3o6UBpHgaXFDNAuttm/giphy.gif"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 14], ["id", 78]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media1.giphy.com/media/AuFPPdcSpeqMo/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 14], ["id", 79]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gifs" ("url") VALUES ($1) RETURNING "id"  [["url", "http://media3.giphy.com/media/kS2K8aB367MpG/giphy.gif"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "gifs" SET "player_id" = $1 WHERE "gifs"."id" = $2[0m  [["player_id", 14], ["id", 80]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35mPrompt Load (0.3ms)[0m  SELECT "prompts".* FROM "prompts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "prompts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "prompts".* FROM "prompts"
+  Rendered games/show.html.erb within layouts/application (680.6ms)
+Completed 200 OK in 724ms (Views: 685.3ms | ActiveRecord: 37.8ms)
