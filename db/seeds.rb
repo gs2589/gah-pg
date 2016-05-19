@@ -14,7 +14,9 @@ BlackCards.each do |card|
     end
 
 
-
+new_game=Game.create()
+new_round=Round.create(game: new_game)
+player_1=Player.create()
 
 #Prompts.each do |prompt|
   
