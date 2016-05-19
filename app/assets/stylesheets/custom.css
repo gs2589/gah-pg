@@ -17,6 +17,13 @@ body {
   background-color: #444444;
 }
 
+
+
+img:hover{
+background: purple; /* make this whatever you want */
+}
+
+
 .prompt-box {
   background-color:white;
   text-align:left;
