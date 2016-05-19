@@ -17,6 +17,7 @@ tmp/*
 /.log
 /log/
 /log/*
+log/development.log
 
 
 ## Specific to RubyMotion:
