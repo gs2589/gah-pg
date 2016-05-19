@@ -17,19 +17,6 @@ class Game < ActiveRecord::Base
 
 
 
-   def get_random_prompt()
-
-    offset=rand(Prompt.count)
-
-    if self.multiple_prompt_mode?
-    offset2=rand(Prompt.count)
-      #return [Prompt.offset(offset).first, Prompt.offset(offset2).first ]
-      #this feature is currently not supported
-    else
-      offset=rand(Prompt.count)
-      self.prompt=Prompt.offset(offset).first
-      self.save
-    end
-  end
+   
 
 end

@@ -19,6 +19,7 @@ log/*.log
 tmp/**/*
 tmp/*
 
+
 ## Specific to RubyMotion:
 .dat*
 .repl_history
