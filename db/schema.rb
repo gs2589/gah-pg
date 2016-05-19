@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160519153218) do
-
+ActiveRecord::Schema.define(version: 20160519174012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,7 +39,6 @@ ActiveRecord::Schema.define(version: 20160519153218) do
   create_table "prompts", force: :cascade do |t|
     t.string  "phrase"
     t.integer "pick"
-    t.integer "round_id"
   end
 
   create_table "rounds", force: :cascade do |t|
