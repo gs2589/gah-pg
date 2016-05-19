@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160518205001) do
+ActiveRecord::Schema.define(version: 20160519153218) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "games", force: :cascade do |t|
-    t.integer "winner_id"
+    t.integer "champion_id"
   end
 
   create_table "gifs", force: :cascade do |t|
@@ -25,13 +26,11 @@ ActiveRecord::Schema.define(version: 20160518205001) do
     t.integer "player_id"
   end
 
-  create_table "player_games", force: :cascade do |t|
+  create_table "player_round_gifs", force: :cascade do |t|
     t.integer "player_id"
-    t.integer "game_id"
+    t.integer "round_id"
+    t.integer "gif_id"
   end
-
-  add_index "player_games", ["game_id"], name: "index_player_games_on_game_id", using: :btree
-  add_index "player_games", ["player_id"], name: "index_player_games_on_player_id", using: :btree
 
   create_table "players", force: :cascade do |t|
     t.string  "username"
@@ -41,7 +40,15 @@ ActiveRecord::Schema.define(version: 20160518205001) do
   create_table "prompts", force: :cascade do |t|
     t.string  "phrase"
     t.integer "pick"
+    t.integer "round_id"
+  end
+
+  create_table "rounds", force: :cascade do |t|
     t.integer "game_id"
+    t.integer "judge_id"
+    t.integer "prompt_id"
+    t.integer "winner_id"
+    t.integer "winning_gif_id"
   end
 
 end
