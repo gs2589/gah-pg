@@ -7,6 +7,5 @@ class SessionsController < ApplicationController
     @game=Game.find(params[:existing_game_number])
     #@game.players<<@player
     redirect_to game_path(@game)
-    binding.pry
   end
 end
