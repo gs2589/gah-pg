@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160519174012) do
+ActiveRecord::Schema.define(version: 20160520134241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "game_players", force: :cascade do |t|
+    t.integer "game_id"
+    t.integer "player_id"
+  end
 
   create_table "games", force: :cascade do |t|
     t.integer "champion_id"
@@ -23,12 +28,6 @@ ActiveRecord::Schema.define(version: 20160519174012) do
   create_table "gifs", force: :cascade do |t|
     t.string  "url"
     t.integer "player_id"
-  end
-
-  create_table "player_round_gifs", force: :cascade do |t|
-    t.integer "player_id"
-    t.integer "round_id"
-    t.integer "gif_id"
   end
 
   create_table "players", force: :cascade do |t|
@@ -47,6 +46,12 @@ ActiveRecord::Schema.define(version: 20160519174012) do
     t.integer "prompt_id"
     t.integer "winner_id"
     t.integer "winning_gif_id"
+  end
+
+  create_table "selections", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "round_id"
+    t.integer "selected_gif_id"
   end
 
 end

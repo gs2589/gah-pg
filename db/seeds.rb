@@ -17,6 +17,16 @@ BlackCards.each do |card|
 new_game=Game.create()
 new_round=Round.create(game: new_game)
 player_1=Player.create()
+player_2=Player.create()
+new_game.players<<player_1
+new_game.players<<player_2
+new_round.judge=player_1
+new_gif_1=Gif.random
+new_gif_2=Gif.random
+new_gif_3=Gif.random
+
+
+
 
 #Prompts.each do |prompt|
   

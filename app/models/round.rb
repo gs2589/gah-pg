@@ -1,12 +1,12 @@
 class Round < ActiveRecord::Base
   belongs_to :game
-  has_many :player_round_gifs
   belongs_to :prompt
-  has_one :judge, class_name: "Player"
-  has_one :winner, class_name: "Player"
-  has_one :winning_gif, class_name: "Gif"
-  has_many :players, through: :player_round_gifs
-  has_many :gifs, through: :player_round_gifs
+  has_many :players, through: :games
+  has_many :gifs, through: :players
+  has_many :selections
+  belongs_to :judge, class_name: "Player"
+  belongs_to :winner, class_name: "Player"
+  belongs_to :winning_gif, class_name: "Gif"
 
 
 
