@@ -2,6 +2,7 @@ class RoundsController < ApplicationController
 
 
   def create
+    puts ("I am the Rounds Controller Create")
     # create a new round
     # assign random prompt
     # assign judge

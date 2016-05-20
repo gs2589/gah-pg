@@ -12,7 +12,7 @@
   <% @gifs[0..3].each do |gif| %>
   <div class="col-md-3 center-block gif-img">
     <div class="gif-button">
-      <%= form_for PlayerRoundGif.new do |f| %>
+      <%= form_for Selection.new do |f| %>
       <%= f.hidden_field :gif_id, :value => gif.id %>
       <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
       <% end %>
@@ -25,7 +25,7 @@
 <div class="row img-row">
   <div class="col-md-3 center-block gif-img">
     <div class="gif-button">
-      <%= form_for PlayerRoundGif.new do |f| %>
+      <%= form_for Selection.new do |f| %>
       <%= f.hidden_field :gif_id, :value => @gifs[4].id %>
       <%= f.submit "I Choose You!", :type => :image, :src => @gifs[4].url %>
       <% end %>
@@ -40,7 +40,7 @@
 
   <div class="col-md-3 center-block gif-img">
     <div class="gif-button">
-     <%= form_for PlayerRoundGif.new do |f| %>
+     <%= form_for Selection.new do |f| %>
      <%= f.hidden_field :gif_id, :value => @gifs[5].id %>
      <%= f.submit "I Choose You!", :type => :image, :src => @gifs[5].url %>
    <% end %>
@@ -54,7 +54,7 @@
   <% @gifs[6..9].each do |gif| %>
   <div class="col-md-3 center-block gif-img">
   <div class="gif-button">
-    <%= form_for PlayerRoundGif.new do |f| %>
+    <%= form_for Selection.new do |f| %>
     <%= f.hidden_field :gif_id, :value => gif.id %>
     <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
     <% end %>

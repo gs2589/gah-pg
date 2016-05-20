@@ -1,9 +1,4 @@
 
 <!-- check if winner%>
-  <! show results partial, player presses button to get those results  %>
-<% if @round.judge == current_user %>
-  <%= render 'show_czar' %>
-<% else %>
-  <%= render 'show_player' %>
-<% end %>
 
+  <%= render 'show_player' %>
