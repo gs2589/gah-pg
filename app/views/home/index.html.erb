@@ -1,14 +1,38 @@
-<h1>Gifs Against Humanity: Watch yo'self!</h1>
-<p>Wait for Awesomeness</p>
-<ul>
-  
-</ul>
+<div class="row">
+  <div class="col-md-6 center-block">
+    <div class="welcome-card">
+      <div class="site-title">
+        <h1>Gifs
+        </br>Against
+        </br>Humanity</h1>
+      </div><!-- /.site-title -->
+    </div><!--/.welcome card-->
+  </div><!-- /.col-md-6 -->
 
+  <div class="col-md-6">
+    <div class="info-card">
+      <div class="info-gif">
+        <%= image_tag(Gif.welcome) %>
+      </div>
 
-<%= form_tag sessions_path do %>
-<%=label_tag :username, "Hi there! Who are you? Enter you username" %>
-<%= text_field_tag :username %><br>
-<%=label_tag :username, "Select Existing Game" %><br>
-<%= text_field_tag :existing_game_number%>
-<%= submit_tag "Play" %>
-<% end%>
+      <div class="user-info">
+        <%= form_tag sessions_path do %>
+
+          <div class="form-group">
+            <%=label_tag :username, "Who the heck are you?" %>
+            <%= text_field_tag :username, "", class: "form-control", autofocus: "true" %><br>
+          </div>
+
+          <div class="form-group">
+            <%=label_tag :username, "Your game #" %><br>
+            <%= text_field_tag :existing_game_number, "", class: "form-control" %>
+          </div>
+
+          <%= submit_tag "Play" , class: "btn btn-success btn-lg btn-block"%>
+
+        <% end%>
+      </div><!-- .user-info -->
+
+    </div><!-- /.info-card -->
+  </div><!-- /.col-md-6 -->
+</div><!-- /.row -->

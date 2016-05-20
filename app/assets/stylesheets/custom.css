@@ -4,6 +4,53 @@ body {
   background: #222222;
 }
 
+/* HOME */
+
+.welcome-card {
+  width:303px;
+  height:472px;
+  background-color: #111111;
+  border-radius:15px;
+  padding:30px;
+  margin-left:400px;
+  margin-top: 100px;
+
+  -ms-transform: rotate(340deg); /* IE 9 */
+  -webkit-transform: rotate(340deg); /* Chrome, Safari, Opera */
+  transform: rotate(340deg);
+
+  .site-title {
+    color: #ffffff;
+  }
+}
+
+.info-card {
+  width:303px;
+  height:472px;
+  background-color:white;
+  border-radius:15px;
+  padding:30px;
+  margin-top:100px;
+
+  .info-gif img {
+    max-width:250px;
+    max-height:250px;
+    padding-bottom:30px;
+    border-radius: 10px;
+  }
+
+  .user-info {
+    margin-top:10px;
+    .user-info-label {
+      color: black;
+    }
+  }
+
+}
+
+
+
+
 /* GAMES */
 
 .gif-button input {
@@ -30,19 +77,20 @@ body {
   border-radius: 10px;
   height:150px;
   margin:25px;
+  border:1px solid #111111;
 }
 
 .prompt-box:hover {
-   -ms-transform: rotate(358deg); /* IE 9 */
-   -webkit-transform: rotate(358deg); /* Chrome, Safari, Opera */
-   transform: rotate(358deg);
+   -ms-transform: rotate(2deg); /* IE 9 */
+   -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
+   transform: rotate(2deg);
  }
 
  .judge-instructions {
    color:#ffffff;
    height:100px;
    border-radius: 10px;
-   margin-top:120px;
+   margin-top:100px;
  }
 
  .judge-instructions img {

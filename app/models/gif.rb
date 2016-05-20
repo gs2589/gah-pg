@@ -17,4 +17,23 @@ class Gif < ActiveRecord::Base
    JSON.load(open("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC"))['data']['image_original_url']
  end
 
+ def self.welcome
+   gifs = ['http://media3.giphy.com/media/btpKtFkGHi66k/giphy.gif',
+            'http://media3.giphy.com/media/13x4ey4sju0V6E/giphy.gif',
+            'http://media0.giphy.com/media/sp64EkjOxvY1W/giphy.gif',
+            'http://media0.giphy.com/media/GGv8GTYHdT3bi/giphy.gif',
+            'http://media0.giphy.com/media/cXqYZgplfOz1S/giphy.gif',
+            'http://media1.giphy.com/media/b6Ie5mPADSmje/giphy.gif',
+            'http://media2.giphy.com/media/R1Mvr97w9b5mw/giphy.gif',
+            'http://media0.giphy.com/media/VWhCKTr9NhxbG/giphy.gif',
+            'https://media1.giphy.com/media/Nyiv0I7uzXPZm/giphy.gif',
+            'https://media.giphy.com/media/12mMxkzKzbxaLK/giphy.gif',
+            'https://media.giphy.com/media/3o85xjSETVG3OpPyx2/giphy.gif',
+            'https://media.giphy.com/media/l0K41Ju0jBPuNxGIE/giphy.gif',
+            'https://media.giphy.com/media/26vUBsNTnP1sD1tbW/giphy.gif',
+            'https://media.giphy.com/media/R9rsJYJmYk4SY/giphy.gif',
+            'http://media4.giphy.com/media/1KxUJONgu8tji/giphy.gif']
+   gifs.shuffle.first
+ end
+
 end

@@ -1,18 +1,14 @@
 <!-- JUDGE VIEW PARTIAL -->
 <!-- remove this from view once we have data from controller -->
 
-<% @gifs = Gif.take(20).shuffle.take(4) %>
+<% @gifs = Gif.take(50).shuffle.take(4) %>
 
 <% @prompt = Prompt.working_random_prompt.phrase %>
 <% @game = Game.last %>
 
 
-<!-- TOP ROW -->
-<div class="row">
 
-</div><!-- /top row -->
-
-<!-- MIDDLE ROW -->
+<!-- CARD ROW -->
 <div class="row img-row">
   <div class="col-md-3 center-block gif-img">
 
