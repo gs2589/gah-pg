@@ -21,9 +21,6 @@ def get_random_prompt()
       #this feature is currently not supported
     else
       offset=rand(Prompt.count)
-
-      require 'pry'
-      binding.pry
       self.prompt=Prompt.offset(offset).first
       self.save
     end
