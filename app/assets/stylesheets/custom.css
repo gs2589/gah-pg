@@ -42,5 +42,12 @@ body {
    color:#ffffff;
    height:100px;
    border-radius: 10px;
-   margin-top:150px;
+   margin-top:120px;
+ }
+
+ .judge-instructions img {
+   height:75px;
+   display:inline;
+   -ms-transform: rotate(37deg); /* IE 9 */
+   -webkit-transform: rotate(37deg); /* Chrome, Safari, Opera */
  }

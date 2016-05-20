@@ -1,10 +1,6 @@
 
 <!-- remove this from view once we have data from controller -->
-<% @player = Player.new %>
-<% @player.save %>
-
-<% @player.starting_hand %>
-<% @gifs = @player.gifs %>
+<% @gifs = Gif.take(100).shuffle.take(10) %>
 
 <% @prompt = Prompt.working_random_prompt.phrase %>
 <% @game = Game.last %>

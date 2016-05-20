@@ -1,10 +1,7 @@
 <!-- JUDGE VIEW PARTIAL -->
 <!-- remove this from view once we have data from controller -->
-<% @player = Player.new %>
-<% @player.save %>
 
-<% @player.starting_hand %>
-<% @gifs = @player.gifs %>
+<% @gifs = Gif.take(20).shuffle.take(4) %>
 
 <% @prompt = Prompt.working_random_prompt.phrase %>
 <% @game = Game.last %>
@@ -35,7 +32,7 @@
 
 <!-- BOTTOM ROW -->
 <div class="row img-row">
-  <% @gifs[6..9].each do |gif| %>
+  <% @gifs[0..3].each do |gif| %>
   <div class="col-md-3 center-block gif-img">
   <div class="gif-button">
     <%= form_for PlayerRoundGif.new do |f| %>
@@ -48,5 +45,5 @@
 </div><!-- /bottom row -->
 
 <div class="judge-instructions text-center">
-  <h4>Your turn, gif czar. Choose the best gif!</h4>
+  <img src="<%= asset_path( 'crown-tilt.png' ) %>"><h4>Your turn, gif czar. Crown the best gif!</h4>
 </div>
