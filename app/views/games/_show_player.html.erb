@@ -1,0 +1,68 @@
+
+<!-- remove this from view once we have data from controller -->
+<% @player = Player.new %>
+<% @player.save %>
+
+<% @player.starting_hand %>
+<% @gifs = @player.gifs %>
+
+<% @prompt = Prompt.working_random_prompt.phrase %>
+<% @game = Game.last %>
+
+
+
+<!-- TOP ROW -->
+<div class="row img-row">
+  <% @gifs[0..3].each do |gif| %>
+  <div class="col-md-3 center-block gif-img">
+    <div class="gif-button">
+      <%= form_for PlayerRoundGif.new do |f| %>
+      <%= f.hidden_field :gif_id, :value => gif.id %>
+      <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
+</div><!-- /top row -->
+
+<!-- MIDDLE ROW -->
+<div class="row img-row">
+  <div class="col-md-3 center-block gif-img">
+    <div class="gif-button">
+      <%= form_for PlayerRoundGif.new do |f| %>
+      <%= f.hidden_field :gif_id, :value => @gifs[4].id %>
+      <%= f.submit "I Choose You!", :type => :image, :src => @gifs[4].url %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="col-md-12 prompt-box">
+      <h3><%= @prompt %></h3>
+    </div>
+  </div>
+
+  <div class="col-md-3 center-block gif-img">
+    <div class="gif-button">
+     <%= form_for PlayerRoundGif.new do |f| %>
+     <%= f.hidden_field :gif_id, :value => @gifs[5].id %>
+     <%= f.submit "I Choose You!", :type => :image, :src => @gifs[5].url %>
+   <% end %>
+   </div>
+ </div>
+</div><!-- /middle row -->
+
+
+<!-- BOTTOM ROW -->
+<div class="row img-row">
+  <% @gifs[6..9].each do |gif| %>
+  <div class="col-md-3 center-block gif-img">
+  <div class="gif-button">
+    <%= form_for PlayerRoundGif.new do |f| %>
+    <%= f.hidden_field :gif_id, :value => gif.id %>
+    <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
+    <% end %>
+  </div>
+  </div>
+  <% end %>
+</div><!-- /bottom row -->

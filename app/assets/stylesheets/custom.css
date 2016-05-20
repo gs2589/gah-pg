@@ -1,9 +1,10 @@
-/* GAMES */
+/* ALL FILES */
 
 body {
   background: #222222;
 }
 
+/* GAMES */
 
 .gif-button input {
   max-height: 275px;
@@ -15,16 +16,12 @@ body {
   background-color: #444444;
 }
 
-
-
-
 .gif-button:hover input {
   -ms-transform: rotate(358deg); /* IE 9 */
   -webkit-transform: rotate(358deg); /* Chrome, Safari, Opera */
   transform: rotate(358deg);
-background: purple;
+  background: purple;
 }
-
 
 .prompt-box {
   background-color:white;
@@ -36,9 +33,14 @@ background: purple;
 }
 
 .prompt-box:hover {
-
    -ms-transform: rotate(358deg); /* IE 9 */
    -webkit-transform: rotate(358deg); /* Chrome, Safari, Opera */
    transform: rotate(358deg);
  }
 
+ .judge-instructions {
+   color:#ffffff;
+   height:100px;
+   border-radius: 10px;
+   margin-top:150px;
+ }
