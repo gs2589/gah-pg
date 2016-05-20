@@ -5,7 +5,8 @@ class SessionsController < ApplicationController
         session[:user_id] = @player.id
     #existing game
     @game=Game.find(params[:existing_game_number])
-    #@game.players<<@player
+    @game.players << @player # shovel all the player into the game that they specify
+
     redirect_to game_path(@game)
   end
 end
