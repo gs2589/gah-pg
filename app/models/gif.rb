@@ -28,10 +28,13 @@ class Gif < ActiveRecord::Base
             'http://media0.giphy.com/media/VWhCKTr9NhxbG/giphy.gif',
             'https://media1.giphy.com/media/Nyiv0I7uzXPZm/giphy.gif',
             'https://media.giphy.com/media/12mMxkzKzbxaLK/giphy.gif',
-            'https://media.giphy.com/media/3o85xjSETVG3OpPyx2/giphy.gif',
             'https://media.giphy.com/media/l0K41Ju0jBPuNxGIE/giphy.gif',
             'https://media.giphy.com/media/26vUBsNTnP1sD1tbW/giphy.gif',
             'https://media.giphy.com/media/R9rsJYJmYk4SY/giphy.gif',
+            'https://media.giphy.com/media/3oGRFvVyUdGBZeQiAw/giphy.gif',
+            'https://media.giphy.com/media/l3972sA1CU6Otys6s/giphy.gif',
+            'https://media.giphy.com/media/3o7qDKsfM5x5BtLCJa/giphy.gif',
+            'https://media.giphy.com/media/eYilisUwipOEM/giphy.gif',
             'http://media4.giphy.com/media/1KxUJONgu8tji/giphy.gif']
    gifs.shuffle.first
  end

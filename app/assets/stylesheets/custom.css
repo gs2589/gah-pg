@@ -27,23 +27,23 @@ body {
 .info-card {
   width:303px;
   height:472px;
-  background-color:white;
+  background-color:#444444;
   border-radius:15px;
+  border: 1px solid black;
   padding:30px;
   margin-top:100px;
 
   .info-gif img {
-    max-width:250px;
+    max-width:240px;
     max-height:250px;
     padding-bottom:30px;
     border-radius: 10px;
+    overflow:hidden;
   }
 
   .user-info {
     margin-top:10px;
-    .user-info-label {
-      color: black;
-    }
+    color: black;
   }
 
 }
