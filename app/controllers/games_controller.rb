@@ -35,33 +35,39 @@ class GamesController < ApplicationController
     def show
 
 
-      @game = Game.find_by_id(params[:id])
-      @round = Round.find_by(winner_id: nil)
-      @prompt = @round.prompt
       @player = Player.find_by_id(session[:user_id])
-      if @round.game_round == 1
-        @judge = @game.players.uniq.sample
-      else
-        @judge =  Round.find_by_id((@round.id) -1).winner 
+      @game = Game.find_by_id(params[:id])
+      @round = @game.rounds.find_by(winner_id: nil)
+      # Stuff that only needs to happen if there is a round
+      if @round == true
+        @prompt = round.prompt
+        # Determining the Judge
+        if  @round.game_round == 1 
+         @judge = @game.players.uniq.sample
+       else
+        @judge = Round.find_by_id((@round.id) -1).winner 
       end
-      if @judge == @player
+
+       # Assigning the correct gifs
+       if @judge == @player
         @gifs =@round.selections.map do |selection|
           selection.gif
-        end  
-        render '_show_czar'
-      elsif @game.players.include?(@player)
+        end
+      else 
         @gifs =  @player.gifs
-        render '_show_player' 
-      else
-        "You aren't in this game Bozo"
       end
-   # if judge for that round
-   # render judge partial 
-   # judge crowns winner (POST to round#update)
+    end
+# Redirections
+if @round == nil
+  render '_game_over'
+elsif  @judge == @player
+  render '_show_czar'
+elsif @game.players.include?(@player)
+  render '_show_player' 
+else
+  "You aren't in this game Bozo"
+end
 
-   # if player for that round
-   # render player partial
-   # players make selections (POST to selections.create)
  end
 
  def destroy

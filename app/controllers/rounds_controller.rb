@@ -14,7 +14,8 @@ class RoundsController < ApplicationController
   def update
     round = Round.find_by_id(params[:id]) 
     gif =  Gif.find_by_id(params[:round][:gif_id])
-    round.winner = gif.player
+    round.winner = round.selections.find_by(gif_id:(gif.id))
+    binding.pry
     round.winner.score += 1
     round.winner.save
     round.winning_gif_id=gif.id
