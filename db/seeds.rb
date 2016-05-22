@@ -10,31 +10,47 @@ require_relative('../lib/assets/prompts.rb')
 
 
 BlackCards.each do |card|
+  if card[:pick] == 1
     Prompt.create(phrase: card[:text], pick: card[:pick])
-    end
-
-
-new_game=Game.create()
-new_round=Round.create(game: new_game)
-player_1=Player.create()
-player_2=Player.create()
-player_3=Player.create()
-new_game.players<<player_1
-new_game.players<<player_2
-new_game.players<<player_3
-new_round.judge=player_1
-new_gif_1=Gif.random
-new_gif_2=Gif.random
-new_gif_3=Gif.random
-new_round_selection_1=Selection.create(player: player_1, round: new_round, selected_gif: new_gif_1)
-new_round_selection_2=Selection.create(player: player_2, round: new_round, selected_gif: new_gif_2)
-new_round_selection_3=Selection.create(player: player_3, round: new_round, selected_gif: new_gif_3)
+  end
+end
 
 
 
 
+
+@game=Game.create()
+player_1=Player.create(username: "robin")
+player_2=Player.create(username: "erin")
+player_3=Player.create(username: "mayank")
+player_4=Player.create(username: "gabe")
+@game.players<<player_1
+@game.players<<player_2
+@game.players<<player_3
+@game.players<<player_4
+
+round1 = Round.create(game_round: 1, game: @game, judge: Player.find_by_id(1))
+round1.get_random_prompt
+
+round2 = Round.create(game_round: 2, game: @game)
+round2.get_random_prompt
+
+round3 = Round.create(game_round: 3, game: @game)
+round3.get_random_prompt
+
+round4 = Round.create(game_round: 4, game: @game)
+round4.get_random_prompt
+
+round5 = Round.create(game_round: 5, game: @game)
+round5.get_random_prompt
+
+round6 = Round.create(game_round: 6, game: @game)
+round6.get_random_prompt
+
+round7 = Round.create(game_round: 7, game: @game)
+round7.get_random_prompt
 
 
 
 #Prompts.each do |prompt|
-  
+

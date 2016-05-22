@@ -1,22 +1,28 @@
-<!-- JUDGE VIEW PARTIAL -->
-<!-- remove this from view once we have data from controller -->
-
-<% @gifs = Gif.take(50).shuffle.take(4) %>
-
-<% @prompt = Prompt.working_random_prompt.phrase %>
-<% @game = Game.last %>
-
-
-
 <!-- CARD ROW -->
 <div class="row img-row">
   <div class="col-md-3 center-block gif-img">
 
   </div>
 
-  <div class="col-md-6">
+  <div class="col-md-4">
     <div class="col-md-12 prompt-box">
-      <h3><%= @prompt %></h3>
+      <h3><%= @prompt.phrase %></h3>
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <div class="col-md-12 info-box">
+     <p>Name: <%= @player.username %> </p>
+      <p>Round : <%= @round.game_round %> </p>
+      <p> Judge: <%= @judge.username %></p>
+      <ol>
+      <% @round.game.players.uniq.each do |player| %>
+        <li><%= player.username %>: <%= player.score %> </li>
+        <% end %>
+      </ol>
+
+      <ul>
+      </ul>
     </div>
   </div>
 
@@ -31,7 +37,8 @@
   <% @gifs[0..3].each do |gif| %>
   <div class="col-md-3 center-block gif-img">
   <div class="gif-button">
-    <%= form_for PlayerRoundGif.new do |f| %>
+    <%= form_for @round do |f| %>
+    <%= f.hidden_field :id, :value => @round.game_round %>
     <%= f.hidden_field :gif_id, :value => gif.id %>
     <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
     <% end %>
