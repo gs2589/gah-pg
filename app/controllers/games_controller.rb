@@ -42,8 +42,8 @@ class GamesController < ApplicationController
       if @round
         @prompt = @round.prompt
         # Determining the Judge
-        if  @round.game_round == 1
-          @judge = @game.players.uniq.sample
+        if @round.game_round == 1
+          @judge = @game.players.first
         else
           @judge = Round.find_by_id((@round.id) -1).winner
         end
@@ -59,12 +59,15 @@ class GamesController < ApplicationController
       end
     # end
 # Redirections
+
 if @round == nil
   render '_game_over'
-elsif  @judge == @player
+elsif @judge == @player
   render '_show_czar'
-elsif @game.players.include?(@player)
+elsif @game.players.include?(@player) && !@round.selections.where(player: @player).any?
   render '_show_player'
+elsif @game.players.include?(@player) && @round.selections.where(player: @player).any?
+  render '_show_player_waiting'
 else
   "You aren't in this game Bozo"
 end

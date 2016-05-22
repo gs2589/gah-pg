@@ -12,10 +12,10 @@ class RoundsController < ApplicationController
 
 
   def update
-    round = Round.find_by_id(params[:id]) 
+    round = Round.find_by_id(params[:id])
     gif =  Gif.find_by_id(params[:round][:gif_id])
-    round.winner = round.selections.find_by(gif_id:(gif.id))
-    binding.pry
+    round.winner = round.selections.find_by(gif_id:(gif.id)).player
+    round.winning_gif = round.selections.find_by(gif_id:(gif.id)).gif
     round.winner.score += 1
     round.winner.save
     round.winning_gif_id=gif.id
@@ -27,7 +27,7 @@ class RoundsController < ApplicationController
     # set winner id = to whatever is passed in
     # set winning gif id
     # Round.create? here, call rounds controller create action
-    # redirect to 
+    # redirect to
 
   end
 
