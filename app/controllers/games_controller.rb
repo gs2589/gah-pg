@@ -3,7 +3,7 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game=Game.create() 
+    @game=Game.create()
     round1 = Round.create(game_round: 1, game: @game, judge: Player.find_by_id(1))
     round1.get_random_prompt
 
@@ -34,36 +34,37 @@ class GamesController < ApplicationController
 
     def show
 
-
       @player = Player.find_by_id(session[:user_id])
       @game = Game.find_by_id(params[:id])
       @round = @game.rounds.find_by(winner_id: nil)
       # Stuff that only needs to happen if there is a round
-      if @round == true
-        @prompt = round.prompt
+
+      if @round
+        @prompt = @round.prompt
         # Determining the Judge
-        if  @round.game_round == 1 
-         @judge = @game.players.uniq.sample
-       else
-        @judge = Round.find_by_id((@round.id) -1).winner 
+        if  @round.game_round == 1
+          @judge = @game.players.uniq.sample
+        else
+          @judge = Round.find_by_id((@round.id) -1).winner
+        end
       end
 
        # Assigning the correct gifs
-       if @judge == @player
+      if @judge == @player
         @gifs =@round.selections.map do |selection|
           selection.gif
         end
-      else 
+      else
         @gifs =  @player.gifs
       end
-    end
+    # end
 # Redirections
 if @round == nil
   render '_game_over'
 elsif  @judge == @player
   render '_show_czar'
 elsif @game.players.include?(@player)
-  render '_show_player' 
+  render '_show_player'
 else
   "You aren't in this game Bozo"
 end
