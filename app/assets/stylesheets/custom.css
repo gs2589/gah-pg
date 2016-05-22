@@ -99,12 +99,12 @@ body {
 .info-box {
   background-color:grey;
   text-align:left;
-  padding:10px;
+  padding:5px;
   border-radius: 10px;
   height:150px;
   margin:25px;
   border:1px solid #111111;
-  font-size: small;
+  font-size: x-small;
 }
 
 .prompt-box:hover {

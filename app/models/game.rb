@@ -6,6 +6,8 @@ class Game < ActiveRecord::Base
 
   @prompt_mode=false
 
+
+
   def multiple_prompt_mode=(prompt_mode)
     #only prompt_mode=false is supported
     @prompt_mode=prompt_mode
@@ -15,6 +17,8 @@ class Game < ActiveRecord::Base
     #only prompt_mode=false is supported
     @prompt_mode
   end
+
+
 
 
 

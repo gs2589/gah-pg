@@ -2,6 +2,7 @@ class Round < ActiveRecord::Base
   belongs_to :game
   belongs_to :prompt
   has_many :players, through: :games
+    has_many :players, through: :selections
   has_many :gifs, through: :players
   has_many :selections
   belongs_to :judge, class_name: "Player"

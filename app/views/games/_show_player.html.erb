@@ -1,13 +1,3 @@
-
-<!-- remove this from view once we have data from controller -->
-<% @gifs = Gif.take(100).shuffle.take(10) %>
-
-<% @prompt = Prompt.working_random_prompt.phrase %>
-<% @round = Round.last %>
-
-
-
-
 <!-- TOP ROW -->
 <div class="row img-row">
   <% @gifs[0..3].each do |gif| %>
@@ -37,20 +27,19 @@
 
   <div class="col-md-4">
     <div class="col-md-12 prompt-box">
-      <h3><%= @prompt %></h3>
+      <h3><%= @prompt.phrase %></h3>
     </div>
   </div>
 
   <div class="col-md-2">
     <div class="col-md-12 info-box">
-      <p>Name: <%= Player.find_by_id(session[:user_id]).username %>
-      </p>
-      <p> Judge: </p>
+      <p>Name: <%= @player.username %> </p>
+      <p>Round : <%= @round.game_round %> </p>
+      <p> Judge: <%= @judge.username %></p>
       <ol>
-        <li> Player 1 - 14</li>
-        <li> Player 2 - 12</li>
-        <li> Player 3 - 5</li>
-        <li> Player 4 - 2</li>
+      <% @round.game.players.uniq.each do |player| %>
+        <li><%= player.username %>: <%= player.score %> </li>
+        <% end %>
       </ol>
     </div>
   </div>
@@ -75,7 +64,7 @@
   <div class="col-md-3 center-block gif-img">
 
     <div class="gif-button">
-    <%= form_for  [@round, Selection.new] do |f| %>
+      <%= form_for  [@round, Selection.new] do |f| %>
       <%= f.hidden_field :gif_id, :value => gif.id %>
       <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
       <% end %>
@@ -83,5 +72,6 @@
   </div>
   <% end %>
 </div><!-- /bottom row -->
+
 
 
