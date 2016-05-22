@@ -43,7 +43,7 @@ class GamesController < ApplicationController
         @prompt = @round.prompt
         # Determining the Judge
         if @round.game_round == 1
-          @judge = @game.players.first
+          @judge = @round.judge
         else
           @judge = Round.find_by_id((@round.id) -1).winner
         end
