@@ -13,6 +13,11 @@ class SelectionsController < ApplicationController
       selection[:player_id]
     end  
 
+    #I think this is where we want the broadcast to happen
+    ActionCable.server.broadcast 'gifs',
+      gifs: @player.gifs
+    head :ok 
+
     if already_submitted.include?(player.id) == false
     Selection.create(gif: gif, player: player, round: round)
     redirect_to round.game

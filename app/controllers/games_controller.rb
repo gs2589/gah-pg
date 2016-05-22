@@ -33,7 +33,9 @@ class GamesController < ApplicationController
 
 
     def show
-
+      @game = Game.find_by_id(params[:id])
+      @round = Round.find_by(winner_id: nil)
+      @prompt = @round.prompt
       @player = Player.find_by_id(session[:user_id])
       @game = Game.find_by_id(params[:id])
       @round = @game.rounds.find_by(winner_id: nil)

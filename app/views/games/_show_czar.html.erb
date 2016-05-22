@@ -36,13 +36,19 @@
 <div class="row img-row">
   <% @gifs[0..3].each do |gif| %>
   <div class="col-md-3 center-block gif-img">
-  <div class="gif-button">
+  
+  /
+  <div id="gif">
+  <div class="gif-button"> 
+    <% #this is where we want the sockets to get updated %>
     <%= form_for @round do |f| %>
     <%= f.hidden_field :id, :value => @round.game_round %>
     <%= f.hidden_field :gif_id, :value => gif.id %>
     <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
     <% end %>
   </div>
+  </div>
+
   </div>
   <% end %>
 </div><!-- /bottom row -->
