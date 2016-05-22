@@ -9,6 +9,7 @@ class GamesController < ApplicationController
 session[:username] = params[:username]
 @player=Player.find_or_create_by(username: params[:username])
 session[:user_id] = @player.id
+    
 
 @game=Game.create()
 session[:game_id]=@game.id
@@ -56,35 +57,47 @@ end
     def show
 
 
+
       @game = Game.find_by_id(session[:game_id])
 
       (redirect_to(game_path(@game)) and return) if params[:id]!=@game.id.to_s
       @round = @game.rounds.find_by(winner_id:nil)
       @prompt = @round.prompt
+
       @player = Player.find_by_id(session[:user_id])
-      if @round.game_round == 1
-        @judge = @game.players.uniq.sample
-      else
-        @judge =  Round.find_by_id((@round.id) -1).winner 
+      
+      # Stuff that only needs to happen if there is a round
+
+      if @round
+        @prompt = @round.prompt
+        # Determining the Judge
+        if  @round.game_round == 1
+          @judge = @game.players.uniq.sample
+        else
+          @judge = Round.find_by_id((@round.id) -1).winner
+        end
       end
+
+       # Assigning the correct gifs
       if @judge == @player
         @gifs =@round.selections.map do |selection|
           selection.gif
-        end  
-        render '_show_czar'
-      elsif @game.players.include?(@player)
-        @gifs =  @player.gifs
-        render '_show_player' 
+        end
       else
-        "You aren't in this game Bozo"
+        @gifs =  @player.gifs
       end
-   # if judge for that round
-   # render judge partial 
-   # judge crowns winner (POST to round#update)
+    # end
+# Redirections
+if @round == nil
+  render '_game_over'
+elsif  @judge == @player
+  render '_show_czar'
+elsif @game.players.include?(@player)
+  render '_show_player'
+else
+  "You aren't in this game Bozo"
+end
 
-   # if player for that round
-   # render player partial
-   # players make selections (POST to selections.create)
  end
 
  def destroy
