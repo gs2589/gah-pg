@@ -47,6 +47,9 @@ class GamesController < ApplicationController
         else
           @judge = Round.find_by_id((@round.id) -1).winner
         end
+
+        # Grabbing the selected gifs
+          @selections = @round.selections
       end
 
        # Assigning the correct gifs

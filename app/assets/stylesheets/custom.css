@@ -132,3 +132,15 @@ body {
    -ms-transform: rotate(37deg); /* IE 9 */
    -webkit-transform: rotate(37deg); /* Chrome, Safari, Opera */
  }
+
+ .waiting {
+   color:#ffffff;
+   height:100px;
+   border-radius: 10px;
+   margin-top:100px;
+
+   img {
+     height:125px;
+     display:inline;
+   }
+ }

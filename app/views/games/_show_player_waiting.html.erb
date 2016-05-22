@@ -31,23 +31,23 @@
  </div>
 </div><!-- /middle row -->
 
-<h1>WAITING FOR GIFS</H1>
 
 <!-- BOTTOM ROW -->
-<!-- <div class="row img-row">
-  <% @gifs[0..3].each do |gif| %>
+<div class="row img-row">
+  <% @selections.each do |selection| %>
   <div class="col-md-3 center-block gif-img">
   <div class="gif-button">
     <%= form_for @round do |f| %>
     <%= f.hidden_field :id, :value => @round.game_round %>
-    <%= f.hidden_field :gif_id, :value => gif.id %>
-    <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
+    <%= f.hidden_field :gif_id, :value => selection.gif.id %>
+    <%= f.submit "I Choose You!", :type => :image, :src => selection.gif.url %>
     <% end %>
   </div>
   </div>
-  <% end %> -->
+  <% end %>
 </div><!-- /bottom row -->
 
-<div class="judge-instructions text-center">
-  <img src="<%= asset_path( 'crown-tilt.png' ) %>"><h4>Your turn, gif czar. Crown the best gif!</h4>
+<div class="waiting">
+  <%= image_tag('https://media.giphy.com/media/2h0paFIFQHUsg/giphy.gif') %>
+  <%= link_to "Check results", @game %>
 </div>
