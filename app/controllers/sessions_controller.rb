@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
         session[:user_id] = @player.id
     #existing game
     @game=Game.find_or_create_by(id: params[:existing_game_number])
+    session[:game_id]=@game.id
     @game.players << @player # shovel all the player into the game that they specify
     @player.starting_hand
 

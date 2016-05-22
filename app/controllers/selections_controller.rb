@@ -15,8 +15,11 @@ class SelectionsController < ApplicationController
 
     if already_submitted.include?(player.id) == false
     Selection.create(gif: gif, player: player, round: round)
+    binding.pry
     redirect_to round.game
   else
+    binding.pry
+
     redirect_to round.game
   end
 
