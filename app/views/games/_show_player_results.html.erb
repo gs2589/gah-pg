@@ -13,6 +13,8 @@
   <% end %>
 </div><!-- /top row -->
 
+HERE ARE THE RESULTS
+
 <!-- MIDDLE ROW -->
 <div class="row img-row">
   <div class="col-md-3 center-block gif-img">
@@ -33,26 +35,16 @@
 
   <div class="col-md-2">
     <div class="col-md-12 info-box">
-      <div class="row">
-        <h5>Hi, <strong><%= @player.username %></strong>.</h5>
-      </div>
-      <table class="table-striped">
-        <thead>
-        <th>Players</th>
-        <th>Scores</th>
-      </thead>
+      <p>Name: <%= @player.username %> </p>
+      <p>Round : <%= @round.game_round %> </p>
+      <p> Judge: <%= @judge.username %></p>
+      <ol>
       <% @round.game.players.uniq.each do |player| %>
-      <tr><td>
-          <% if @judge == player %>
-            <div class = "info-crown"><img src="<%= asset_path( 'crown-tilt.png' ) %>"></div>
-          <% end %>
-          <%= player.username %></td><td><%= player.score %></td>
-        </tr>
+        <li><%= player.username %>: <%= player.score %> </li>
         <% end %>
-      </table>
-      <h5> Game <%= @game.id %> | Round <%= @round.game_round %></h5>
-  </div><!-- /.info-box -->
-</div>
+      </ol>
+    </div>
+  </div>
 
 
 
