@@ -15,6 +15,7 @@ body {
   margin-left:400px;
   margin-top: 100px;
 
+
   -ms-transform: rotate(340deg); /* IE 9 */
   -webkit-transform: rotate(340deg); /* Chrome, Safari, Opera */
   transform: rotate(340deg);
@@ -24,14 +25,19 @@ body {
   }
 }
 
+.site-title {
+    color: #ffffff;
+  }
+
 .info-card {
   width:303px;
-  height:472px;
+  height:600px;
   background-color:#444444;
   border-radius:15px;
   border: 1px solid black;
   padding:30px;
   margin-top:100px;
+
 
   .info-gif img {
     max-width:240px;

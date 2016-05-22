@@ -3,6 +3,8 @@ class GamesController < ApplicationController
   end
 
   def create
+    session[:username] = params[:username]
+    @player=Player.find_or_create_by(username: params[:username])
 
     @game=Game.create()
     4.times do 
