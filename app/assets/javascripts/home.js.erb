@@ -1,7 +1,50 @@
-// $(document).ready(function(){
-//
-//   // <% 1.times do %>
-//   // $("ul").append('<img src= <%= Gif.randomgif %> >');
-//   // <% end %>
-//
-// })
+$(document).ready(function(){
+
+ $('#join-game').click(function(e) {
+      e.stopPropagation();
+      joinGameCall();
+  });
+
+ $('#start-game').click(function(e) {
+      e.stopPropagation();
+      startGameCall();
+  });
+
+
+
+
+function joinGameCall() {
+    var username = $("#username").val()
+    var existing_game_number= $("#existing_game_number").val()
+    
+    
+    $.post({
+      url: '/sessions',
+      method: 'POST', 
+      data: {username: username, existing_game_number: existing_game_number},
+      success: function(response){ window.location.href='/games/'+existing_game_number
+      
+      }
+    })
+  }
+
+
+
+  function startGameCall() {
+    var username = $("#username").val()
+    
+    
+    $.post({
+      url: '/games',
+      method: 'POST', 
+      data: {username: username},
+      success: function(response){ 
+        
+        window.location.href=response["game"]
+      
+      }
+    })
+  }
+
+
+})

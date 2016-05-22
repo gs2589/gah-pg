@@ -16,31 +16,29 @@
       </div>
 
       <div class="user-info">
-        <%= form_tag sessions_path do %>
+      
 
           <div class="form-group">
             <%=label_tag :username, "Who the heck are you?" %>
-            <%= text_field_tag :username, "", class: "form-control", autofocus: "true" %><br>
+            <div><input class="form-control" type="text" id="username" placeholder="enter a username here"></div>
           </div>
 
           <div class="form-group">
             <%=label_tag :existing_game_number, "Enter your game # to join an existing game:" %><br>
-            <%= text_field_tag :existing_game_number, "", class: "form-control" %>
-          </div><br>
+            <div><input class="form-control" type="text" id="existing_game_number" placeholder="enter the game # you were invited to"></div>
+          </div>
 
-          <%= submit_tag "Join Game" , class: "btn btn-success btn-lg btn-block"%>
+          <div type="submit" class="btn btn-success btn-lg btn-block" id="join-game">Join Game</div>
            
           <h3 class="site-title"> OR </h3> 
           
-           
-
-          <%= submit_tag "Start A New Game" , class: "btn btn-success btn-lg btn-block"%>
+           <div type="submit" class="btn btn-success btn-lg btn-block" id="start-game">Start a New Game</div>
 
           
 
           
 
-        <% end%>
+       
       </div><!-- .user-info -->
 
     </div><!-- /.info-card -->
