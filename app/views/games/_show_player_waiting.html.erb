@@ -1,7 +1,6 @@
-<!-- CARD ROW -->
+<!-- PROMPT ROW -->
 <div class="row img-row">
   <div class="col-md-3 center-block gif-img">
-
   </div>
 
   <div class="col-md-4">
@@ -20,34 +19,29 @@
         <li><%= player.username %>: <%= player.score %> </li>
         <% end %>
       </ol>
-
       <ul>
       </ul>
     </div>
   </div>
 
   <div class="col-md-3 center-block gif-img">
-
  </div>
-</div><!-- /middle row -->
+</div><!-- /prompt row -->
 
 
-<!-- BOTTOM ROW -->
+<!-- CARD ROW -->
 <div class="row img-row">
   <% @selections.each do |selection| %>
-  <div class="col-md-3 center-block gif-img">
-  <div class="gif-button">
-    <%= form_for @round do |f| %>
-    <%= f.hidden_field :id, :value => @round.game_round %>
-    <%= f.hidden_field :gif_id, :value => selection.gif.id %>
-    <%= f.submit "I Choose You!", :type => :image, :src => selection.gif.url %>
-    <% end %>
+  <div class="col-md-4 center-block gif-img">
+  <div class="gif-flat">
+    <%= image_tag(selection.gif.url) %>
   </div>
+  <div class="gif-label"><h3><%= selection.gif.player.username %></h3></div>
   </div>
   <% end %>
 </div><!-- /bottom row -->
 
-<div class="waiting">
-  <%= image_tag('https://media.giphy.com/media/2h0paFIFQHUsg/giphy.gif') %>
-  <%= link_to "Check results", @game %>
+<div class="waiting text-center">
+  <%= link_to image_tag('https://media.giphy.com/media/2h0paFIFQHUsg/giphy.gif'), @game %>
+  <h4>Waiting...</br>
 </div>

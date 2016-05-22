@@ -69,8 +69,10 @@ elsif @judge == @player
   render '_show_czar'
 elsif @game.players.include?(@player) && !@round.selections.where(player: @player).any?
   render '_show_player'
-elsif @game.players.include?(@player) && @round.selections.where(player: @player).any?
+elsif @game.players.include?(@player) && @round.selections.where(player: @player).any? && !@round.winner.present?
   render '_show_player_waiting'
+elsif @game.players.include?(@player) && @round.winner.present?
+  render '_show_player_results'
 else
   "You aren't in this game Bozo"
 end
