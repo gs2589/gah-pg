@@ -5,7 +5,7 @@ class GamesController < ApplicationController
   def create
    ## session[:username] = params[:username]
    ##@player=Player.find_or_create_by(username: params[:username])
-    
+  binding.pry  
 session[:username] = params[:username]
 @player=Player.find_or_create_by(username: params[:username])
 session[:user_id] = @player.id
@@ -46,6 +46,7 @@ end
 
     
   
+
     # redirect_to game_path(@game)
     # Shovel 4 players into the game
     # generate n game rounds

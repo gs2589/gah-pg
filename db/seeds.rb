@@ -19,15 +19,15 @@ end
 
 
 
-@game=Game.create()
-player_1=Player.create(username: "robin")
-player_2=Player.create(username: "erin")
-player_3=Player.create(username: "mayank")
-player_4=Player.create(username: "gabe")
-@game.players<<player_1
-@game.players<<player_2
-@game.players<<player_3
-@game.players<<player_4
+# @game=Game.create()
+# player_1=Player.create(username: "robin")
+# player_2=Player.create(username: "erin")
+# player_3=Player.create(username: "mayank")
+# player_4=Player.create(username: "gabe")
+# @game.players<<player_1
+# @game.players<<player_2
+# @game.players<<player_3
+# @game.players<<player_4
 
 
 

@@ -8,6 +8,8 @@ class SessionsController < ApplicationController
     session[:game_id]=@game.id
     @game.players << @player # shovel all the player into the game that they specify
     @player.starting_hand
+    @game.rounds.first.judge = @game.players.first
+    @game.rounds.first.save
 
     redirect_to game_path(@game)
   end
