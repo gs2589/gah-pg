@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  resources :games, only: [:new, :create, :show, :destroy],:has_many => [:comments] 
+  resources :games, only: [:new, :create, :show, :destroy]
+  get '/games/:id/results', to: 'games#results', as: "game_results"
+    # resources :games, only: [:new, :create, :show, :destroy, :results],:has_many => [:comments]
   resources :rounds do
     resources :selections
   end

@@ -42,11 +42,11 @@ class GamesController < ApplicationController
       if @round
         @prompt = @round.prompt
         # Determining the Judge
-        if @round.game_round == 1
+        # if @round.game_round == 1
           @judge = @round.judge
-        else
-          @judge = Round.find_by_id((@round.id) -1).winner
-        end
+        # else
+        #   @judge = Round.find_by_id((@round.id) -1).winner
+        # end
 
         # Grabbing the selected gifs
           @selections = @round.selections
@@ -77,6 +77,24 @@ else
   "You aren't in this game Bozo"
 end
 
+ end
+
+
+ def results
+   # custom get route bc show action only works for games w/o winners
+   @player = Player.find_by_id(session[:user_id])
+   @game = Game.find_by_id(params[:id])
+   @round = @game.rounds.find_by(winner_id: nil)
+   @prompt = @round.prompt
+   @selections = @round.selections
+   @judge = @round.judge
+
+   if @round.winner
+     binding.pry
+     render '_show_player_results'
+   else
+     redirect_to @game
+   end
  end
 
  def destroy
