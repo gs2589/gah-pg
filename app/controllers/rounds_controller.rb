@@ -25,8 +25,8 @@ class RoundsController < ApplicationController
 
     game = round.game
     next_round = game.rounds.where(game_round: round.game_round+1).first
-    next_round.judge = round.winner
-    next_round.save
+    next_round.judge = round.winner unless next_round == nil
+    next_round.save unless next_round == nil
 
     redirect_to round.game
 
