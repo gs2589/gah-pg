@@ -84,14 +84,23 @@ end
    # custom get route bc show action only works for games w/o winners
    @player = Player.find_by_id(session[:user_id])
    @game = Game.find_by_id(params[:id])
-   @round = @game.rounds.find_by(winner_id: nil)
+  #  @round = @game.rounds.find_by(winner_id: nil) # need to fix this line
+
+   # find earliest round with no assigned players, then subtract 1 from that
+@playerless_rounds = @game.rounds.select {|round| !round.players.any?}
+@earliest = @playerless_rounds.min_by(&:game_round)
+if @earliest.game_round > 1
+  @round = @game.rounds.find_by(game_round: (@earliest.game_round - 1))
+else
+  @round = @earliest
+end
+
    @prompt = @round.prompt
    @selections = @round.selections
    @judge = @round.judge
 
    if @round.winner
-     binding.pry
-     render '_show_player_results'
+     redirect_to @game, notice: "#{@round.winner.username} was the winner!"
    else
      redirect_to @game
    end
