@@ -5,7 +5,7 @@ class Round < ActiveRecord::Base
     has_many :players, through: :selections
   has_many :gifs, through: :players
   has_many :selections
-  belongs_to :judge, class_name: "Player"
+  has_one :judge, class_name: "Player", :foreign_key => "id"
   belongs_to :winner, class_name: "Player"
   belongs_to :winning_gif, class_name: "Gif"
 
