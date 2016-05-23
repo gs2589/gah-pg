@@ -11,7 +11,6 @@ class Round < ActiveRecord::Base
 
 
 
-
 def get_random_prompt()
 
     offset=rand(Prompt.count)

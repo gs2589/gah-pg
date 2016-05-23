@@ -71,11 +71,14 @@ end
       if @round
         @prompt = @round.prompt
         # Determining the Judge
-        if  @round.game_round == 1
-          @judge = @game.players.uniq.sample
-        else
-          @judge = Round.find_by_id((@round.id) -1).winner
-        end
+        # if @round.game_round == 1
+          @judge = @round.judge
+        # else
+        #   @judge = Round.find_by_id((@round.id) -1).winner
+        # end
+
+        # Grabbing the selected gifs
+          @selections = @round.selections
       end
 
        # Assigning the correct gifs
@@ -88,16 +91,48 @@ end
       end
     # end
 # Redirections
+
 if @round == nil
   render '_game_over'
-elsif  @judge == @player
+elsif @judge == @player
   render '_show_czar'
-elsif @game.players.include?(@player)
+elsif @game.players.include?(@player) && !@round.selections.where(player: @player).any?
   render '_show_player'
+elsif @game.players.include?(@player) && @round.selections.where(player: @player).any? && !@round.winner.present?
+  render '_show_player_waiting'
+elsif @game.players.include?(@player) && @round.winner.present?
+  render '_show_player_results'
 else
   "You aren't in this game Bozo"
 end
 
+ end
+
+
+ def results
+   # custom get route bc show action only works for games w/o winners
+   @player = Player.find_by_id(session[:user_id])
+   @game = Game.find_by_id(params[:id])
+  #  @round = @game.rounds.find_by(winner_id: nil) # need to fix this line
+
+   # find earliest round with no assigned players, then subtract 1 from that
+@playerless_rounds = @game.rounds.select {|round| !round.players.any?}
+@earliest = @playerless_rounds.min_by(&:game_round)
+if @earliest.game_round > 1
+  @round = @game.rounds.find_by(game_round: (@earliest.game_round - 1))
+else
+  @round = @earliest
+end
+
+   @prompt = @round.prompt
+   @selections = @round.selections
+   @judge = @round.judge
+
+   if @round.winner
+     redirect_to @game, notice: "#{@round.winner.username} was the winner!"
+   else
+     redirect_to @game
+   end
  end
 
  def destroy

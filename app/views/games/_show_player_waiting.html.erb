@@ -1,30 +1,6 @@
-<!-- TOP ROW -->
-<div class="row img-row">
-  <% @gifs[0..3].each do |gif| %>
-  <div class="col-md-3 center-block gif-img">
-    <div class="gif-button">
-
-      <%= form_for [@round, Selection.new] do |f| %>
-      <%= f.hidden_field :gif_id, :value => gif.id %>
-      <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
-      <% end %>
-    </div>
-  </div>
-  <% end %>
-</div><!-- /top row -->
-
-WAITING FOR RESULTS
-
-<!-- MIDDLE ROW -->
+<!-- PROMPT ROW -->
 <div class="row img-row">
   <div class="col-md-3 center-block gif-img">
-    <div class="gif-button">
-
-      <%= form_for [@round, Selection.new] do |f| %>
-      <%= f.hidden_field :gif_id, :value => @gifs[4].id %>
-      <%= f.submit "I Choose You!", :type => :image, :src => @gifs[4].url %>
-      <% end %>
-    </div>
   </div>
 
   <div class="col-md-4">
@@ -35,7 +11,7 @@ WAITING FOR RESULTS
 
   <div class="col-md-2">
     <div class="col-md-12 info-box">
-      <p>Name: <%= @player.username %> </p>
+     <p>Name: <%= @player.username %> </p>
       <p>Round : <%= @round.game_round %> </p>
       <p> Judge: <%= @judge.username %></p>
       <ol>
@@ -43,34 +19,29 @@ WAITING FOR RESULTS
         <li><%= player.username %>: <%= player.score %> </li>
         <% end %>
       </ol>
+      <ul>
+      </ul>
     </div>
   </div>
 
-
-
   <div class="col-md-3 center-block gif-img">
-    <div class="gif-button">
-
-     <%= form_for [@round, Selection.new] do |f| %>
-     <%= f.hidden_field :gif_id, :value => @gifs[5].id %>
-     <%= f.submit "I Choose You!", :type => :image, :src => @gifs[5].url %>
-     <% end %>
-   </div>
  </div>
-</div><!-- /middle row -->
+</div><!-- /prompt row -->
 
 
-<!-- BOTTOM ROW -->
+<!-- CARD ROW -->
 <div class="row img-row">
-  <% @gifs[6..9].each do |gif| %>
-  <div class="col-md-3 center-block gif-img">
-
-    <div class="gif-button">
-      <%= form_for  [@round, Selection.new] do |f| %>
-      <%= f.hidden_field :gif_id, :value => gif.id %>
-      <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
-      <% end %>
-    </div>
+  <% @selections.each do |selection| %>
+  <div class="col-md-4 center-block gif-img">
+  <div class="gif-flat">
+    <%= image_tag(selection.gif.url) %>
+  </div>
+  <div class="gif-label"><h3><%= selection.gif.player.username %></h3></div>
   </div>
   <% end %>
 </div><!-- /bottom row -->
+
+<div class="waiting text-center">
+  <%= link_to image_tag('https://media.giphy.com/media/2h0paFIFQHUsg/giphy.gif'), game_results_path(@game) %>
+  <h4>Waiting...</br>
+</div>

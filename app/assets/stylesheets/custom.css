@@ -59,6 +59,10 @@ body {
 
 /* GAMES */
 
+.flash {
+  
+}
+
 .gif-button input {
   max-height: 275px;
   max-width: 275px;
@@ -78,6 +82,33 @@ body {
   -webkit-transform: rotate(358deg); /* Chrome, Safari, Opera */
   transform: rotate(358deg);
   background: purple;
+}
+
+.gif-flat {
+  max-height: 275px;
+  max-width: 275px;
+  padding:20px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius:15px;
+  background-color: #444444;
+}
+
+.gif-flat img {
+  max-height: 235px;
+  max-width: 235px;
+  border-radius:15px;
+}
+
+.gif-flat:hover {
+  -ms-transform: rotate(358deg); /* IE 9 */
+  -webkit-transform: rotate(358deg); /* Chrome, Safari, Opera */
+  transform: rotate(358deg);
+}
+
+.gif-label {
+  color:white;
+  margin-left: 125px;
 }
 
 .prompt-box {
@@ -137,4 +168,24 @@ body {
    display:inline;
    -ms-transform: rotate(37deg); /* IE 9 */
    -webkit-transform: rotate(37deg); /* Chrome, Safari, Opera */
+ }
+
+ .waiting {
+   color:#ffffff;
+   height:100px;
+   border-radius: 10px;
+   margin-top:100px;
+
+   img {
+     height:125px;
+     display:inline;
+   }
+
+   img:hover {
+     transform:scale(1.5,1.5);
+   }
+
+   h4 {
+     margin-top:-20px;
+   }
  }
