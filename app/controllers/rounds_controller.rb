@@ -19,7 +19,7 @@ class RoundsController < ApplicationController
     round.winning_gif = round.selections.find_by(gif_id:(gif.id)).gif
     round.save
 
-    round.winner.score += 1
+    #round.winner.score += 1
     round.winner.save
     # round.winning_gif_id=gif.id
 
