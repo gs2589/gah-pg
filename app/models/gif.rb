@@ -1,3 +1,6 @@
+require 'json' 
+require 'open-uri'
+
 class Gif < ActiveRecord::Base
   belongs_to :player
   has_many :games, through: :players
@@ -5,7 +8,6 @@ class Gif < ActiveRecord::Base
   has_one :selection , foreign_key: "selected_gif" 
   has_many :won_rounds, foreign_key: "winning_gif_id"
 
-  require 'json'
   # attr_reader :url
 
   def self.random

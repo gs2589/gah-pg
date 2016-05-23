@@ -31,7 +31,6 @@ class GamesController < ApplicationController
     # Round.create x 4 (prompts and all that are generated)
     # now the game is ready to be played through all its rounds
 
-
     def show
       @game = Game.find_by_id(params[:id])
       @round = Round.find_by(winner_id: nil)
@@ -44,11 +43,11 @@ class GamesController < ApplicationController
       if @round
         @prompt = @round.prompt
         # Determining the Judge
-        if  @round.game_round == 1
-          @judge = @game.players.uniq.sample
-        else
-          @judge = Round.find_by_id((@round.id) -1).winner
-        end
+
+      if @round.game_round == 1
+        @judge = Player.first
+      else
+        @judge =  Round.find_by_id((@round.id) -1).winner 
       end
 
        # Assigning the correct gifs
