@@ -9,7 +9,7 @@ session[:username] = params[:username]
 @player=Player.find_or_create_by(username: params[:username])
 
 session[:user_id] = @player.id
-    
+
 
 @game=Game.create()
 session[:game_id]=@game.id
@@ -44,8 +44,8 @@ round7.get_random_prompt
 
 end
 
-    
-  
+
+
 
     # redirect_to game_path(@game)
     # Shovel 4 players into the game
@@ -61,7 +61,7 @@ end
       @game = Game.find_by_id(session[:game_id])
 
       (redirect_to(game_path(@game)) and return) if params[:id]!=@game.id.to_s
-      
+
       @winnerless_rounds = @game.rounds.select {|round| !round.winner_id.present?}
       @round = @winnerless_rounds.min_by(&:game_round)
 
@@ -132,7 +132,7 @@ end
    @judge = @round.judge
 
    if @round.winner
-     redirect_to @game, notice: "#{@round.winner.username} was the winner!"
+     redirect_to @game
    else
      redirect_to @game
    end
