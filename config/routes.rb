@@ -9,5 +9,4 @@ Rails.application.routes.draw do
   end
   resources :players, only: [:index,:create]
   resources :sessions, only: [:create]
-
 end
