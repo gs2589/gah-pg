@@ -33,6 +33,7 @@
 
   <div class="col-md-2">
     <div class="col-md-12 info-box">
+      
 
       <div class="row">
         <h5>Hi, <strong><%= @player.username %></strong>.</h5>
@@ -42,7 +43,6 @@
         <th>Players</th>
         <th>Scores</th>
       </thead>
->>>>>>> 70a140dbc4588f2113cb14c8313b46329a8037b1
       <% @round.game.players.uniq.each do |player| %>
       <tr><td>
           <% if @judge == player %>
