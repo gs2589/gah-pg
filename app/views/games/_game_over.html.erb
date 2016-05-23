@@ -4,7 +4,15 @@
   <title></title>
 </head>
 <body>
-Game Over Bud!
+ <div class="col-md-12">
+  <div class="col-md-12 info-box">
+    <ol>
+      <% @round.game.players.uniq.each do |player| %>
+      <li><%= player.username %>: <%= player.score %> </li>
+      <% end %>
+    </ol>
+  </div>
+</div>
 
 </body>
 </html>
