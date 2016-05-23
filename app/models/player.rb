@@ -6,8 +6,7 @@ class Player < ActiveRecord::Base
   has_many :selections
   has_many :won_rounds, foreign_key: "winner_id"
   has_many :won_games, foreign_key: "champion_id"
-
-  # has_many :judged_rounds, foreign_key: "judge_id", class_name: "Round"
+  has_many :judged_rounds, class_name: "Round", foreign_key: "judge_id"
 
   def starting_hand
     self.gifs.delete_all

@@ -5,9 +5,9 @@ class GamesController < ApplicationController
   def create
    ## session[:username] = params[:username]
    ##@player=Player.find_or_create_by(username: params[:username])
-  binding.pry  
 session[:username] = params[:username]
 @player=Player.find_or_create_by(username: params[:username])
+
 session[:user_id] = @player.id
     
 
@@ -69,7 +69,6 @@ end
       @prompt = @round.prompt
 
       @player = Player.find_by_id(session[:user_id])
-      
       # Stuff that only needs to happen if there is a round
 
       if @round
