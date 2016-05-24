@@ -40,7 +40,7 @@ class RoundsController < ApplicationController
         # player: @selection.player,
         # round: @selection.round,
         # game: @selection.round.game
-      head :ok
+      #head :ok
       # broadcast this selection to EVERYONE who is looking at the judges show page
       end
 
