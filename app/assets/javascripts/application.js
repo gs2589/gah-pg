@@ -15,3 +15,5 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+//= require ./channels/games.js
+//= require ./channels/selections.js
