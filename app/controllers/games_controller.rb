@@ -66,7 +66,7 @@ end
       @round = @winnerless_rounds.min_by(&:game_round)
 
 
-      @prompt = @round.prompt
+      @prompt = @round.prompt unless @round == nil
 
       @player = Player.find_by_id(session[:user_id])
       # Stuff that only needs to happen if there is a round

@@ -4,10 +4,21 @@
   <title></title>
 </head>
 <body>
+
+
+  <div class="col-md-12">
+    <div class="col-md-12 prompt-box">
+      <h3> WINNERS! </h3>
+    </div>
+  </div>
+
+
+
  <div class="col-md-12">
   <div class="col-md-12 info-box">
     <ol>
-      <% @round.game.players.uniq.each do |player| %>
+      <% sorted_players =  @game.players.uniq.sort{ |player|- player.score }.reverse %>
+      <% sorted_players.each do |player| %>
       <li><%= player.username %>: <%= player.score %> </li>
       <% end %>
     </ol>

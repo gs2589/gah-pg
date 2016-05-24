@@ -53,9 +53,3 @@ end
 gem 'puma'
 gem 'redis'
 gem 'rack'
-
-
-
-
-
-
