@@ -17,7 +17,11 @@ class RoundsController < ApplicationController
     gif =  Gif.find_by_id(params[:round][:gif_id])
     round.winner = round.selections.find_by(gif_id:(gif.id)).player
     round.winning_gif = round.selections.find_by(gif_id:(gif.id)).gif
-    round.save
+    #round.save
+
+
+
+
 
     round.winner.score += 1
     round.winner.save
@@ -27,6 +31,19 @@ class RoundsController < ApplicationController
     next_round = game.rounds.where(game_round: round.game_round+1).first
     next_round.judge = round.winner unless next_round == nil
     next_round.save unless next_round == nil
+
+
+    
+    if round.save
+      ActionCable.server.broadcast 'selections',
+         data: "no data being sent"
+        # player: @selection.player,
+        # round: @selection.round,
+        # game: @selection.round.game
+      head :ok
+      # broadcast this selection to EVERYONE who is looking at the judges show page
+      end
+
 
     redirect_to round.game
 

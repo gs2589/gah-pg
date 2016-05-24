@@ -1,6 +1,6 @@
-class GifsChannel < ApplicationCable::Channel
+class SelectionsChannel < ApplicationCable::Channel
   def subscribed
-    stream_from 'gifs'
+    stream_from 'selections'
   end
 
   # def select_gif gif
