@@ -40,10 +40,10 @@ class RoundsController < ApplicationController
     
     if round.save
       ActionCable.server.broadcast 'selections',
-         data: "no data being sent"
+         data: "no data being sent",
         # player: @selection.player,
         # round: @selection.round,
-        # game: @selection.round.game
+         game: game.id
       #head :ok
       # broadcast this selection to EVERYONE who is looking at the judges show page
       end
