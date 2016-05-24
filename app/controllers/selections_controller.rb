@@ -24,8 +24,7 @@ def create
       head :ok
       # broadcast this selection to EVERYONE who is looking at the judges show page
       end
-      redirect_to round.game
-    else
+      
       redirect_to round.game
     end
   end
