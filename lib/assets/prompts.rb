@@ -1,6 +1,6 @@
 
   BlackCards=[
-    {
+     {
       "text": "Why can't I sleep at night?",
       "pick": 1
     },
@@ -359,7 +359,608 @@
     {
       "text": "Daddy, why is Mommy crying?",
       "pick": 1
-    }]
+    },
+    {
+      "text": "What brought the orgy to a grinding halt?",
+      "pick": 1
+    },
+    {
+      "text": "When I pooped, what came out of my butt?",
+      "pick": 1
+    },
+    {
+      "text": "In the distant future, historians will agree that _ marked the beginning of America's decline.",
+      "pick": 1
+    },
+    {
+      "text": "What's the gift that keeps on giving?",
+      "pick": 1
+    },
+    {
+      "text": "This season on Man vs. Wild, Bear Grylls must survive in the depths of the Amazon with only _ and his wits.",
+      "pick": 1
+    },
+    {
+      "text": "Michael Bay's new three-hour action epic pits _ against _.",
+      "pick": 2
+    },
+    {
+      "text": "And I would have gotten away with it, too, if it hadn't been for _!",
+      "pick": 1
+    },
+    {
+      "text": "In a pinch, _ can be a suitable substitute for _.",
+      "pick": 2
+    },
+    {
+      "text": "What has been making life difficult at the nudist colony?",
+      "pick": 1
+    },
+    {
+      "text": "Science will never explain the origin of _.",
+      "pick": 1
+    },
+    {
+      "text": "In Rome, there are whisperings that the Vatican has a secret room devoted to _.",
+      "pick": 1
+    },
+    {
+      "text": "I learned the hard way that you can't cheer up a grieving friend with _.",
+      "pick": 1
+    },
+    {
+      "text": "When all else fails, I can always masturbate to _.",
+      "pick": 1
+    },
+    {
+      "text": "An international tribunal has found _ guilty of _.",
+      "pick": 2
+    },
+    {
+      "text": "In its new tourism campaign, Detroit proudly proclaims that it has finally eliminated _.",
+      "pick": 1
+    },
+    {
+      "text": "In his new self-produced album, Kanye West raps over the sounds of _.",
+      "pick": 1
+    },
+    {
+      "text": "The socialist governments of Scandinavia have declared that access to _ is a basic human right.",
+      "pick": 1
+    },
+    {
+      "text": "He who controls _ controls the world.",
+      "pick": 1
+    },
+    {
+      "text": "Dear Sir or Madam, We regret to inform you that the Office of _ has denied your request for _.",
+      "pick": 2
+    },
+    {
+      "text": "The CIA now interrogates enemy agents by repeatedly subjecting them to _.",
+      "pick": 1
+    },
+    {
+      "text": "_ would be woefully incomplete without _.",
+      "pick": 2
+    },
+    {
+      "text": "During his midlife crisis, my dad got really into _.",
+      "pick": 1
+    },
+    {
+      "text": "Before I run for president, I must destroy all evidence of my involvement with _.",
+      "pick": 1
+    },
+    {
+      "text": "My new favorite porn star is Joey \"_\" McGee.",
+      "pick": 1
+    },
+    {
+      "text": "In his newest and most difficult stunt, David Blaine must escape from _.",
+      "pick": 1
+    },
+    {
+      "text": "This is your captain speaking. Fasten your seatbelts and prepare for _.",
+      "pick": 1
+    },
+    {
+      "text": "My mom freaked out when she looked at my browser history and found _.com/_.",
+      "pick": 2
+    },
+    {
+      "text": "The Five Stages of Grief: denial, anger, bargaining, _, acceptance.",
+      "pick": 1
+    },
+    {
+      "text": "Members of New York's social elite are paying thousands of dollars just to experience _.",
+      "pick": 1
+    },
+    {
+      "text": "I went from _ to _, all thanks to _.",
+      "pick": 3
+    },
+    {
+      "text": "Little Miss Muffet Sat on a tuffet, Eating her curds and _.",
+      "pick": 1
+    },
+    {
+      "text": "This month's Cosmo: \"Spice up your sex life by bringing _ into the bedroom.\"",
+      "pick": 1
+    },
+    {
+      "text": "If God didn't want us to enjoy _, he wouldn't have given us _.",
+      "pick": 2
+    },
+    {
+      "text": "My country, 'tis of thee, sweet land of _.",
+      "pick": 1
+    },
+    {
+      "text": "After months of debate, the Occupy Wall Street General Assembly could only agree on \"More _!\"",
+      "pick": 1
+    },
+    {
+      "text": "I spent my whole life working toward _, only to have it ruined by _.",
+      "pick": 2
+    },
+    {
+      "text": "Next time on Dr. Phil: How to talk to your child about _.",
+      "pick": 1
+    },
+    {
+      "text": "Only two things in life are certain: death and _.",
+      "pick": 1
+    },
+    {
+      "text": "Everyone down on the ground! We don't want to hurt anyone. We're just here for _.",
+      "pick": 1
+    },
+    {
+      "text": "The healing process began when I joined a support group for victims of _.",
+      "pick": 1
+    },
+    {
+      "text": "The votes are in, and the new high school mascot is _.",
+      "pick": 1
+    },
+    {
+      "text": "Charades was ruined for me forever when my mom had to act out _.",
+      "pick": 1
+    },
+    {
+      "text": "Before _, all we had was _.",
+      "pick": 2
+    },
+    {
+      "text": "Tonight on 20/20: What you don't know about _ could kill you.",
+      "pick": 1
+    },
+    {
+      "text": "You haven't truly lived until you've experienced _ and _ at the same time.",
+      "pick": 2
+    },
+    {
+      "text": "Hey baby, come back to my place and I'll show you _.",
+      "pick": 1
+    },
+    {
+      "text": "My gym teacher got fired for adding _ to the obstacle course.",
+      "pick": 1
+    },
+    {
+      "text": "Finally! A service that delivers _ right to your door.",
+      "pick": 1
+    },
+    {
+      "text": "To prepare for his upcoming role, Daniel Day-Lewis immersed himself in the world of _.",
+      "pick": 1
+    },
+    {
+      "text": "My life is ruled by a vicious cycle of _ and _.",
+      "pick": 2
+    },
+    {
+      "text": "During high school, I never really fit in until I found _ club.",
+      "pick": 1
+    },
+    {
+      "text": "Money can't buy me love, but it can buy me _.",
+      "pick": 1
+    },
+    {
+      "text": "Listen, son. If you want to get involved with _, I won't stop you. Just steer clear of _.",
+      "pick": 2
+    },
+    {
+      "text": "A successful job interview begins with a firm handshake and ends with _.",
+      "pick": 1
+    },
+    {
+      "text": "Call the law offices of Goldstein &amp; Goldstein, because no one should have to tolerate _ in the workplace.",
+      "pick": 1
+    },
+    {
+      "text": "Lovin' you is easy 'cause you're _.",
+      "pick": 1
+    },
+    {
+      "text": "The blind date was going horribly until we discovered our shared interest in _.",
+      "pick": 1
+    },
+    {
+      "text": "What left this stain on my couch?",
+      "pick": 1
+    },
+    {
+      "text": "Turns out that _-Man was neither the hero we needed nor wanted.",
+      "pick": 1
+    },
+    {
+      "text": "After months of practice with _, I think I'm finally ready for _.",
+      "pick": 2
+    },
+    {
+      "text": "In the seventh circle of Hell, sinners must endure _ for all eternity.",
+      "pick": 1
+    },
+    {
+      "text": "As part of his daily regimen, Anderson Cooper sets aside 15 minutes for _.",
+      "pick": 1
+    },
+    {
+      "text": "When you get right down to it, _ is just _.",
+      "pick": 2
+    },
+    {
+      "text": "Having problems with _? Try _!",
+      "pick": 2
+    },
+    {
+      "text": "And what did <i>you</i> bring for show and tell?",
+      "pick": 1
+    },
+    {
+      "text": "I'm not like the rest of you. I'm too rich and busy for _.",
+      "pick": 1
+    },
+    {
+      "text": "With enough time and pressure, _ will turn into _.",
+      "pick": 2
+    },
+    {
+      "text": "_: Hours of fun. Easy to use. Perfect for _!",
+      "pick": 2
+    },
+    {
+      "text": "_. Awesome in theory, kind of a mess in practice.",
+      "pick": 1
+    },
+    {
+      "text": "As part of his contract, Prince won't perform without _ in his dressing room.",
+      "pick": 1
+    },
+    {
+      "text": "Man, this is bullshit. Fuck _.",
+      "pick": 1
+    },
+    {
+      "text": "Dear Leader Kim Jong-un,<br>our village praises your infinite wisdom with a humble offering of _.",
+      "pick": 1
+    },
+    {
+      "text": "_ may pass, but _ will last forever.",
+      "pick": 2
+    },
+    {
+      "text": "She's up all night for good fun.<br>I'm up all night for _.",
+      "pick": 1
+    },
+    {
+      "text": "Alright, bros. Our frat house is condemned, and all the hot slampieces are over at Gamma Phi. The time has come to commence Operation _.",
+      "pick": 1
+    },
+    {
+      "text": "The Japanese have developed a smaller, more efficient version of _.",
+      "pick": 1
+    },
+    {
+      "text": "In return for my soul, the Devil promised me _, but all I got was _.",
+      "pick": 2
+    },
+    {
+      "text": "You guys, I saw this crazy movie last night. It opens on _, and then there's some stuff about _, and then it ends with _.",
+      "pick": 3
+    },
+    {
+      "text": "_ will never be the same after _.",
+      "pick": 2
+    },
+    {
+      "text": "Wes Anderson's new film tells the story of a precocious child coming to terms with _.",
+      "pick": 1
+    },
+    {
+      "text": "In the beginning, there was _.<br>And the Lord said, \"Let there be _.\"",
+      "pick": 2
+    },
+    {
+      "text": "What's fun until it gets weird?",
+      "pick": 1
+    },
+    {
+      "text": "We never did find _, but along the way we sure learned a lot about _.",
+      "pick": 2
+    },
+    {
+      "text": "You've seen the bearded lady!<br>You've seen the ring of fire!<br>Now, ladies and gentlemen, feast your eyes upon _!",
+      "pick": 1
+    },
+    {
+      "text": "How am I compensating for my tiny penis?",
+      "pick": 1
+    },
+    {
+      "text": "I'm sorry, sir, but we don't allow _ at the country club.",
+      "pick": 1
+    },
+    {
+      "text": "2 AM in the city that never sleeps. The door swings open and <i>she</i> walks in, legs up to here. Something in her eyes tells me she's looking for _.",
+      "pick": 1
+    },
+    {
+      "text": "As king, how will I keep the peasants in line?",
+      "pick": 1
+    },
+    {
+      "text": "Oprah's book of the month is \"_ For _: A Story of Hope.\"",
+      "pick": 2
+    },
+    {
+      "text": "Do <i>not</i> fuck with me! I am literally _ right now.",
+      "pick": 1
+    },
+    {
+      "text": "Adventure.<br>Romance.<br>_.<br><br>From Paramount Pictures, \"_.\"",
+      "pick": 2
+    },
+    {
+      "text": "I am become _, destroyer of _!",
+      "pick": 2
+    },
+    {
+      "text": "It lurks in the night. It hungers for flesh. This summer, no one is safe from _.",
+      "pick": 1
+    },
+    {
+      "text": "If you can't handle _, you'd better stay away from _.",
+      "pick": 2
+    },
+    {
+      "text": "This is the prime of my life. I'm young, hot, and full of _.",
+      "pick": 1
+    },
+    {
+      "text": "I'm pretty sure I'm high right now, because I'm absolutely mesmerized by _.",
+      "pick": 1
+    },
+    {
+      "text": "This year's hottest album is \"_\" by _.",
+      "pick": 2
+    },
+    {
+      "text": "Every step towards _ gets me a little closer to _.",
+      "pick": 2
+    },
+    {
+      "text": "Forget everything you know about _, because now we've supercharged it with _!",
+      "pick": 2
+    },
+    {
+      "text": "Honey, I have a new role-play I want to try tonight! You can be _, and I'll be _.",
+      "pick": 2
+    },
+    {
+      "text": "Do the Dew &reg; with our most extreme flavor yet! Get ready for Mountain Dew _!",
+      "pick": 1
+    },
+    {
+      "text": "Armani suit: $1,000. Dinner for two at that swanky restaurant: $300. The look on her face when you surprise her with _: priceless.",
+      "pick": 1
+    },
+    {
+      "text": "In his new action comedy, Jackie Chan must fend off ninjas while also dealing with _.",
+      "pick": 1
+    },
+    {
+      "text": "Well what do you have to say for yourself, Casey? This is the third time you've been sent to the principal's office for _.",
+      "pick": 1
+    },
+    {
+      "text": "Here at the Academy for Gifted Children, we allow students to explore _ at their own pace.",
+      "pick": 1
+    },
+    {
+      "text": "Heed my voice, mortals! I am the god of _, and I will not tolerate _!",
+      "pick": 2
+    },
+    {
+      "text": "I don't mean to brag, but they call me the Michael Jordan of _.",
+      "pick": 1
+    },
+    {
+      "text": "Why am I broke?",
+      "pick": 1
+    },
+    {
+      "text": "Help me doctor, I've got _ in my butt!",
+      "pick": 1
+    },
+    {
+      "text": "Hi MTV! My name is Kendra, I live in Malibu, I'm into _, and I love to have a good time.",
+      "pick": 1
+    },
+    {
+      "text": "Patient presents with _. Likely a result of _.",
+      "pick": 2
+    },
+    {
+      "text": "Life's pretty tough in the fast lane. That's why I never leave the house without _.",
+      "pick": 1
+    },
+    {
+      "text": "What's making things awkward in the sauna?",
+      "pick": 1
+    },
+    {
+      "text": "Get ready for the movie of the summer! One cop plays by the book. The other's only interested in one thing: _.",
+      "pick": 1
+    },
+    {
+      "text": "Having the worst day EVER. #_",
+      "pick": 1
+    },
+    {
+      "text": "In his farewell address, George Washington famously warned Americans about the dangers of _.",
+      "pick": 1
+    },
+    {
+      "text": "Don't forget! Beginning this week, Casual Friday will officially become \"_ Friday.\"",
+      "pick": 1
+    },
+    {
+      "text": "What killed my boner?",
+      "pick": 1
+    },
+    {
+      "text": "Yo' mama so fat she _!",
+      "pick": 1
+    },
+    {
+      "text": "Well if _ is good enough for _, it's good enough for me.",
+      "pick": 2
+    },
+    {
+      "text": "Hi, this is Jim from accounting. We noticed a $1,200 charge labeled \"_\". Can you explain?",
+      "pick": 1
+    },
+    {
+      "text": "Do you lack energy? Does it sometimes feel like the whole world is _? Zoloft.&reg;",
+      "pick": 1
+    },
+    {
+      "text": "WHOOO! God damn I love _!",
+      "pick": 1
+    },
+    {
+      "text": "Now in bookstores: \"The Audacity of _\", by Barack Obama.",
+      "pick": 1
+    },
+    {
+      "text": "And today's soup is Cream of _.",
+      "pick": 1
+    },
+    {
+      "pick": 1,
+      "text": "I work my ass off all day for this family, and this is what I come home to? _!?"
+    },
+    {
+      "pick": 1,
+      "text": "I have a strict policy. First date, dinner. Second date, kiss. Third date, _."
+    },
+    {
+      "pick": 1,
+      "text": "When I was a kid, we used to play Cowboys and _."
+    },
+    {
+      "pick": 1,
+      "text": "This is America. If you don't work hard, you don't succeed. I don't care if you're black, white, purple, or _."
+    },
+    {
+      "pick": 1,
+      "text": "You Won't Believe These 15 Hilarious _ Bloopers!"
+    },
+    {
+      "pick": 1,
+      "text": "James is a lonely boy. But when he discovers a secret door in his attic, he meets a magical new friend: _."
+    },
+    {
+      "pick": 1,
+      "text": "Don't worry kid. It gets better. I've been living with _ for 20 years."
+    },
+    {
+      "pick": 1,
+      "text": "My grandfather worked his way up from nothing. When he came to this country, all he had was the shoes on his feet and _."
+    },
+    {
+      "pick": 1,
+      "text": "Behind every powerful man is _."
+    },
+    {
+      "pick": 1,
+      "text": "You are not alone. Millions of Americans struggle with _ every day."
+    },
+    {
+      "pick": 1,
+      "text": "Come to Dubai, where you can relax in our world famous spas, experience the nightlife, or simply enjoy _ by the poolside."
+    },
+    {
+      "pick": 1,
+      "text": "\"This is madness.\" \"No, THIS IS _!\""
+    },
+    {
+      "pick": 1,
+      "text": "Listen Gary, I like you. But if you want that corner office, you're going to have to show me _."
+    },
+    {
+      "pick": 1,
+      "text": "I went to the desert and ate of the peyote cactus. Turns out my spirit animal is _."
+    },
+    {
+      "pick": 1,
+      "text": "And would you like those buffalo wings mild, hot, or _?"
+    },
+    {
+      "pick": 1,
+      "text": "The six things I could never do without: oxygen, Facebook, chocolate, Netflix, friends, and _ LOL!"
+    },
+    {
+      "pick": 1,
+      "text": "Why won't you make love to me anymore? Is it _?"
+    },
+    {
+      "pick": 1,
+      "text": "Puberty is a time of change. You might notice hair growing in new places. You might develop an interest in _. This is normal."
+    },
+    {
+      "pick": 1,
+      "text": "I'm sorry, Mrs. Chen, but there was nothing we could do. At 4:15 this morning, your son succumbed to _."
+    },
+    {
+      "pick": 1,
+      "text": "I'm Miss Tennessee, and if I could make the world better by changing one thing, I would get rid of _."
+    },
+    {
+      "pick": 1,
+      "text": "Tonight we will have sex. And afterwards, If you'd like, a little bit of _."
+    },
+    {
+      "pick": 1,
+      "text": "Everybody join hands and close your eyes. Do you sense that? That's the presence of _ in this room."
+    },
+    {
+      "pick": 1,
+      "text": "To become a true Yanomamo warrior, you must prove that you can withstand _ without crying out."
+    },
+    {
+      "pick": 1,
+      "text": "Y'all ready to get this thing started? I'm Nick Cannon, and this is America's Got _."
+    },
+    {
+      "pick": 1,
+      "text": "If you had to describe the Card Czar, using only one of the cards in your hand, which one would it be?"
+    }
+  ]
 
 
    

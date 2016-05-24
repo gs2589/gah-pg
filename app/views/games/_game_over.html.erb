@@ -4,26 +4,147 @@
   <title></title>
 </head>
 <body>
-
-
+  <!-- Top Winner Bar -->
   <div class="col-md-12">
-    <div class="col-md-12 prompt-box">
-      <h3> WINNERS! </h3>
+    <div class="col-md-12 winner-banner-box center-block">
+      <h1> WINNERS! </h1>
     </div>
   </div>
 
 
+  <!-- Iterate Across Players -->
+  <% sorted_players =  @game.players.uniq.sort{ |player|- player.score }.reverse %>
 
- <div class="col-md-12">
-  <div class="col-md-12 info-box">
-    <ol>
-      <% sorted_players =  @game.players.uniq.sort{ |player|- player.score }.reverse %>
-      <% sorted_players.each do |player| %>
-      <li><%= player.username %>: <%= player.score %> </li>
-      <% end %>
-    </ol>
-  </div>
-</div>
+  <!-- Player 1 -->
+  <div class="row img-row">
+    <div class="col-md-3 center-block gif-img">
+      <div class="gif-button">
+        <img src="https://media.giphy.com/media/H9Ko1WiAZNNZK/giphy.gif">
+      </div>
+    </div>
+
+
+
+    <div class="col-md-6">
+      <div class="col-md-12  player-position-box">
+        <h1>1st Place =  <%= sorted_players[0].username %> </h1>
+        <h2>Score = <%= sorted_players[0].score %></h2>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 center-block gif-img">
+      <div class="gif-button">
+        <img src="https://media.giphy.com/media/H9Ko1WiAZNNZK/giphy.gif">
+      </div>
+    </div>
+  </div><!-- /onerow -->
+
+
+
+    <!-- Player 2 -->
+  <div class="row img-row">
+    <div class="col-md-3 center-block gif-img">
+      <div class="gif-button">
+        <img src="https://media.giphy.com/media/xT9DPMrvb8eJIGOAM0/giphy.gif">
+      </div>
+    </div>
+
+    
+
+    <div class="col-md-6">
+      <div class="col-md-12  player-position-box">
+        <h1>2nd Place =  <%= sorted_players[1].username %> </h1>
+        <h2>Score = <%= sorted_players[1].score %></h2>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 center-block gif-img">
+      <div class="gif-button">
+        <img src="https://media.giphy.com/media/xT9DPMrvb8eJIGOAM0/giphy.gif">
+      </div>
+    </div>
+  </div><!-- /onerow -->
+
+
+    <!-- Player 3 -->
+  <div class="row img-row">
+    <div class="col-md-3 center-block gif-img">
+      <div class="gif-button">
+        <img src="https://media.giphy.com/media/1guRIRB7MHGkzzqbHUs/giphy.gif">
+      </div>
+    </div>
+
+    
+
+    <div class="col-md-6">
+      <div class="col-md-12  player-position-box">
+        <h1>3rd Place =  <%= sorted_players[2].username %> </h1>
+        <h2>Score = <%= sorted_players[2].score %></h2>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 center-block gif-img">
+      <div class="gif-button">
+        <img src="https://media.giphy.com/media/1guRIRB7MHGkzzqbHUs/giphy.gif">
+      </div>
+    </div>
+  </div><!-- /onerow -->
+
+
+      <!-- Player 4 -->
+  <div class="row img-row">
+    <div class="col-md-3 center-block gif-img">
+      <div class="gif-button">
+        <img src="https://media.giphy.com/media/cSmwcTzp96ocU/giphy.gif">
+      </div>
+    </div>
+
+    
+
+    <div class="col-md-6">
+      <div class="col-md-12  player-position-box">
+        <h1>4th Place =  <%= sorted_players[3].username %> </h1>
+        <h2>Score = <%= sorted_players[3].score %></h2>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 center-block gif-img">
+      <div class="gif-button">
+        <img src="https://media.giphy.com/media/cSmwcTzp96ocU/giphy.gif">
+      </div>
+    </div>
+  </div><!-- /onerow -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

@@ -189,3 +189,38 @@ body {
      margin-top:-20px;
    }
  }
+
+
+.winner-banner-box {
+  background-color:white;
+  text-align:center;
+  padding:30px;
+  border-radius: 10px;
+  height:150px;
+  margin:25px;
+  border:1px solid #111111;
+}
+
+.winner-banner-box:hover {
+   -ms-transform: rotate(2deg); /* IE 9 */
+   -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
+   transform: rotate(2deg);
+ }
+
+ .player-position-box {
+  background-color:grey;
+  text-align:center;
+  padding:15px;
+  border-radius: 10px;
+  height:150px;
+  margin:25px;
+  border:1px solid #111111;
+}
+
+.player-position-box:hover {
+   -ms-transform: rotate(2deg); /* IE 9 */
+   -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
+   transform: rotate(2deg);
+ }
+
+
