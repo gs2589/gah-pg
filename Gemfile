@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -38,7 +38,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry'
-  gem 'tux'
 end
 
 group :development do
@@ -49,8 +48,14 @@ group :development do
   gem 'spring'
 
   # Updating for Rails 5
-  gem 'puma'
-  gem 'redis'
-  gem 'rack'
 
 end
+gem 'puma'
+gem 'redis'
+gem 'rack'
+
+
+
+
+
+
