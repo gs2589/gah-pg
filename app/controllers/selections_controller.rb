@@ -14,9 +14,17 @@ def create
     end  
 
     if already_submitted.include?(player.id) == false
-      Selection.create(gif: gif, player: player, round: round)
-      redirect_to round.game
-    else
+      @selection=Selection.new(gif: gif, player: player, round: round)
+      if @selection.save
+      ActionCable.server.broadcast 'selections',
+        gif: @selection.gif,
+        player: @selection.player,
+        round: @selection.round,
+        game: @selection.round.game
+      #head :ok
+      # broadcast this selection to EVERYONE who is looking at the judges show page
+      end
+      
       redirect_to round.game
     end
   end
