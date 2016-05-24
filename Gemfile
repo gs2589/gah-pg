@@ -54,4 +54,4 @@ gem 'puma'
 gem 'redis'
 gem 'rack'
 
-gem 'bundler', '~> 1.2.0.pre'
+gem 'bundler' #, '~> 1.2.0.pre'
