@@ -7,7 +7,7 @@ class GamesController < ApplicationController
    ##@player=Player.find_or_create_by(username: params[:username])
 session[:username] = params[:username]
 @player=Player.find_or_create_by(username: params[:username])
-
+@player.score=0
 session[:user_id] = @player.id
 
 
