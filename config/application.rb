@@ -1,7 +1,5 @@
 require_relative 'boot'
 
-require 'json'
-require 'open-uri'
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems

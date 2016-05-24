@@ -3,7 +3,7 @@ class SelectionsController < ApplicationController
     render nothing: true
   end
 
-  def create
+def create
     # player posts selection here
     # assign player, gif, round all those ids to the selection and save to DB
     round =  Round.find_by_id(params[:round_id])
@@ -14,16 +14,11 @@ class SelectionsController < ApplicationController
     end  
 
     if already_submitted.include?(player.id) == false
-    Selection.create(gif: gif, player: player, round: round)
-    redirect_to round.game
-  else
-
-    redirect_to round.game
-  end
-
-  end
-
-  def show
+      Selection.create(gif: gif, player: player, round: round)
+      redirect_to round.game
+    else
+      redirect_to round.game
+    end
   end
 
   def show

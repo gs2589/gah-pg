@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   end
   resources :players, only: [:index,:create]
   resources :sessions, only: [:create]
+
+  # Serve websocket cable requests in-process
+  mount ActionCable.server => '/cable'
+
 end
