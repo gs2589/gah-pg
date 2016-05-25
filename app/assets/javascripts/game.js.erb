@@ -1,10 +1,33 @@
 $(document).ready(function(){
 
-  // $('.pow').show().delay(2500).slideUp(200)
-  // $('.all-player-rows').hide().delay(2500).show(600)
+  var round = $('.info-box h4').text().slice(-2).replace(' ', '')
+  if (round === '1') {
+    show_gifs()
+  }
 
-  $('.pow').show()
-  $('.all-player-rows').hide()
+  else {
+    show_winner_then_gifs()
+  }
+
+  function show_gifs() {
+    $('.pow').hide()
+  }
+
+
+  function show_winner_then_gifs() {
+    $('.pow').show().delay(2800).slideUp(200)
+    $('.all-player-rows').hide().delay(2800).show(100)
+  }
+
+
+  // $('.pow').show().delay(2500).slideUp(200)
+  // $('.all-player-rows').hide().delay(2500).show(100)
+  //
+
+
+  //
+  // $('.pow').show()
+  // $('.all-player-rows').hide()
 
 
  $('img').mouseover(function(){

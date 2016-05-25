@@ -2,20 +2,21 @@
   <!-- <% flash.each do |key, value| %>
     <%= content_tag :div, value, class: "flash alert alert-warning", role: "alert" %>
   <% end %> -->
-
+  <!-- WINNER ALERT -->
+<% if @round.game_round > 1 %>
   <div class="pow center-block text-center">
     <div class="message">
       <div class="crown">
         <img src="<%= asset_path( 'crown-tilt.png' ) %>">
       </div>
-      <% if @round.game_round > 1 %>
       <center><div class="winning-gif">
-      <%= image_tag(Round.find(@round.id-3).winning_gif.url) %>
-      <% end %>
+      <%= image_tag(Round.find(@round.id-1).winning_gif.url) %>
       </div></center>
       <h4><strong><%= @round.judge.username %></strong> won!<h4>
     </div>
   </div>
+<% end %>
+<!--/WINNER ALERT -->
 
 <div class="all-player-rows">
 
