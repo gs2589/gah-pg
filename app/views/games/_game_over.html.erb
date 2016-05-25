@@ -1,93 +1,100 @@
 <div class="container">
-      <% sorted_players = @game.players.order(score: :desc).uniq %>
+  <% sorted_players = @game.players.order(score: :desc).uniq %>
   <!-- Winner Bar -->
   <div class="row">
-   <div class="col-md-12 winner-banner-box center-block">
-    <h1> WINNERS! </h1>
+   <div class="col-md-12 winner-banner-box">
+    <h2> WINNERS! </h2>
   </div>
 </div>
 
 
 
 <!-- Row One -->
+
 <div class="row" style= "margin:30px">
-  <div class="col-md-3 center-block">
-    <div class="img">
-      <img src="https://media.giphy.com/media/H9Ko1WiAZNNZK/giphy.gif" style="width:90%;padding:0px;margin:0px">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-8 center-block player-position-box" style=" background-color:#F5D900;margin-top: 0px">
+    <div class="row">
+      <div class="img">
+        <img src="https://m.popkey.co/bca7ab/ygQJw.gif?c=popkey-web&p=popkey&i=mashupgifs-reactions&l=direct&f=.gif" style="width:100%;padding:0px;margin:0px">
+
+
+        <div style="background-color:#F5D900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px">
+          <h1 style ="margin:0px">1st Place =  <%= sorted_players[0].username %> </h1>
+          <h2 style ="margin-bottom: 20px; margin-top: 0px;"> Score = <%= sorted_players[0].score %></h2>
+        </div>
+
+
+      </div>
     </div>
   </div>
-
-  <div class="col-md-6 player-position-box" style="margin:0px">
-       <h1>1st Place =  <%= sorted_players[0].username %> </h1>
-        <h2>Score = <%= sorted_players[0].score %></h2>
-
-  </div>
-
-  <div class="col-md-3 center-block">
-    <div class="img">
-      <img src="https://media.giphy.com/media/H9Ko1WiAZNNZK/giphy.gif" style="width:100%;padding:0px;margin:0px">
-    </div>
-  </div>
+</div>
 </div>
 
 <!-- Row Two -->
-<div class="row" style= "margin:30px">
-  <div class="col-md-3 center-block">
-    <div class="img">
-      <img src="https://media.giphy.com/media/xT9DPMrvb8eJIGOAM0/giphy.gif"  style="width:100%;padding:0px;margin:0px">
+<div class="row">
+
+  <div class="col-md-5 center-block player-position-box" style=" background-color:#C0C0C0;margin-top: 250px">
+    <div class="row">
+      <div class="img">
+        <img src="https://media.giphy.com/media/l3978hPCi5iREQk5W/giphy.gif" style="width:100%;padding:0px;margin:0px">
+
+
+        <div style="background-color:#C0C0C0; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px">
+          <h1 style ="margin:0px">2nd Place =  <%= sorted_players[1].username %> </h1>
+          <h2 style ="margin-bottom: 20px; margin-top: 0px;"> Score = <%= sorted_players[1].score %></h2>
+        </div>
+
+
+      </div>
     </div>
   </div>
 
-  <div class="col-md-6 player-position-box" style="margin:0px">
-        <h1>2nd Place =  <%= sorted_players[1].username %> </h1>
-        <h2>Score = <%= sorted_players[1].score %></h2>
+  <div class="col-md-2">
   </div>
 
-  <div class="col-md-3 center-block">
-    <div class="img">
-      <img src="https://media.giphy.com/media/xT9DPMrvb8eJIGOAM0/giphy.gif"  style="width:100%;padding:0px;margin:0px">
+
+
+  <div class="col-md-5 center-block player-position-box" style=" background-color:#B87333;margin-top: 250px">
+    <div class="row">
+      <div class="img">
+        <img src="http://gifrific.com/wp-content/uploads/2012/08/McKayla-Maroney-Not-Impressed-Face-Receiving-Medal.gif" style="width:100%;padding:0px;margin:0px">
+
+
+        <div style="background-color:#B87333; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px">
+          <h1 style ="margin:0px">3rd Place =  <%= sorted_players[2].username %> </h1>
+          <h2 style ="margin-bottom: 20px; margin-top: 0px;"> Score = <%= sorted_players[2].score %></h2>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- Row 3 -->
+<div class="row">
+  <div class="col-md-7">
+  </div>
+  <div class="col-md-4 center-block player-position-box" style=" background-color:#8B4513;margin-top: 450px">
+    <div class="row">
+      <div class="img">
+        <img src="https://media.giphy.com/media/cSmwcTzp96ocU/giphy.gif" style="width:100%;padding:0px;margin:0px">
+
+
+        <div style="background-color: #8B4513; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px">
+          <h1 style ="margin:0px">4th Place =  <%= sorted_players[3].username %> </h1>
+          <h2 style ="margin-bottom: 20px; margin-top: 0px;"> Score = <%= sorted_players[3].score %></h2>
+        </div>
+
+
+      </div>
     </div>
   </div>
 </div>
-
-<!-- Row Three -->
-<div class="row" style= "margin:30px">
-  <div class="col-md-3 center-block">
-    <div class="img" style = "width: 100%">
-      <img src="https://media.giphy.com/media/1guRIRB7MHGkzzqbHUs/giphy.gif"  style="width:100%;padding:0px;margin:0px">
-    </div>
-  </div>
-
-  <div class="col-md-6 player-position-box" style="margin:0px">
-     <h1>3rd Place =  <%= sorted_players[2].username %> </h1>
-        <h2>Score = <%= sorted_players[2].score %></h2>
-  </div>
-
-  <div class="col-md-3 center-block">
-    <div class="img" style = "width: 100%">
-      <img src="https://media.giphy.com/media/1guRIRB7MHGkzzqbHUs/giphy.gif"  style="width:100%;padding:0px;margin:0px">
-    </div>
-  </div>
-</div>
-
-<!-- Row Four -->
-<div class="row" style= "margin:30px">
-  <div class="col-md-3 center-block">
-    <div class="img">
-      <img src="https://media.giphy.com/media/cSmwcTzp96ocU/giphy.gif"  style="width:100%;padding:0px;margin:0px">
-    </div>
-  </div>
-
-  <div class="col-md-6 player-position-box" style="margin:0px">
-          <h1>4th Place =  <%= sorted_players[3].username %> </h1>
-        <h2>Score = <%= sorted_players[3].score %></h2>
-  </div>
-
-  <div class="col-md-3 center-block">
-    <div class="img">
-      <img src="https://media.giphy.com/media/cSmwcTzp96ocU/giphy.gif"  style="width:100%;padding:0px;margin:0px">
-    </div>
-  </div>
 </div>
 
 
@@ -95,4 +102,6 @@
 
 
 
+
+<!-- End of everything -->
 </div>
