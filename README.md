@@ -2,7 +2,7 @@
 ## Welcome to our GIFS Agianst Humanity Game 
 ### Flatiron Student Project!
 
--> ![alt tag](https://media.giphy.com/media/mtodxXp8DxVRu/giphy.gif) <-
+![alt tag](https://media.giphy.com/media/mtodxXp8DxVRu/giphy.gif)
 
 The gameplay is nearly identical to that of the popular party card game, Cards Against Humanity.
 We recommend playing with four players.
