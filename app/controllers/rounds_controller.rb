@@ -18,9 +18,9 @@ class RoundsController < ApplicationController
     round.winner = round.selections.find_by(gif_id:(gif.id)).player
     round.winning_gif = round.selections.find_by(gif_id:(gif.id)).gif
     round.players.each do |player|
-      player.starting_hand
+      player.db_starting_hand
     end
-    
+
     #round.save
 
 
@@ -37,7 +37,7 @@ class RoundsController < ApplicationController
     next_round.save unless next_round == nil
 
 
-    
+
     if round.save
       ActionCable.server.broadcast 'selections',
          data: "no data being sent",
