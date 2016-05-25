@@ -4,43 +4,48 @@
       <div class="site-title">
         <h1>Gifs
         </br>Against
-        </br>Humanity</h1>
-      </div><!-- /.site-title -->
-    </div><!--/.welcome card-->
-  </div><!-- /.col-md-6 -->
+      </br>Humanity</h1>
+    </div><!-- /.site-title -->
+  </div><!--/.welcome card-->
+</div><!-- /.col-md-6 -->
 
-  <div class="col-md-6">
-    <div class="info-card">
-      <div class="info-gif">
-        <%= image_tag(Gif.welcome) %>
-      </div>
+<div class="col-md-6">
+  <div class="info-card">
+    <div class="info-gif">
+      <%= image_tag(Gif.welcome) %>
+    </div>
 
-      <div class="user-info">
+    <div class="user-info">
       
 
-          <div class="form-group">
-            <%=label_tag :username, "Who the heck are you?" %>
-            <div><input class="form-control" type="text" id="username" placeholder="enter a username here"></div>
-          </div>
+      <div class="form-group">
+        <%=label_tag :username, "Who the heck are you?" %>
+        <div><input class="form-control" type="text" id="username" placeholder="enter a username here"></div>
+      </div>
 
-          <div class="form-group">
-            <%=label_tag :existing_game_number, "Enter your game # to join an existing game:" %><br>
-            <div><input class="form-control" type="text" id="existing_game_number" placeholder="enter the game # you were invited to"></div>
-          </div>
+      <div class="form-group">
+        <%=label_tag :existing_game_number, "Enter your game # to join an existing game:" %><br>
+        <div><input class="form-control" type="text" id="existing_game_number" placeholder="enter the game # you were invited to"></div>
+      </div>
 
-          <div type="submit" class="btn btn-success btn-lg btn-block" id="join-game">Join Game</div>
-           
-          <h3 class="site-title"> OR </h3> 
-          
-           <div type="submit" class="btn btn-success btn-lg btn-block" id="start-game">Start a New Game</div>
+      <div class="col-md-6">
 
-          
+        <div type="submit" class="btn btn-success btn-lg btn-block" id="join-game">Join </div>
 
-          
+      </div> 
 
-       
-      </div><!-- .user-info -->
+      <div class="col-md-6">
 
-    </div><!-- /.info-card -->
-  </div><!-- /.col-md-6 -->
+       <div type="submit" class="btn btn-success btn-lg btn-block" id="start-game">Start </div>
+
+     </div>
+
+
+     
+
+     
+   </div><!-- .user-info -->
+
+ </div><!-- /.info-card -->
+</div><!-- /.col-md-6 -->
 </div><!-- /.row -->
