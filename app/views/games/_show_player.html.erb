@@ -1,85 +1,92 @@
 
-  <% flash.each do |key, value| %>
-    <%= content_tag :div, value, class: "flash alert alert-success", role: "alert" %>
-  <% end %>
+  <!-- <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class: "flash alert alert-warning", role: "alert" %>
+  <% end %> -->
 
-
-<!-- TOP ROW -->
-<div class="row img-row">
-  <% @gifs[0..3].each do |gif| %>
-  <div class="col-md-3 center-block gif-img">
-    <div class="gif-button">
-
-      <%= form_for [@round, Selection.new] do |f| %>
-      <%= f.hidden_field :gif_id, :value => gif.id %>
-      <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
-      <% end %>
-    </div>
-  </div>
-  <% end %>
-</div><!-- /top row -->
-
-<!-- MIDDLE ROW -->
-<div class="row img-row">
-  <div class="col-md-3 center-block gif-img">
-    <div class="gif-button">
-
-      <%= form_for [@round, Selection.new] do |f| %>
-      <%= f.hidden_field :gif_id, :value => @gifs[4].id %>
-      <%= f.submit "I Choose You!", :type => :image, :src => @gifs[4].url %>
-      <% end %>
-    </div>
+  <div class="flash">
+    Unicorn won!
   </div>
 
-  <div class="col-md-4">
-    <div class="col-md-12 prompt-box">
-      <h3><%= @prompt.phrase %></h3>
-    </div>
-  </div>
+<div class="all-player-rows">
 
-  <div class="col-md-2">
-    <div class="col-md-12 info-box">
-      <div class="text-center">
-      <h4>game <%= @round.game.id %> &sdot; round <%= @round.game_round %> </h4>
-    </div>
-    <table class="table">
-      <% @round.game.players.uniq.each do |player| %>
-        <% if player == @judge %>
-          <tr><td><div class="info-crown"><img src="<%= asset_path( 'crown-tilt.png' ) %>"></div><%= player.username %><span class="badge"><%= player.score %></span>
-          </td></tr>
-        <% else %>
-          <tr><td><%= player.username %><span class="badge"><%= player.score %></span>
-          </td></tr>
+  <!-- TOP ROW -->
+  <div class="row img-row">
+    <% @gifs[0..3].each do |gif| %>
+    <div class="col-md-3 center-block gif-img">
+      <div class="gif-button">
+
+        <%= form_for [@round, Selection.new] do |f| %>
+        <%= f.hidden_field :gif_id, :value => gif.id %>
+        <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
         <% end %>
-      <% end %>
-</table>
+      </div>
     </div>
-  </div>
+    <% end %>
+  </div><!-- /top row -->
+
+  <!-- MIDDLE ROW -->
+  <div class="row img-row">
+    <div class="col-md-3 center-block gif-img">
+      <div class="gif-button">
+
+        <%= form_for [@round, Selection.new] do |f| %>
+        <%= f.hidden_field :gif_id, :value => @gifs[4].id %>
+        <%= f.submit "I Choose You!", :type => :image, :src => @gifs[4].url %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="col-md-12 prompt-box">
+        <h3><%= @prompt.phrase %></h3>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="col-md-12 info-box">
+        <div class="text-center">
+        <h4>game <%= @round.game.id %> &sdot; round <%= @round.game_round %> </h4>
+      </div>
+      <table class="table">
+        <% @round.game.players.uniq.each do |player| %>
+          <% if player == @judge %>
+            <tr><td><div class="info-crown"><img src="<%= asset_path( 'crown-tilt.png' ) %>"></div><%= player.username %><span class="badge"><%= player.score %></span>
+            </td></tr>
+          <% else %>
+            <tr><td><%= player.username %><span class="badge"><%= player.score %></span>
+            </td></tr>
+          <% end %>
+        <% end %>
+      </table>
+      </div>
+    </div>
 
 
-  <div class="col-md-3 center-block gif-img">
-    <div class="gif-button">
+    <div class="col-md-3 center-block gif-img">
+      <div class="gif-button">
 
-     <%= form_for [@round, Selection.new] do |f| %>
-     <%= f.hidden_field :gif_id, :value => @gifs[5].id %>
-     <%= f.submit "I Choose You!", :type => :image, :src => @gifs[5].url %>
-     <% end %>
+       <%= form_for [@round, Selection.new] do |f| %>
+       <%= f.hidden_field :gif_id, :value => @gifs[5].id %>
+       <%= f.submit "I Choose You!", :type => :image, :src => @gifs[5].url %>
+       <% end %>
+     </div>
    </div>
- </div>
-</div><!-- /middle row -->
+  </div><!-- /middle row -->
 
 
-<!-- BOTTOM ROW -->
-<div class="row img-row">
-  <% @gifs[6..9].each do |gif| %>
-  <div class="col-md-3 center-block gif-img">
+  <!-- BOTTOM ROW -->
+  <div class="row img-row">
+    <% @gifs[6..9].each do |gif| %>
+    <div class="col-md-3 center-block gif-img">
 
-    <div class="gif-button">
-      <%= form_for  [@round, Selection.new] do |f| %>
-      <%= f.hidden_field :gif_id, :value => gif.id %>
-      <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
-      <% end %>
+      <div class="gif-button">
+        <%= form_for  [@round, Selection.new] do |f| %>
+        <%= f.hidden_field :gif_id, :value => gif.id %>
+        <%= f.submit "I Choose You!", :type => :image, :src => gif.url %>
+        <% end %>
+      </div>
     </div>
-  </div>
-  <% end %>
-</div><!-- /bottom row -->
+    <% end %>
+  </div><!-- /bottom row -->
+
+</div>

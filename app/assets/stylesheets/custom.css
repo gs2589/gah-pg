@@ -68,7 +68,6 @@ body {
 /* GAMES */
 
 .flash {
-
 }
 
 .gif-button input {
@@ -251,5 +250,3 @@ body {
    -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
    transform: rotate(2deg);
  }
-
-

@@ -20,7 +20,7 @@ class RoundsController < ApplicationController
     round.players.each do |player|
       player.starting_hand
     end
-    
+
     #round.save
 
 
@@ -37,7 +37,7 @@ class RoundsController < ApplicationController
     next_round.save unless next_round == nil
 
 
-    
+
     if round.save
       ActionCable.server.broadcast 'selections',
          data: "no data being sent"
@@ -48,7 +48,7 @@ class RoundsController < ApplicationController
       # broadcast this selection to EVERYONE who is looking at the judges show page
       end
 
-
+    flash[:notice] = "#{round.winner.username} won the game!"
     redirect_to round.game
 
     # set winner id = to whatever is passed in
