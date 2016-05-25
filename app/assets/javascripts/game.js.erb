@@ -1,38 +1,11 @@
 $(document).ready(function(){
 
-    var winner_already_viewed = false
-    var round = $('.info-box h4').text().slice(-2).replace(' ', '')
 
-    if (round === '1' || winner_already_viewed === true) {
-      show_gifs()
-    }
-
-    else {
-      show_winner_then_gifs()
-      winner_already_viewed = true
-      console.log("set winner already viewed to true!")
-      console.log(winner_already_viewed)
-    }
-
-    function show_gifs() {
-      $('.pow').hide()
-    }
+  $('.pow').show().delay(2500).slideUp(200)
+  $('.all-player-rows').hide().delay(2500).show(100)
 
 
-    function show_winner_then_gifs() {
-      $('.pow').show().delay(2800).slideUp(200)
-      $('.all-player-rows').hide().delay(2800).show(100)
-    }
-
-
-  // $('.pow').show().delay(2500).slideUp(200)
-  // $('.all-player-rows').hide().delay(2500).show(100)
-  //
-
-
-  //
-  // $('.pow').show()
-  // $('.all-player-rows').hide()
+  $('.all-player-rows-no-winner').show(100)
 
 
  $('img').mouseover(function(){
