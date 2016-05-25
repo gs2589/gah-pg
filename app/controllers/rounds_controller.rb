@@ -18,7 +18,7 @@ class RoundsController < ApplicationController
     round.winner = round.selections.find_by(gif_id:(gif.id)).player
     round.winning_gif = round.selections.find_by(gif_id:(gif.id)).gif
     round.players.each do |player|
-      player.starting_hand
+      player.db_starting_hand
     end
 
     #round.save
