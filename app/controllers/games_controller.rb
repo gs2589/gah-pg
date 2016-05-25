@@ -16,26 +16,31 @@ session[:game_id]=@game.id
 @game.players << @player # shovel all the player into the game that they specify
 @player.db_starting_hand
 
-round1 = Round.create(game_round: 1, game: @game, judge: @player)
-round1.get_random_prompt
+10.times do |i|
+  Round.create(game_round: i, game: @game, judge: @player).get_random_prompt if i==1
+  Round.create(game_round: i, game: @game).get_random_prompt if i>1
+end
 
-round2 = Round.create(game_round: 2, game: @game)
-round2.get_random_prompt
-
-round3 = Round.create(game_round: 3, game: @game)
-round3.get_random_prompt
-
-round4 = Round.create(game_round: 4, game: @game)
-round4.get_random_prompt
-
-round5 = Round.create(game_round: 5, game: @game)
-round5.get_random_prompt
-
-round6 = Round.create(game_round: 6, game: @game)
-round6.get_random_prompt
-
-round7 = Round.create(game_round: 7, game: @game)
-round7.get_random_prompt
+# round1 = Round.create(game_round: 1, game: @game, judge: @player)
+# round1.get_random_prompt
+#
+# round2 = Round.create(game_round: 2, game: @game)
+# round2.get_random_prompt
+#
+# round3 = Round.create(game_round: 3, game: @game)
+# round3.get_random_prompt
+#
+# round4 = Round.create(game_round: 4, game: @game)
+# round4.get_random_prompt
+#
+# round5 = Round.create(game_round: 5, game: @game)
+# round5.get_random_prompt
+#
+# round6 = Round.create(game_round: 6, game: @game)
+# round6.get_random_prompt
+#
+# round7 = Round.create(game_round: 7, game: @game)
+# round7.get_random_prompt
 
 
 
