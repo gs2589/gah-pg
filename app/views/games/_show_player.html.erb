@@ -56,7 +56,7 @@
     <div class="col-md-2">
       <div class="col-md-12 info-box">
         <div class="text-center">
-        <h4>game <%= @round.game.id %> &sdot; round <%= @round.game_round %> </h4>
+        <h4>game <%= @round.game.id %> &sdot; round <%= @round.game_round %> </h4><!-- jquery animations depend on this string's format!!-->
       </div>
       <table class="table">
         <% @round.game.players.uniq.each do |player| %>
