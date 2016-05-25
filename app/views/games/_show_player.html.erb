@@ -10,7 +10,7 @@
       </div>
       <% if @round.game_round > 1 %>
       <center><div class="winning-gif">
-      <%= image_tag(Round.find(@round.id-1).winning_gif.url) %>
+      <%= image_tag(Round.find(@round.id-3).winning_gif.url) %>
       <% end %>
       </div></center>
       <h4><strong><%= @round.judge.username %></strong> won!<h4>

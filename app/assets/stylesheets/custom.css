@@ -64,7 +64,7 @@ body {
   margin-top:250px;
 
   .crown {
-    margin-left:-250px;
+    margin-left:-252px;
     z-index:1000;
   }
 
@@ -84,7 +84,7 @@ body {
     border: 1px solid black;
     border-radius:15px;
     background-color: #444444;
-    margin-top:-35px;
+    margin-top:-37px;
   }
 
   .winning-gif img {
