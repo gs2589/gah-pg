@@ -3,8 +3,14 @@
     <%= content_tag :div, value, class: "flash alert alert-warning", role: "alert" %>
   <% end %> -->
 
-  <div class="flash">
-    Unicorn won!
+  <div class="pow center-block">
+    <img src="<%= asset_path( 'pow.png' ) %>">
+    <div class="message">
+      <img src="<%= asset_path( 'crown-tilt.png' ) %>" height="50">
+      <%= image_tag(Round.find(@round.id-1).winning_gif.url) %>
+      <h4><strong>playername</strong> +1!<h4>
+      <h5>you... <img src="<%= asset_path( 'poop-tiny.png' ) %>" height="25"></h5>
+    </div>
   </div>
 
 <div class="all-player-rows">

@@ -5,13 +5,6 @@ body {
 }
 
 
-/* NAV */
-
-.navbar {
-  background-color: #111111;
-  border:none;
-}
-
 /* HOME */
 
 .welcome-card {
@@ -67,7 +60,22 @@ body {
 
 /* GAMES */
 
-.flash {
+.pow {
+  margin-top:250px;
+  margin-left:550px;
+  ms-transform: scale(1.5, 1.5); /* IE 9 */
+  webkit-transform: scale(1.5, 1.5); /* Chrome, Safari, Opera */
+  transform: scale(1.5, 1.5);
+  .message {
+    color:black;
+    text-align:center;
+    margin-top:-150px;
+    margin-left:-550px;
+  }
+}
+
+.pow img {
+  display:inline;
 }
 
 .gif-button input {
