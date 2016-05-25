@@ -20,7 +20,7 @@ def create
         gif: @selection.gif,
         player: @selection.player,
         round: @selection.round,
-        game: @selection.round.game
+        game: @selection.round.game.id
       #head :ok
       # broadcast this selection to EVERYONE who is looking at the judges show page
       end

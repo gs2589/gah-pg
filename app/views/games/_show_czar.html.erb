@@ -12,18 +12,20 @@
 
   <div class="col-md-2">
     <div class="col-md-12 info-box">
-     <p>Name: <%= @player.username %> </p>
-     <p>Game: <%= @round.game.id %> </p>
-      <p>Round : <%= @round.game_round %> </p>
-      <p> Judge: <%= @judge.username %></p>
-      <ol>
+      <div class="text-center">
+      <h4>game <%= @round.game.id %> &sdot; round <%= @round.game_round %> </h4>
+    </div>
+    <table class="table">
       <% @round.game.players.uniq.each do |player| %>
-        <li><%= player.username %>: <%= player.score %> </li>
+        <% if player == @judge %>
+          <tr><td><div class="info-crown"><img src="<%= asset_path( 'crown-tilt.png' ) %>"></div><%= player.username %><span class="badge"><%= player.score %></span>
+          </td></tr>
+        <% else %>
+          <tr><td><%= player.username %><span class="badge"><%= player.score %></span>
+          </td></tr>
         <% end %>
-      </ol>
-
-      <ul>
-      </ul>
+      <% end %>
+    </table>
     </div>
   </div>
 
@@ -37,10 +39,10 @@
 <div class="row img-row">
   <% @gifs[0..3].each do |gif| %>
   <div class="col-md-3 center-block gif-img">
-  
-  
+
+
   <div id="gif">
-  <div class="gif-button"> 
+  <div class="gif-button">
     <% #this is where we want the sockets to get updated %>
     <%= form_for @round do |f| %>
     <%= f.hidden_field :id, :value => @round.game_round %>

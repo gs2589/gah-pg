@@ -11,16 +11,20 @@
 
   <div class="col-md-2">
     <div class="col-md-12 info-box">
-     <p>Name: <%= @player.username %> </p>
-      <p>Round : <%= @round.game_round %> </p>
-      <p> Judge: <%= @judge.username %></p>
-      <ol>
+      <div class="text-center">
+      <h4>game <%= @round.game.id %> &sdot; round <%= @round.game_round %> </h4>
+    </div>
+    <table class="table">
       <% @round.game.players.uniq.each do |player| %>
-        <li><%= player.username %>: <%= player.score %> </li>
+        <% if player == @judge %>
+          <tr><td><div class="info-crown"><img src="<%= asset_path( 'crown-tilt.png' ) %>"></div><%= player.username %><span class="badge"><%= player.score %></span>
+          </td></tr>
+        <% else %>
+          <tr><td><%= player.username %><span class="badge"><%= player.score %></span>
+          </td></tr>
         <% end %>
-      </ol>
-      <ul>
-      </ul>
+      <% end %>
+    </table>
     </div>
   </div>
 
