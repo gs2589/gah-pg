@@ -62,21 +62,40 @@ body {
 
 .pow {
   margin-top:250px;
-  margin-left:550px;
-  ms-transform: scale(1.5, 1.5); /* IE 9 */
-  webkit-transform: scale(1.5, 1.5); /* Chrome, Safari, Opera */
-  transform: scale(1.5, 1.5);
-  .message {
-    color:black;
-    text-align:center;
-    margin-top:-150px;
-    margin-left:-550px;
+
+  .crown {
+    margin-left:-250px;
+    z-index:1000;
   }
+
+  .crown img {
+    height:75px;
+  }
+
+  .message {
+    color:white;
+    text-align:center;
+  }
+  .winning-gif {
+    max-height: 275px;
+    max-width: 275px;
+    padding:20px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius:15px;
+    background-color: #444444;
+    margin-top:-35px;
+  }
+
+  .winning-gif img {
+    max-height: 235px;
+    max-width: 235px;
+    border-radius:15px;
+  }
+
 }
 
-.pow img {
-  display:inline;
-}
+
 
 .gif-button input {
   max-height: 275px;

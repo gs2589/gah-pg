@@ -3,13 +3,17 @@
     <%= content_tag :div, value, class: "flash alert alert-warning", role: "alert" %>
   <% end %> -->
 
-  <div class="pow center-block">
-    <img src="<%= asset_path( 'pow.png' ) %>">
+  <div class="pow center-block text-center">
     <div class="message">
-      <img src="<%= asset_path( 'crown-tilt.png' ) %>" height="50">
+      <div class="crown">
+        <img src="<%= asset_path( 'crown-tilt.png' ) %>">
+      </div>
+      <% if @round.game_round > 1 %>
+      <center><div class="winning-gif">
       <%= image_tag(Round.find(@round.id-1).winning_gif.url) %>
-      <h4><strong>playername</strong> +1!<h4>
-      <h5>you... <img src="<%= asset_path( 'poop-tiny.png' ) %>" height="25"></h5>
+      <% end %>
+      </div></center>
+      <h4><strong><%= @round.judge.username %></strong> won!<h4>
     </div>
   </div>
 
