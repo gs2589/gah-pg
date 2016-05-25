@@ -99,8 +99,10 @@ if @round == nil
   render '_game_over'
 elsif @judge == @player
   render '_show_czar'
-elsif @game.players.include?(@player) && !@round.selections.where(player: @player).any?
-  render '_show_player'
+elsif @game.players.include?(@player) && !@round.selections.where(player: @player).any? && @round.selections.count == 0
+  render '_show_player', notice: "winner stuff here"
+elsif @game.players.include?(@player) && !@round.selections.where(player: @player).any? && @round.selections.count > 0
+  render '_show_player_no_winner'
 elsif @game.players.include?(@player) && @round.selections.where(player: @player).any? && !@round.winner.present?
   render '_show_player_waiting'
 elsif @game.players.include?(@player) && @round.winner.present?
