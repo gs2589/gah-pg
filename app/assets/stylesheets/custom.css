@@ -247,12 +247,12 @@ body {
 
 
 .winner-banner-box {
-  background-color:white;
+  background-color:grey;
   text-align:center;
-  padding:30px;
+  padding:-5px;
   border-radius: 10px;
-  height:150px;
-  margin:25px;
+  height:60px;
+  margin:0px;
   border:1px solid #111111;
 }
 
@@ -268,7 +268,7 @@ body {
   padding:15px;
   border-radius: 10px;
   height:150px;
-  margin:25px;
+  margin:0px;
   border:1px solid #111111;
 }
 
