@@ -23,3 +23,21 @@ We recommend playing with four players.
 ###Joining a Game
 * 1. Input a username and enter the game number known by anyone in the game you wish to join.
 * 2. Select join and you will be redirected to the proper game.
+
+###Motivation
+
+Gifs Against Humanity is a group project undertaken for the Flatiron Web Development 0416 class. All credit and blame go to [Erin Pettigrew](https://github.com/erinpettigrew), [Robin Tully](https://github.com/robintully), [Gabriel Seidner](https://github.com/gs2589) & [Mayank Mishra](https://github.com/InvasiveLionfish).
+
+###Contributions
+<ul>
+<li>If you're an approved contributor, small changes may be made on master</li>
+<li>If you're not an approved contributor, changes must be forked out of master, and then run through a pull-request</li>
+<li>Large changes should always go through pull-requests</li>
+<li>Provide informative commit messages (<50chars)</li>
+</ul>
+
+### Credits & License
+<ul>
+<li>[Cards Against Humanity](https://cardsagainsthumanity.com/) is a registered trademark. We didn't invent the game. 
+<li>This repository is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+</ul>

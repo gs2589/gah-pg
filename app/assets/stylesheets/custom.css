@@ -5,13 +5,6 @@ body {
 }
 
 
-/* NAV */
-
-.navbar {
-  background-color: #111111;
-  border:none;
-}
-
 /* HOME */
 
 .welcome-card {
@@ -67,9 +60,42 @@ body {
 
 /* GAMES */
 
-.flash {
+.pow {
+  margin-top:250px;
+
+  .crown {
+    margin-left:-252px;
+    z-index:1000;
+  }
+
+  .crown img {
+    height:75px;
+  }
+
+  .message {
+    color:white;
+    text-align:center;
+  }
+  .winning-gif {
+    max-height: 275px;
+    max-width: 275px;
+    padding:20px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius:15px;
+    background-color: #daa520;
+    margin-top:-37px;
+  }
+
+  .winning-gif img {
+    max-height: 235px;
+    max-width: 235px;
+    border-radius:15px;
+  }
 
 }
+
+
 
 .gif-button input {
   max-height: 275px;
@@ -251,5 +277,3 @@ body {
    -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
    transform: rotate(2deg);
  }
-
-
