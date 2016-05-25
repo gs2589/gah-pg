@@ -1,21 +1,19 @@
 $(document).ready(function(){
 
-  var player_show_page_already_viewed = false
-
+    var winner_already_viewed = false
     var round = $('.info-box h4').text().slice(-2).replace(' ', '')
 
     if (round === '1') {
       show_gifs()
-      player_show_page_already_viewed = true
     }
 
     else {
-      if (player_show_page_already_viewed == false) {
-        show_winner_then_gifs()
-        player_show_page_already_viewed = true
+      if (winner_already_viewed == true) {
+        show_gifs()
       }
       else {
         show_winner_then_gifs()
+        winner_already_viewed = true
       }
     }
 
