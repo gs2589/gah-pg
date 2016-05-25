@@ -1,23 +1,33 @@
 $(document).ready(function(){
 
-  var round = $('.info-box h4').text().slice(-2).replace(' ', '')
-  if (round === '1') {
-    show_gifs()
-  }
+  var player_show_page_already_viewed = false
 
-  else {
-    show_winner_then_gifs()
-  }
+    var round = $('.info-box h4').text().slice(-2).replace(' ', '')
 
-  function show_gifs() {
-    $('.pow').hide()
-  }
+    if (round === '1') {
+      show_gifs()
+      player_show_page_already_viewed = true
+    }
+
+    else {
+      if (player_show_page_already_viewed == false) {
+        show_winner_then_gifs()
+        player_show_page_already_viewed = true
+      }
+      else {
+        show_winner_then_gifs()
+      }
+    }
+
+    function show_gifs() {
+      $('.pow').hide()
+    }
 
 
-  function show_winner_then_gifs() {
-    $('.pow').show().delay(2800).slideUp(200)
-    $('.all-player-rows').hide().delay(2800).show(100)
-  }
+    function show_winner_then_gifs() {
+      $('.pow').show().delay(2800).slideUp(200)
+      $('.all-player-rows').hide().delay(2800).show(100)
+    }
 
 
   // $('.pow').show().delay(2500).slideUp(200)
