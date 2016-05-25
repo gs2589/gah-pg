@@ -3,18 +3,15 @@ $(document).ready(function(){
     var winner_already_viewed = false
     var round = $('.info-box h4').text().slice(-2).replace(' ', '')
 
-    if (round === '1') {
+    if (round === '1' || winner_already_viewed === true) {
       show_gifs()
     }
 
     else {
-      if (winner_already_viewed == true) {
-        show_gifs()
-      }
-      else {
-        show_winner_then_gifs()
-        winner_already_viewed = true
-      }
+      show_winner_then_gifs()
+      winner_already_viewed = true
+      console.log("set winner already viewed to true!")
+      console.log(winner_already_viewed)
     }
 
     function show_gifs() {
