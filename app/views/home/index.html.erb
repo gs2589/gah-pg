@@ -17,16 +17,6 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<!-- Facebook Login Script -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1048581988557244";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 <div class="row">
   <div class="col-md-6 center-block">
     <div class="welcome-card">
@@ -46,9 +36,6 @@
 
     <div class="user-info">
       
-      <!-- FB Login Button -->
-      <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="true" data-auto-logout-link="true"></div>
-
       <div class="form-group">
         <%=label_tag :username, "Who the heck are you?" %>
         <div><input class="form-control" type="text" id="username" placeholder="enter a username here"></div>

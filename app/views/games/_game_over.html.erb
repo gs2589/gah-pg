@@ -1,3 +1,22 @@
+<!-- Facebook JS SDK -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1048581988557244',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 <div class="container">
       <% sorted_players = @game.players.order(score: :desc).uniq %>
   <!-- Winner Bar -->
@@ -20,7 +39,6 @@
   <div class="col-md-6 player-position-box" style="margin:0px">
        <h1>1st Place =  <%= sorted_players[0].username %> </h1>
         <h2>Score = <%= sorted_players[0].score %></h2>
-  <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
   </div>
   </div>
 
@@ -42,8 +60,6 @@
   <div class="col-md-6 player-position-box" style="margin:0px">
         <h1>2nd Place =  <%= sorted_players[1].username %> </h1>
         <h2>Score = <%= sorted_players[1].score %></h2>
-
-  <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
   </div>
   </div>
 
@@ -65,7 +81,6 @@
   <div class="col-md-6 player-position-box" style="margin:0px">
      <h1>3rd Place =  <%= sorted_players[2].username %> </h1>
         <h2>Score = <%= sorted_players[2].score %></h2>
-  <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
   </div>
   </div>
 
@@ -87,7 +102,6 @@
   <div class="col-md-6 player-position-box" style="margin:0px">
           <h1>4th Place =  <%= sorted_players[3].username %> </h1>
         <h2>Score = <%= sorted_players[3].score %></h2>
-  <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
   </div>
   </div>
 
@@ -96,11 +110,9 @@
       <img src="https://media.giphy.com/media/cSmwcTzp96ocU/giphy.gif"  style="width:100%;padding:0px;margin:0px">
     </div>
   </div>
+
 </div>
 
-
-
-
-
-
+<!-- Facebook Like/Share -->
+  <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
 </div>
