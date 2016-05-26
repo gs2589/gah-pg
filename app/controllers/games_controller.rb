@@ -16,7 +16,7 @@ session[:game_id]=@game.id
 @game.players << @player # shovel all the player into the game that they specify
 @player.db_starting_hand
 
-10.times do |i|
+5.times do |i|
   Round.create(game_round: i, game: @game, judge: @player).get_random_prompt if i==1
   Round.create(game_round: i, game: @game).get_random_prompt if i>1
 end
