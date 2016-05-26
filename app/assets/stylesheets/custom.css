@@ -16,7 +16,6 @@ body {
   margin-left:400px;
   margin-top: 100px;
 
-
   -ms-transform: rotate(340deg); /* IE 9 */
   -webkit-transform: rotate(340deg); /* Chrome, Safari, Opera */
   transform: rotate(340deg);
@@ -32,13 +31,13 @@ body {
 
 .info-card {
   width:303px;
-  height:600px;
+  height:472px;
   background-color:#444444;
   border-radius:15px;
   border: 1px solid black;
   padding:30px;
   margin-top:100px;
-
+  color:#444444;
 
   .info-gif img {
     max-width:240px;
@@ -55,6 +54,10 @@ body {
 
 }
 
+.fb-container {
+  width:303px;
+  margin-top:15px;
+}
 
 
 
@@ -269,7 +272,7 @@ body {
   border-radius: 10px;
   height:150px;
   margin:0px;
-  border:1px solid #111111;
+  border:1px solid #222222;
 }
 
 .player-position-box:hover {

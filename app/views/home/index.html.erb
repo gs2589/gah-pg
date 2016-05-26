@@ -1,3 +1,22 @@
+<!-- Facebook JS SDK (here for now) -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1048581988557244',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 <div class="row">
   <div class="col-md-6 center-block">
     <div class="welcome-card">
@@ -16,23 +35,22 @@
     </div>
 
     <div class="user-info">
-      
 
       <div class="form-group">
         <%=label_tag :username, "Who the heck are you?" %>
-        <div><input class="form-control" type="text" id="username" placeholder="enter a username here"></div>
+        <div><input class="form-control" type="text" id="username" placeholder="username"></div>
       </div>
 
       <div class="form-group">
-        <%=label_tag :existing_game_number, "Enter your game # to join an existing game:" %><br>
-        <div><input class="form-control" type="text" id="existing_game_number" placeholder="enter the game # you were invited to"></div>
+        <%=label_tag :existing_game_number, "Got a game ID?" %><br>
+        <div><input class="form-control" type="text" id="existing_game_number" placeholder="ID"></div>
       </div>
 
       <div class="col-md-6">
 
         <div type="submit" class="btn btn-success btn-lg btn-block" id="join-game">Join </div>
 
-      </div> 
+      </div>
 
       <div class="col-md-6">
 
@@ -41,11 +59,19 @@
      </div>
 
 
-     
-
-     
    </div><!-- .user-info -->
 
  </div><!-- /.info-card -->
+ <!-- Facebook Like/Share Button -->
+ <div class="fb-container text-center">
+ <div
+   class="fb-like"
+   data-layout="button_count"
+   data-share="true"
+   data-width="450"
+   data-show-faces="true"
+   data-colorscheme="dark">
+ </div>
+ </div>
 </div><!-- /.col-md-6 -->
 </div><!-- /.row -->
