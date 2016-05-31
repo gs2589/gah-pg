@@ -88,6 +88,7 @@ end
  end
 
 
+
  def results
    # custom get route bc show action only works for games w/o winners
    @player = Player.find_by_id(session[:user_id])
@@ -113,6 +114,7 @@ end
      redirect_to @game
    end
  end
+
 
 
 
