@@ -1,10 +1,8 @@
 class GamesController < ApplicationController
-  def new
-  end
+  
 
-  def create
-   ## session[:username] = params[:username]
-   ##@player=Player.find_or_create_by(username: params[:username])
+def create
+ 
 session[:username] = params[:username]
 @player=Player.find_or_create_by(username: params[:username])
 @player.score=0
@@ -16,31 +14,8 @@ session[:game_id]=@game.id
 @game.players << @player # shovel all the player into the game that they specify
 @player.db_starting_hand
 
-5.times do |i|
-  Round.create(game_round: i, game: @game, judge: @player).get_random_prompt if i==1
-  Round.create(game_round: i, game: @game).get_random_prompt if i>1
-end
 
-# round1 = Round.create(game_round: 1, game: @game, judge: @player)
-# round1.get_random_prompt
-#
-# round2 = Round.create(game_round: 2, game: @game)
-# round2.get_random_prompt
-#
-# round3 = Round.create(game_round: 3, game: @game)
-# round3.get_random_prompt
-#
-# round4 = Round.create(game_round: 4, game: @game)
-# round4.get_random_prompt
-#
-# round5 = Round.create(game_round: 5, game: @game)
-# round5.get_random_prompt
-#
-# round6 = Round.create(game_round: 6, game: @game)
-# round6.get_random_prompt
-#
-# round7 = Round.create(game_round: 7, game: @game)
-# round7.get_random_prompt
+Round.initiate_rounds_for_game(@game, 10, @player)
 
 
 
@@ -51,12 +26,6 @@ end
 
 
 
-
-    # redirect_to game_path(@game)
-    # Shovel 4 players into the game
-    # generate n game rounds
-    # Round.create x 4 (prompts and all that are generated)
-    # now the game is ready to be played through all its rounds
 
 
     def show
@@ -145,8 +114,6 @@ end
    end
  end
 
- def destroy
- end
 
 
 end
