@@ -27,7 +27,12 @@ def get_random_prompt()
   end
 
 
-
+def self.initiate_rounds_for_game(game, number_of_rounds, judge_player)
+  number_of_rounds.times do |i|
+    Round.create(game_round: i, game: game, judge: judge_player).get_random_prompt if i==1
+    Round.create(game_round: i, game: game).get_random_prompt if i>1
+  end
+end
 
 
 
