@@ -4,6 +4,9 @@ belongs_to :round
 belongs_to :gif
 
 
+def self.currentselections(round)
+round.selections unless round == nil
+end
 
 
 

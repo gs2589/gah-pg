@@ -2,7 +2,7 @@ class Round < ActiveRecord::Base
   belongs_to :game
   belongs_to :prompt
   has_many :players, through: :games
-    has_many :players, through: :selections
+  has_many :players, through: :selections
   has_many :gifs, through: :players
   has_many :selections
   belongs_to :judge, class_name: "Player"
@@ -11,12 +11,12 @@ class Round < ActiveRecord::Base
 
 
 
-def get_random_prompt()
+  def get_random_prompt()
 
     offset=rand(Prompt.count)
 
     if self.game.multiple_prompt_mode?
-    offset2=rand(Prompt.count)
+      offset2=rand(Prompt.count)
       #return [Prompt.offset(offset).first, Prompt.offset(offset2).first ]
       #this feature is currently not supported
     else
@@ -25,6 +25,18 @@ def get_random_prompt()
       self.save
     end
   end
+
+
+  def self.currentround(game)
+   game.rounds.select {|round| !round.winner_id.present?}.min_by(&:game_round)
+ end
+
+ def self.currentjudge(round)
+  round.judge unless round == nil
+ end
+
+
+
 
 
 
