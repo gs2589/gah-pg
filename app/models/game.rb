@@ -42,6 +42,11 @@ class Game < ActiveRecord::Base
     @prompt_mode
   end
 
+def self.currentgame(session)
+Game.find_by_id(session)
+end
+
+
 
 
 

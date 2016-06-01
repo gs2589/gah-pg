@@ -1,6 +1,13 @@
 require 'rails_helper'
 
 describe "Player" do 
+
+  it 'players have a username' do
+  x = Player.new(username: "will")
+  expect(x.username).to eq("will")
+  end
+
+
   
   describe '#starting_hand' do 
     

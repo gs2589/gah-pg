@@ -9,7 +9,9 @@ class Round < ActiveRecord::Base
   belongs_to :winner, class_name: "Player"
   belongs_to :winning_gif, class_name: "Gif"
 
+
   def get_random_prompt()
+
     offset=rand(Prompt.count)
     if self.game.multiple_prompt_mode?
       offset2=rand(Prompt.count)
@@ -27,6 +29,18 @@ class Round < ActiveRecord::Base
     round.winner.score += 1
     round.winner.save
   end
+
+  def self.currentround(game)
+   game.rounds.select {|round| !round.winner_id.present?}.min_by(&:game_round)
+ end
+
+ def self.currentjudge(round)
+  round.judge unless round == nil
+ end
+
+
+
+
 
 
 def self.initiate_rounds_for_game(game, number_of_rounds, judge_player)
