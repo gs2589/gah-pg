@@ -21,16 +21,16 @@ class GamesController < ApplicationController
     @selections = Selection.currentselections(@round)
     @gifs = Gif.currentgifs(@judge,@selections,@player)
     if @round == nil   
-      render '_game_over'
+      render 'game_over'
     elsif @judge == @player  
-      render '_show_judge'    
+      render 'show_judge'    
     elsif @game.has_player?(@player)
       if @round.selections.count == 0
-        render '_show_player_with_winner'
+        render 'show_player_with_winner'
       elsif  !@player.has_selected?(@round) 
-        render '_show_player_no_winner'
+        render 'show_player_no_winner'
       elsif   @player.has_selected?(@round) && !@round.winner.present?
-        render '_show_player_waiting'
+        render 'show_player_waiting'
       end
     end
   end
