@@ -15,21 +15,25 @@ class Player < ActiveRecord::Base
 
    end
    self.save
- end
+  end
 
 
-   def db_starting_hand
+  def db_starting_hand
     self.gifs.delete_all
     10.times do
-     self.gifs << Gif.db_random
+    self.gifs << Gif.db_random
 
-   end
-   self.save
- end
+    end
+    self.save
+  end
 
  def self.currentplayer(session)
   Player.find_by_id(session)
-end
+ end
+
+ def has_selected?(round)
+  round.selections.where(player: self).any?
+ end
 
 
 
