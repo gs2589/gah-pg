@@ -6,28 +6,8 @@ class Game < ActiveRecord::Base
 
   @prompt_mode=false
 
-  def self.generate
-    @game=Game.create()
-    round1 = Round.create(game_round: 1, game: @game)
-    round1.get_random_prompt
-
-    round2 = Round.create(game_round: 2, game: @game)
-    round2.get_random_prompt
-
-    round3 = Round.create(game_round: 3, game: @game)
-    round3.get_random_prompt
-
-    round4 = Round.create(game_round: 4, game: @game)
-    round4.get_random_prompt
-
-    round5 = Round.create(game_round: 5, game: @game)
-    round5.get_random_prompt
-
-    round6 = Round.create(game_round: 6, game: @game)
-    round6.get_random_prompt
-
-    round7 = Round.create(game_round: 7, game: @game)
-    round7.get_random_prompt
+  def has_player?(player)
+    self.players.include?(player)
   end
 
 
