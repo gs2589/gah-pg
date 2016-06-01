@@ -27,6 +27,10 @@ class Player < ActiveRecord::Base
    self.save
  end
 
+ def self.currentplayer(session)
+  Player.find_by_id(session)
+end
+
 
 
 

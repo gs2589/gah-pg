@@ -9,4 +9,10 @@ class Prompt < ActiveRecord::Base
      Prompt.working_random_prompt
      end
   end
+
+
+  def self.currentprompt(round)
+        round.prompt unless round == nil
+  end
+
 end
