@@ -8,9 +8,8 @@ class GameCreator
   def create_game_with_first_player  
     player= create_player_with_starting_hand
     game=Game.create()
-    game.players << player  # shovel all the player into the game that they specify
-    
-    Round.initiate_rounds_for_game(game, 10, player)
+    game.players << player
+    Round.create(game_round: 1, game: game, judge: player).get_random_prompt
     game
   end
 
