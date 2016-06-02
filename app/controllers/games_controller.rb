@@ -3,7 +3,7 @@ class GamesController < ApplicationController
 
 
   def create
-    @game=GameCreator.new(params).create_game_with_first_player
+    @game=GameCreator.new(params, session, is_member?).create_game_with_first_player
     session[:user_id] = @game.players.first.id
     session[:game_id]=@game.id
     render json: {game: game_path(@game)}

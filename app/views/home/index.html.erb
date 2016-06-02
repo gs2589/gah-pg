@@ -1,4 +1,9 @@
 <!-- Facebook JS SDK (here for now) -->
+<% if session[:member] %>
+<%= render "member" %>
+<% end %>
+
+
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -35,12 +40,12 @@
     </div>
 
     <div class="user-info">
-
+    <% if !session[:member] %>
       <div class="form-group">
         <%=label_tag :username, "Who the heck are you?" %>
         <div><input class="form-control" type="text" id="username" placeholder="username"></div>
       </div>
-
+      <% end %>
       <div class="form-group">
         <%=label_tag :existing_game_number, "Got a game ID?" %><br>
         <div><input class="form-control" type="text" id="existing_game_number" placeholder="ID"></div>
@@ -75,3 +80,34 @@
  </div>
 </div><!-- /.col-md-6 -->
 </div><!-- /.row -->
+
+
+
+
+<% if !session[:member] %>
+<div class="row">
+<div class="member-registration">
+<h2> Register as a Member:</h2>
+<%= form_for :member, url: '/members' do |f| %>
+      Username: <%= f.text_field :username %>
+      Password: <%= f.password_field :password %>
+      Password Confirmation: <%= f.password_field :password_confirmation %>
+      <%= f.submit "Register" %>
+    <% end %>
+
+</div>
+</div>
+
+
+<div class="row">
+<div class="member-login">
+<h2> Login as a Member:</h2>
+<%= form_for :member, url: '/sessions' do |f| %>
+      Username: <%= f.text_field :username %>
+      Password: <%= f.password_field :password %>
+      <%= f.submit "Sign-In" %>
+    <% end %>
+
+</div>
+</div>
+<% end %>
