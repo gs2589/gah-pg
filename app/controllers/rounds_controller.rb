@@ -10,8 +10,7 @@ class RoundsController < ApplicationController
         data: "no data being sent",
         game: game.id
     end
-
-    redirect_to round.game
+    redirect_to game
   end
 
 end
