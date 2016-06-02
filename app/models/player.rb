@@ -20,10 +20,7 @@ class Player < ActiveRecord::Base
 
   def db_starting_hand
     self.gifs.delete_all
-    10.times do
-    self.gifs << Gif.db_random
-
-    end
+    self.gifs << Gif.limit(10).order("RANDOM()")
     self.save
   end
 
