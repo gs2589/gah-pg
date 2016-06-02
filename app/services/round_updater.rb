@@ -21,8 +21,9 @@ class RoundUpdater
   end
 
   def setup_next_round
-    next_round = game.rounds.where(game_round: round.game_round+1).first
-    next_round.judge = round.winner unless next_round == nil
+    Round.create(game_round: (round.game_round) +1, game: game).get_random_prompt
+    next_round =  game.rounds.last
+    next_round.judge = round.winner unless nil
     next_round.save unless next_round == nil
   end
 end
