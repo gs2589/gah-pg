@@ -86,7 +86,7 @@
 
 <% if !session[:member] %>
 <div class="row">
-<div class="member-registration">
+<div class="member-registration info-card">
 <h2> Register as a Member:</h2>
 <%= form_for :member, url: '/members' do |f| %>
       Username: <%= f.text_field :username %>
