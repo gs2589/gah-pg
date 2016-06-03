@@ -13,7 +13,7 @@ body {
   background-color: #111111;
   border-radius:15px;
   padding:30px;
-  margin-left:400px;
+  margin-left:200px;
   margin-top: 100px;
 
   -ms-transform: rotate(340deg); /* IE 9 */
@@ -39,6 +39,8 @@ body {
   margin-top:100px;
   color:#444444;
 
+
+
   .info-gif img {
     max-width:240px;
     max-height:250px;
@@ -50,9 +52,15 @@ body {
   .user-info {
     margin-top:10px;
     color: black;
+
   }
 
+
 }
+
+
+
+
 
 .fb-container {
   width:303px;

@@ -14,100 +14,124 @@
   };
 
   (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));
 </script>
 
 <div class="row">
-  <div class="col-md-6 center-block">
+  <div class="col-md-4 center-block">
     <div class="welcome-card">
       <div class="site-title">
         <h1>Gifs
         </br>Against
-      </br>Humanity</h1>
-    </div><!-- /.site-title -->
-  </div><!--/.welcome card-->
-</div><!-- /.col-md-6 -->
+        </br>Humanity</h1>
+      </div><!-- /.site-title -->
+    </div><!--/.welcome card-->
+  </div><!-- /.col-md-4 -->
 
-<div class="col-md-6">
-  <div class="info-card">
-    <div class="info-gif">
+  <div class="col-md-4">
+    <div class="info-card">
+      <div class="info-gif">
       <%= image_tag(Gif.welcome) %>
-    </div>
-
-    <div class="user-info">
-    <% if !session[:member] %>
-      <div class="form-group">
-        <%=label_tag :username, "Who the heck are you?" %>
-        <div><input class="form-control" type="text" id="username" placeholder="username"></div>
       </div>
+
+      <div class="user-info">
+       <% if !session[:member] %>
+        <div class="form-group">
+          <%=label_tag :username, "Who the heck are you?" %>
+            <div><input class="form-control" type="text" id="username" placeholder="username"></div>
+        </div>
       <% end %>
-      <div class="form-group">
-        <%=label_tag :existing_game_number, "Got a game ID?" %><br>
-        <div><input class="form-control" type="text" id="existing_game_number" placeholder="ID"></div>
-      </div>
+        <div class="form-group">
+          <%=label_tag :existing_game_number, "Got a game ID?" %><br>
+            <div><input class="form-control" type="text" id="existing_game_number" placeholder="ID"></div>
+        </div>
 
-      <div class="col-md-6">
+        <div class="col-md-6">
+          <div type="submit" class="btn btn-success btn-lg btn-block" id="join-game">Join </div>
+        </div>
 
-        <div type="submit" class="btn btn-success btn-lg btn-block" id="join-game">Join </div>
+        <div class="col-md-6">
 
-      </div>
+          <div type="submit" class="btn btn-success btn-lg btn-block" id="start-game">Start </div>
+        </div>
+      </div><!-- .user-info -->
+    </div><!-- /.info-card -->
 
-      <div class="col-md-6">
-
-       <div type="submit" class="btn btn-success btn-lg btn-block" id="start-game">Start </div>
-
-     </div>
-
-
-   </div><!-- .user-info -->
-
- </div><!-- /.info-card -->
- <!-- Facebook Like/Share Button -->
- <div class="fb-container text-center">
- <div
-   class="fb-like"
-   data-layout="button_count"
+    <!-- Facebook Like/Share Button -->
+    <div class="fb-container text-center">
+      <div class="fb-like"
+    data-layout="button_count"
    data-share="true"
    data-width="450"
    data-show-faces="true"
    data-colorscheme="dark">
- </div>
- </div>
-</div><!-- /.col-md-6 -->
-</div><!-- /.row -->
+      </div>
+    </div>
+  </div><!-- /.col-md-4 -->
 
 
 
 
 <% if !session[:member] %>
-<div class="row">
-<div class="member-registration info-card">
-<h2> Register as a Member:</h2>
-<%= form_for :member, url: '/members' do |f| %>
-      Username: <%= f.text_field :username %>
-      Password: <%= f.password_field :password %>
-      Password Confirmation: <%= f.password_field :password_confirmation %>
-      <%= f.submit "Register" %>
-    <% end %>
+<div class="col-md-4">
+  <div class="row">
+    <div class="member-registration info-card">
+      <h2 class="user-info"> Register as a Member:</h2>
 
+      <%= form_for :member, url: '/members' do |f| %>
+      
+      <div class="user-info">
+        <div class "form-group">
+          <%= f.label :username, "Username:" %>
+          <%= f.text_field :username, :class => "form-control" %>
+        </div>
+        <div class "form-group">
+          <%= f.label :password, "Password:" %>
+          <%= f.password_field :password, :class => "form-control" %>
+        </div>
+        <div class "form-group">
+          <%= f.label :password_confirmation, "Confirm Password:" %>
+          <%= f.password_field :password_confirmation, :class => "form-control" %>
+        </div>
+          <br><br>
+         <%= f.submit "Register", class:"btn btn-success btn-lg btn-block" %>
+      </div>
+      <% end %>
+
+    </div>
+  </div>
 </div>
-</div>
 
+<div class="col-md-4">
+  <div class="row">
+    <div class="member-login info-card">
+      <h2 class="user-info"> Log-In as a Member:</h2>
+    
+        
+      <%= form_for :member, url: '/sessions' do |f| %>
 
-<div class="row">
-<div class="member-login">
-<h2> Login as a Member:</h2>
-<%= form_for :member, url: '/sessions' do |f| %>
-      Username: <%= f.text_field :username %>
-      Password: <%= f.password_field :password %>
-      <%= f.submit "Sign-In" %>
-    <% end %>
+      <div class="user-info">
+        <div class "form-group">
+        <%= f.label :username, "Username:" %>
+        <%= f.text_field :username, :class => "form-control" %>
+        </div>
+        <div class "form-group">
+        <%= f.label :password, "Password:" %>
+        <%= f.password_field :password, :class => "form-control" %>
+        </div>
+        
+          <br><br>
+        <%= f.submit "Sign-In", class:"btn btn-success btn-lg btn-block" %>
+      </div>
+      <% end %>
 
-</div>
+    </div>
+  </div>
 </div>
 <% end %>
+</div><!-- /.row
