@@ -80,7 +80,7 @@
 <% if !session[:member] %>
 <div class="col-md-4">
   <div class="row">
-    <div class="member-registration info-card">
+    <div class="member-registration info-card" id="front_card" >
       <h2 class="user-info"> Register as a Member:</h2>
 
       <%= form_for :member, url: '/members' do |f| %>
@@ -103,13 +103,16 @@
       </div>
       <% end %>
 
+      <br>
+      <div type="submit" class="btn btn-success btn-lg btn-block" id="have_accnt">Already a member? </div>
+
     </div>
   </div>
-</div>
 
-<div class="col-md-4">
+
+
   <div class="row">
-    <div class="member-login info-card">
+    <div class="member-login info-card" id="back_card">
       <h2 class="user-info"> Log-In as a Member:</h2>
     
         
@@ -129,6 +132,10 @@
         <%= f.submit "Sign-In", class:"btn btn-success btn-lg btn-block" %>
       </div>
       <% end %>
+
+      <br>
+      <div type="submit" class="btn btn-success btn-lg btn-block" id="dont_have_accnt">Need an Account? </div>
+
 
     </div>
   </div>

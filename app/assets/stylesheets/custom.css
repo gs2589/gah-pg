@@ -58,6 +58,27 @@ body {
 
 }
 
+#front_card {
+  position: absolute;
+  z-index: 10;
+  -webkit-transform-origin: 50% 0;
+  -webkit-transform: rotateY(0deg);
+   animation:swivel 2s ease-in 
+}
+
+#back_card{
+  position: relative;
+  z-index: 5;
+  -webkit-transform-origin: 50% 0;
+  -webkit-transform: rotateY(180deg);
+   animation:swivel 2s ease-in 
+
+}
+
+@keyframes swivel {
+  from { -webkit-transform: rotateY(-180deg);}
+  to {-webkit-transform: rotateY(0deg);}
+}
 
 
 
