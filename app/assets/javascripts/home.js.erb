@@ -12,13 +12,32 @@ $(document).ready(function(){
 
  $('#have_accnt').click(function(e) {
       e.stopPropagation();
+
+      $('.member-registration').attr('id','switch_swivel')
+      $('.member-login').attr('id','switch_swivel')
+      $('.member-registration').toggleClass('front_card')
+      $('.member-registration').toggleClass('back_card')
+      $('.member-login').toggleClass('back_card')
+      $('.member-login').toggleClass('front_card')
+     
       // change id from front_end to back end
   });
 
 $('#dont_have_accnt').click(function(e) {
       e.stopPropagation();
+
+
+      $('.member-registration').attr('id','switch_swivel')
+      $('.member-login').attr('id','switch_swivel')
+      $('.member-registration').toggleClass('front_card')
+      $('.member-registration').toggleClass('back_card')
+      $('.member-login').toggleClass('back_card')
+      $('.member-login').toggleClass('front_card')
+
       // change id from front_end to back end
   });
+
+
 
 
 
