@@ -88,10 +88,10 @@
       "text": "A romantic, candlelit dinner would be incomplete without _.",
       "pick": 1
     },
-    {
-      "text": "White people like _.",
-      "pick": 1
-    },
+    # {
+    #   "text": "White people like _.",
+    #   "pick": 1
+    # },
     {
       "text": "_. Betcha can't have just one!",
       "pick": 1
@@ -108,10 +108,10 @@
       "text": "_. High five, bro.",
       "pick": 1
     },
-    {
-      "text": "During sex, I like to think about _.",
-      "pick": 1
-    },
+    # {
+    #   "text": "During sex, I like to think about _.",
+    #   "pick": 1
+    # },
     {
       "text": "What did I bring back from Mexico?",
       "pick": 1
@@ -120,10 +120,10 @@
       "text": "What are my parents hiding from me?",
       "pick": 1
     },
-    {
-      "text": "What will always get you laid?",
-      "pick": 1
-    },
+    # {
+    #   "text": "What will always get you laid?",
+    #   "pick": 1
+    # },
     {
       "text": "What would grandma find disturbing, yet oddly charming?",
       "pick": 1
@@ -180,10 +180,10 @@
       "text": "What's my secret power?",
       "pick": 1
     },
-    {
-      "text": "What gives me uncontrollable gas?",
-      "pick": 1
-    },
+    # {
+    #   "text": "What gives me uncontrollable gas?",
+    #   "pick": 1
+    # },
     {
       "text": "But before I kill you, Mr. Bond, I must show you _.",
       "pick": 1
@@ -196,10 +196,10 @@
       "text": "What am I giving up for Lent?",
       "pick": 1
     },
-    {
-      "text": "What do old people smell like? ",
-      "pick": 1
-    },
+    # {
+    #   "text": "What do old people smell like? ",
+    #   "pick": 1
+    # },
     {
       "text": "The class field trip was completely ruined by _.",
       "pick": 1
@@ -292,10 +292,10 @@
       "text": "That's right, I killed _. How, you ask? _.",
       "pick": 2
     },
-    {
-      "text": "When I was tripping on acid, _ turned into _.",
-      "pick": 2
-    },
+    # {
+    #   "text": "When I was tripping on acid, _ turned into _.",
+    #   "pick": 2
+    # },
     {
       "text": "_ + _ = _.",
       "pick": 3
@@ -336,10 +336,10 @@
       "text": "Here is the church<br>Here is the steeple<br>Open the doors<br>And there is _.",
       "pick": 1
     },
-    {
-      "text": "How did I lose my virginity?",
-      "pick": 1
-    },
+    # {
+    #   "text": "How did I lose my virginity?",
+    #   "pick": 1
+    # },
     {
       "text": "During his childhood, Salvador Dal&iacute; produced hundreds of paintings of _.",
       "pick": 1
@@ -360,14 +360,14 @@
       "text": "Daddy, why is Mommy crying?",
       "pick": 1
     },
-    {
-      "text": "What brought the orgy to a grinding halt?",
-      "pick": 1
-    },
-    {
-      "text": "When I pooped, what came out of my butt?",
-      "pick": 1
-    },
+    # {
+    #   "text": "What brought the orgy to a grinding halt?",
+    #   "pick": 1
+    # },
+    # {
+    #   "text": "When I pooped, what came out of my butt?",
+    #   "pick": 1
+    # },
     {
       "text": "In the distant future, historians will agree that _ marked the beginning of America's decline.",
       "pick": 1
@@ -408,10 +408,10 @@
       "text": "I learned the hard way that you can't cheer up a grieving friend with _.",
       "pick": 1
     },
-    {
-      "text": "When all else fails, I can always masturbate to _.",
-      "pick": 1
-    },
+    # {
+    #   "text": "When all else fails, I can always masturbate to _.",
+    #   "pick": 1
+    # },
     {
       "text": "An international tribunal has found _ guilty of _.",
       "pick": 2
@@ -484,10 +484,10 @@
       "text": "Little Miss Muffet Sat on a tuffet, Eating her curds and _.",
       "pick": 1
     },
-    {
-      "text": "This month's Cosmo: \"Spice up your sex life by bringing _ into the bedroom.\"",
-      "pick": 1
-    },
+    # {
+    #   "text": "This month's Cosmo: \"Spice up your sex life by bringing _ into the bedroom.\"",
+    #   "pick": 1
+    # },
     {
       "text": "If God didn't want us to enjoy _, he wouldn't have given us _.",
       "pick": 2
@@ -640,10 +640,10 @@
       "text": "As part of his contract, Prince won't perform without _ in his dressing room.",
       "pick": 1
     },
-    {
-      "text": "Man, this is bullshit. Fuck _.",
-      "pick": 1
-    },
+    # {
+    #   "text": "Man, this is bullshit. Fuck _.",
+    #   "pick": 1
+    # },
     {
       "text": "Dear Leader Kim Jong-un,<br>our village praises your infinite wisdom with a humble offering of _.",
       "pick": 1
@@ -696,10 +696,10 @@
       "text": "You've seen the bearded lady!<br>You've seen the ring of fire!<br>Now, ladies and gentlemen, feast your eyes upon _!",
       "pick": 1
     },
-    {
-      "text": "How am I compensating for my tiny penis?",
-      "pick": 1
-    },
+    # {
+    #   "text": "How am I compensating for my tiny penis?",
+    #   "pick": 1
+    # },
     {
       "text": "I'm sorry, sir, but we don't allow _ at the country club.",
       "pick": 1
@@ -792,10 +792,10 @@
       "text": "Why am I broke?",
       "pick": 1
     },
-    {
-      "text": "Help me doctor, I've got _ in my butt!",
-      "pick": 1
-    },
+    # {
+    #   "text": "Help me doctor, I've got _ in my butt!",
+    #   "pick": 1
+    # },
     {
       "text": "Hi MTV! My name is Kendra, I live in Malibu, I'm into _, and I love to have a good time.",
       "pick": 1
@@ -828,14 +828,14 @@
       "text": "Don't forget! Beginning this week, Casual Friday will officially become \"_ Friday.\"",
       "pick": 1
     },
-    {
-      "text": "What killed my boner?",
-      "pick": 1
-    },
-    {
-      "text": "Yo' mama so fat she _!",
-      "pick": 1
-    },
+    # {
+    #   "text": "What killed my boner?",
+    #   "pick": 1
+    # },
+    # {
+    #   "text": "Yo' mama so fat she _!",
+    #   "pick": 1
+    # },
     {
       "text": "Well if _ is good enough for _, it's good enough for me.",
       "pick": 2
@@ -924,10 +924,10 @@
       "pick": 1,
       "text": "The six things I could never do without: oxygen, Facebook, chocolate, Netflix, friends, and _ LOL!"
     },
-    {
-      "pick": 1,
-      "text": "Why won't you make love to me anymore? Is it _?"
-    },
+    # {
+    #   "pick": 1,
+    #   "text": "Why won't you make love to me anymore? Is it _?"
+    # },
     {
       "pick": 1,
       "text": "Puberty is a time of change. You might notice hair growing in new places. You might develop an interest in _. This is normal."
@@ -940,10 +940,10 @@
       "pick": 1,
       "text": "I'm Miss Tennessee, and if I could make the world better by changing one thing, I would get rid of _."
     },
-    {
-      "pick": 1,
-      "text": "Tonight we will have sex. And afterwards, If you'd like, a little bit of _."
-    },
+    # {
+    #   "pick": 1,
+    #   "text": "Tonight we will have sex. And afterwards, If you'd like, a little bit of _."
+    # },
     {
       "pick": 1,
       "text": "Everybody join hands and close your eyes. Do you sense that? That's the presence of _ in this room."
